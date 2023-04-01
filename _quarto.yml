@@ -9,11 +9,13 @@ lang: ko
 
 website:
   title: "챗GPT 교육"
+  favicon: "images/profile.png"
+  google-analytics: "UA-229551680-1"  
   site-url: https://quartopub.com/sites/statkclee/quarto-ds
   page-footer:
     left: "[Quarto](https://quarto.org/) 로 제작"
   sidebar: 
-    style: docked
+    style: floating
     contents: 
       - section: "광명시"
         contents:

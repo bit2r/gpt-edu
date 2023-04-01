@@ -1,0 +1,14 @@
+{
+  "hash": "d1793dc142052593911e0c869c0d7ad3",
+  "result": {
+    "markdown": "---\ntitle: \"chatGPT\"\nsubtitle: \"광명시 직무교육\"\nauthor:\n  - name: 이광춘\n    url: https://www.linkedin.com/in/kwangchunlee/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r\ndate: \"2023-04-07\"\ntitle-block-banner: true\n#title-block-banner: \"#562457\"\nformat:\n  html:\n    css: css/quarto.css\n    theme: flatly\n    code-fold: true\n    code-overflow: wrap\n    toc: true\n    toc-depth: 3\n    toc-title: 목차\n    number-sections: true\n    highlight-style: github    \n    self-contained: false\nfilters:\n   - lightbox\nlightbox: auto\nlink-citations: true\nknitr:\n  opts_chunk: \n    message: false\n    warning: false\n    collapse: true\n    comment: \"#>\" \n    R.options:\n      knitr.graphics.auto_pdf: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n# 강의 교재\n\n**ChatGPT(Chatbot Generative Pre-trained Transformer)**는 OpenAI에서 개발한 거대언어 모델이다. ChatGPT는 입력한 텍스트를 사람과 유사한 텍스트를 이해하고 생성하도록 설계되었다. 인터넷의 방대한 텍스트 데이터로 학습되어 다양한 주제에 응답, 정보 제공, 질문응답, 제안, 사용자와 대화를 이어나갈 수 있다.\n\n- [챗GPT](https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/#/title-slide)\n\n# 강의노트\n\n- [강의노트](https://hackmd.io/qYEvZtGYSW6Aldit839ZNA)\n    - 정보보안을 위해서 강의 후 접속불가합니다.\n\n \n# 실습\n\n- 마크다운 글쓰기: <https://dillinger.io/>\n- 챗GPT 글쓰기: <https://chat.openai.com/chat>\n- 그리기: <https://www.bing.com/images/create/>\n\n# 공유의 장\n\n- 강사: [Korean Garden](https://www.bing.com/images/create/korean-garden/641ad9b05f1e4d4b9cf8617c14f5c38b?id=5cdC8AJDsUS3BCQr%2btl0gg%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay)\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
