@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!materials/workshop/"
+
+lang: ko
+
+website:
+  title: "챗GPT 교육"
+  site-url: https://quartopub.com/sites/statkclee/quarto-ds
+  page-footer:
+    left: "[Quarto](https://quarto.org/) 로 제작"
+  sidebar: 
+    style: docked
+    contents: 
+      - section: "광명시"
+        contents:
+          - href: km_20230407.qmd
+            text: "직무교육(4/7)"
+
+format:
+  html:
+    theme: 
+      - litera
+      - css/quarto.scss
+    toc: true
+    
+execute:
+  freeze: true
