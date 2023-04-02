@@ -19,6 +19,8 @@ website:
     contents: 
       - section: "광명시"
         contents:
+          - href: timer.qmd
+            text: "실습시간"        
           - href: km_20230407.qmd
             text: "직무교육(4/7)"
 

@@ -44,6 +44,23 @@ editor_options:
 
 - [챗GPT](https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/#/title-slide)
 
+
+# 챗GPT 보안사고
+
+
+- [정두용 (2023-03-30), "우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출", 이코노미스트](https://economist.co.kr/article/view/ecn202303300057)
+
+> 삼성전자 DS 부문 임직원 A씨는 **반도체 설비 계측 데이터베이스(DB)** 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.
+
+> 임직원 B씨는 수율·불량 설비 파악을 위해 작성한 **프로그램 코드**를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 **네이버 클로바 애플리케이션(앱)**을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.
+
+
+- [민재용 (2023.04.02), "이탈리아도 챗GPT '차단'...서방 국가중 처음", 한국일보](https://m.hankookilbo.com/News/Read/A2023040208490005108)
+
+> 로이터 통신 등에 따르면 이탈리아 데이터 보호청은 "챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것"이라고 밝혔다.
+
+> 접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.
+
 # 강의노트
 
 - [강의노트](https://hackmd.io/qYEvZtGYSW6Aldit839ZNA)
@@ -52,13 +69,20 @@ editor_options:
  
 # 실습
 
-- 마크다운 글쓰기: <https://dillinger.io/>
+- 마크다운 글쓰기: <http://hackmd.io/>
 - 챗GPT 글쓰기: <https://chat.openai.com/chat>
 - 그리기: <https://www.bing.com/images/create/>
 
+![](images/image-creator.jpg)
+
 # 공유의 장
+## 그리기
 
 - 강사: [Korean Garden](https://www.bing.com/images/create/korean-garden/641ad9b05f1e4d4b9cf8617c14f5c38b?id=5cdC8AJDsUS3BCQr%2btl0gg%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay)
+
+## 글쓰기
+
+
 
 
 
