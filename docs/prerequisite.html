@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,14 +77,12 @@ ga('send', {
   'anonymizeIp': true,
 });
 </script>
-<link href="site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-<script src="site_libs/countdown-0.4.0/countdown.js"></script>
 
 
 <link rel="stylesheet" href="css/quarto.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -90,7 +91,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./timer.html">실습시간</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./prerequisite.html">사전 준비</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -104,7 +105,7 @@ ga('send', {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">chatGPT</h1>
-            <p class="subtitle lead">광명시 직무교육</p>
+            <p class="subtitle lead">사전 준비</p>
                       </div>
   </div>
     
@@ -130,7 +131,7 @@ ga('send', {
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2023년 4월 7일</p>
+        <p class="date">2023년 4월 5일</p>
       </div>
     </div>
     
@@ -155,13 +156,13 @@ ga('send', {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prerequisite.html" class="sidebar-item-text sidebar-link">
+  <a href="./prerequisite.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">사전 준비</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./timer.html" class="sidebar-item-text sidebar-link active">
+  <a href="./timer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">실습시간</span></a>
   </div>
 </li>
@@ -188,24 +189,188 @@ ga('send', {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#컴퓨터" id="toc-컴퓨터" class="nav-link active" data-scroll-target="#컴퓨터"><span class="header-section-number">1</span> 컴퓨터</a></li>
+  <li><a href="#ai-서비스" id="toc-ai-서비스" class="nav-link" data-scroll-target="#ai-서비스"><span class="header-section-number">2</span> AI 서비스</a>
+  <ul class="collapse">
+  <li><a href="#챗gpt-로그인" id="toc-챗gpt-로그인" class="nav-link" data-scroll-target="#챗gpt-로그인"><span class="header-section-number">2.1</span> 챗GPT 로그인</a></li>
+  <li><a href="#마이크로소프트" id="toc-마이크로소프트" class="nav-link" data-scroll-target="#마이크로소프트"><span class="header-section-number">2.2</span> 마이크로소프트</a></li>
+  </ul></li>
+  <li><a href="#디지털-글쓰기" id="toc-디지털-글쓰기" class="nav-link" data-scroll-target="#디지털-글쓰기"><span class="header-section-number">3</span> 디지털 글쓰기</a></li>
+  <li><a href="#마크다운-글쓰기" id="toc-마크다운-글쓰기" class="nav-link" data-scroll-target="#마크다운-글쓰기"><span class="header-section-number">4</span> 마크다운 글쓰기</a></li>
+  <li><a href="#프롬프트" id="toc-프롬프트" class="nav-link" data-scroll-target="#프롬프트"><span class="header-section-number">5</span> 프롬프트</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_98318f68" data-update-every="1" tabindex="0" style="right:0;bottom:0;left:0;margin:5%;padding:50px;font-size:10em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<section id="컴퓨터" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 컴퓨터</h1>
+<p>챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다. 만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다. 개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.</p>
+</section>
+<section id="ai-서비스" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> AI 서비스</h1>
+<p>AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종량제(Pay-as-you-go) 요금제를 따른다. 하지만 거의 모든 AI 서비스는 일정량 무료(사용횟수, 사용기간 등)를 제공하고 사용량 혹은 사용기간에 따라 과금하는 구조를 따른다.</p>
+<p>오픈AI 챗GPT, 마이크로소프트 Image Creator도 크게 다르지 않다.</p>
+<section id="챗gpt-로그인" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="챗gpt-로그인"><span class="header-section-number">2.1</span> 챗GPT 로그인</h2>
+<p>챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.</p>
+<ol type="1">
+<li>OpenAI 웹사이트(<a href="https://openai.com/blog/chatgpt" class="uri">https://openai.com/blog/chatgpt</a>)를 방문</li>
+<li>페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭</li>
+<li>구글이나 마이크로소프트 계정으로 로그인</li>
+<li>로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료</li>
+</ol>
+<div id="fig-signup" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/chatgpt-signup-01.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/chatgpt-signup-02.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/chatgpt-signup-03.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/chatgpt-signup-05.jpg" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 </div>
+<p></p><figcaption class="figure-caption">그림&nbsp;1: 챗GPT 가입절차</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="마이크로소프트" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="마이크로소프트"><span class="header-section-number">2.2</span> 마이크로소프트</h2>
+<p>텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 <a href="https://www.bing.com/images/create?">이미지 작성자(Image Creator) 웹사이트</a>에 접속한다.</p>
+<div id="fig-ms-signup" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-00.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/microsoft-singup-00.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/microsoft-singup-01.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/microsoft-singup-02.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/microsoft-singup-04.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/microsoft-singup-05.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-06.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/microsoft-singup-06.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/microsoft-singup-07.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/microsoft-singup-07.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">그림&nbsp;2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="디지털-글쓰기" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 디지털 글쓰기</h1>
+<p>챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 <a href="https://hackmd.io/">HackMD</a> 마크다운 편집기를 사용한다.</p>
+<p><a href="https://hackmd.io/">HackMD</a> 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.</p>
+<div id="fig-ms-signup" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/hackmd-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/hackmd-singup-01.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/hackmd-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/hackmd-singup-02.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/hackmd-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/hackmd-singup-04.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/hackmd-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/hackmd-singup-05.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">그림&nbsp;3: 마크다운 디지털 글쓰기</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="마크다운-글쓰기" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 마크다운 글쓰기</h1>
+<p>마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.</p>
+<ul>
+<li><a href="http://statkclee.github.io/modern-scientific-authoring/02-markdown-kr.html">마크다운 기초</a></li>
+<li><a href="https://r2bit.com/bitBook/">디지털 글쓰기 - chatGPT와 함께 AI 글쓰기</a></li>
+</ul>
+<p>챗GPT 프롬프트를 <a href="https://hackmd.io/">HackMD</a>에 잘 기록하고 챗GPT 실행결과도 <a href="https://hackmd.io/">HackMD</a>에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/workflow.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="프롬프트" class="level1 page-columns page-full" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 프롬프트</h1>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://r2bit.com/chatGPT/prompt.html">프롬프트 잘 작성하는 방법</a></span></div></div>
+<p><strong>프롬프트(Prompt)</strong>는 목표한 작업을 수행하기 위해 챗GPT와 같은 거대언어모형(LLM)에 명령어와 맥락, 사례, 절차 등의 정보를 텍스트에 담아내야만 한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/prompt-component.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/prompt-component.jpg" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -453,6 +618,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 

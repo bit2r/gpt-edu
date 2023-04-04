@@ -54,5 +54,26 @@
     "title": "chatGPT",
     "section": "4.1 DALL·E 그리기",
     "text": "4.1 DALL·E 그리기"
+  },
+  {
+    "objectID": "prerequisite.html",
+    "href": "prerequisite.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다. 만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다. 개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다."
+  },
+  {
+    "objectID": "prerequisite.html#챗gpt-로그인",
+    "href": "prerequisite.html#챗gpt-로그인",
+    "title": "chatGPT",
+    "section": "2.1 챗GPT 로그인",
+    "text": "2.1 챗GPT 로그인\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+  },
+  {
+    "objectID": "prerequisite.html#마이크로소프트",
+    "href": "prerequisite.html#마이크로소프트",
+    "title": "chatGPT",
+    "section": "2.2 마이크로소프트",
+    "text": "2.2 마이크로소프트\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
   }
 ]

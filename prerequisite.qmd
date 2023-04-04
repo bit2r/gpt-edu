@@ -1,0 +1,160 @@
+---
+title: "chatGPT"
+subtitle: "사전 준비"
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+date: "2023-04-05"
+title-block-banner: true
+#title-block-banner: "#562457"
+format:
+  html:
+    css: css/quarto.css
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# 컴퓨터
+
+챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다.
+만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다.
+개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.
+
+# AI 서비스
+
+AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종량제(Pay-as-you-go) 요금제를 
+따른다. 하지만 거의 모든 AI 서비스는 일정량 무료(사용횟수, 사용기간 등)를 제공하고 
+사용량 혹은 사용기간에 따라 과금하는 구조를 따른다.
+
+오픈AI 챗GPT, 마이크로소프트 Image Creator도 크게 다르지 않다.
+
+## 챗GPT 로그인
+
+챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.
+
+1. OpenAI 웹사이트(<https://openai.com/blog/chatgpt>)를 방문
+1. 페이지 좌측 중간에 "Try ChatGPT" 버튼을 클릭
+1. 구글이나 마이크로소프트 계정으로 로그인
+1. 로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료
+
+::: {#fig-signup layout-ncol=5}
+
+![](images/chatgpt-signup-01.jpg)
+
+![](images/chatgpt-signup-02.jpg)
+
+![](images/chatgpt-signup-03.jpg)
+
+![](images/chatgpt-signup-04.jpg)
+
+![](images/chatgpt-signup-05.jpg)
+
+
+챗GPT 가입절차
+
+:::
+
+## 마이크로소프트
+
+텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트
+[이미지 작성자(Image Creator) 웹사이트](https://www.bing.com/images/create?)에 접속한다.
+
+::: {#fig-ms-signup layout-ncol=7}
+
+![](images/microsoft-singup-00.jpg)
+
+![](images/microsoft-singup-01.jpg)
+ 
+![](images/microsoft-singup-02.jpg)
+
+![](images/microsoft-singup-04.jpg)
+
+![](images/microsoft-singup-05.jpg)
+
+![](images/microsoft-singup-06.jpg)
+
+![](images/microsoft-singup-07.jpg)
+
+마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)
+
+:::
+
+
+# 디지털 글쓰기
+
+챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 
+채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 
+후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 
+공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 [HackMD](https://hackmd.io/) 
+마크다운 편집기를 사용한다.
+
+[HackMD](https://hackmd.io/) 마크다운 편집기도 구독형 서비스이기 때문에
+개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.
+
+::: {#fig-ms-signup layout-ncol=5}
+
+![](images/hackmd-singup-01.jpg)
+
+![](images/hackmd-singup-02.jpg)
+
+![](images/chatgpt-signup-04.jpg)
+
+![](images/hackmd-singup-04.jpg)
+
+![](images/hackmd-singup-05.jpg)
+
+마크다운 디지털 글쓰기
+
+:::
+
+
+# 마크다운 글쓰기
+
+마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.
+
+- [마크다운 기초](http://statkclee.github.io/modern-scientific-authoring/02-markdown-kr.html)
+- [디지털 글쓰기 - chatGPT와 함께 AI 글쓰기](https://r2bit.com/bitBook/)
+
+챗GPT 프롬프트를 [HackMD](https://hackmd.io/)에 잘 기록하고 챗GPT 실행결과도 
+[HackMD](https://hackmd.io/)에 정리하여 동료와 공유와 품평 등 
+후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다.
+
+![](images/workflow.jpg)
+
+
+# 프롬프트
+
+[[프롬프트 잘 작성하는 방법](https://r2bit.com/chatGPT/prompt.html)]{.aside}
+
+**프롬프트(Prompt)**는 목표한 작업을 수행하기 위해 챗GPT와 같은 거대언어모형(LLM)에 
+명령어와 맥락, 사례, 절차 등의 정보를 텍스트에 담아내야만 한다.
+
+![](images/prompt-component.jpg)
+
+
+
+

@@ -17,10 +17,12 @@ website:
   sidebar: 
     style: floating
     contents: 
+      - href: prerequisite.qmd
+        text: "사전 준비"
+      - href: timer.qmd
+        text: "실습시간"
       - section: "광명시"
         contents:
-          - href: timer.qmd
-            text: "실습시간"        
           - href: km_20230407.qmd
             text: "직무교육(4/7)"
 
