@@ -156,5 +156,49 @@ AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종�
 ![](images/prompt-component.jpg)
 
 
+# 코딩
+
+코딩 실습을 위해서 파이썬을 설치한다. [파이썬 홈페이지](https://www.python.org/)에서 
+운영체제에 맞는 파이썬 버전을 선택하여 설치한다. 
+파이썬 코드 작성에 필요한 편집기는 파이썬 설치할 때 내장되어 있으니 
+설치가 정상처리되면 `아이들(IDLE)` 편집기를 실행하여 헬로월드 파이썬 확장자를 갖는 
+파일을 생성하여 키보드 {{< kbd F5 >}} 키를 누르면 실행된다. 즉 바탕화면에 `hello.py` 파일명으로 코드를 저장하고 키보드 {{< kbd F5 >}} 키로 실행한다.
+
+::: {#fig-logout layout-ncol=6}
+
+
+![](images/python-01.jpg)
+
+![](images/python-02.jpg)
+
+![](images/python-03.jpg)
+
+![](images/python-04.jpg)
+
+![](images/python-05.jpg)
+
+![](images/python-06.jpg)
+
+파이썬과 편집기(IDLE) 
+
+:::
+
+
+# 마무리
+
+개인 노트북이 아니고 전산실의 공용 PC 혹은 지급받은 노트북인 경우 개인 정보보호를 위해서 사용한 컴퓨터에서 모두 로그아웃한다. 인공지능 API를 사용한 경우 실습한 정보는 로컬 컴퓨터에 별도 저장을 하고나 공개대상을 외부로 노출시키지 않은 경우 웹브라우져를 통해 클라우드 서버에 접속했기 때문에 로그아웃하게 되면 로컬 컴퓨터에서 다시 로그인하지 않는 이상 이론상 남아있지 않게 된다.
+
+::: {#fig-logout layout-ncol=3}
+
+![챗GPT](images/logout-chatGPT.jpg)
+
+![Image Creator](images/logout-newbing.jpg)
+
+![HackMD](images/logout-hackMD.jpg)
+
+AI 실습 웹서비스 로그아웃
+
+:::
+
 
 
