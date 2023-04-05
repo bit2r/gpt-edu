@@ -25,6 +25,8 @@ website:
         contents:
           - href: km_20230407.qmd
             text: "직무교육(4/7)"
+          - href: km_20230407_adv.qmd
+            text: "직무교육 심화(4/7)"
 
 format:
   html:
