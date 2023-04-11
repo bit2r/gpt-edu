@@ -46,7 +46,7 @@ editor:
 
 [Code.org](https://code.org/)에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자
 
-![AI: Is this a fish?](https://studio.code.org/s/oceans/lessons/1/levels/2)
+- [AI: Is this a fish?](https://studio.code.org/s/oceans/lessons/1/levels/2)
 
 
 # AI 모형 개발
