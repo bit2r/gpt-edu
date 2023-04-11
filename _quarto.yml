@@ -27,6 +27,10 @@ website:
             text: "직무교육(4/7)"
           - href: km_20230407_adv.qmd
             text: "직무교육 심화(4/7)"
+      - section: "경기도"
+        contents:
+          - href: gg_20230426.qmd
+            text: "직무교육(4/26)"
 
 format:
   html:
