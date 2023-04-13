@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.299">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="이광춘">
+
+<title>챗GPT 교육 - chatGPT</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/profile.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/quarto.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gg_20230426.html">경기도</a></li><li class="breadcrumb-item"><a href="./gg_20230426_excel.html">직무교육(4/26) 엑셀</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">chatGPT</h1>
+            <p class="subtitle lead">경기도 직무교육 (엑셀)</p>
+                      </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">저자</div>
+    <div class="quarto-title-meta-heading">소속</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://www.linkedin.com/in/kwangchunlee/">이광춘</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://github.com/bit2r">
+              한국 R 사용자회
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">공개</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2023년 4월 7일</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">챗GPT 교육</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prerequisite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">사전 준비</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./timer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">실습시간</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">광명시</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./km_20230407.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/7)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./km_20230407_adv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 심화(4/7)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">경기도</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gg_20230426.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/26)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gg_20230426_excel.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">직무교육(4/26) 엑셀</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#작업흐름" id="toc-작업흐름" class="nav-link active" data-scroll-target="#작업흐름"><span class="header-section-number">1</span> 작업흐름</a></li>
+  <li><a href="#초중고급-엑셀" id="toc-초중고급-엑셀" class="nav-link" data-scroll-target="#초중고급-엑셀"><span class="header-section-number">2</span> 초중고급 엑셀</a></li>
+  <li><a href="#초급" id="toc-초급" class="nav-link" data-scroll-target="#초급"><span class="header-section-number">3</span> 초급</a>
+  <ul class="collapse">
+  <li><a href="#조건-합" id="toc-조건-합" class="nav-link" data-scroll-target="#조건-합"><span class="header-section-number">3.1</span> 조건 합</a></li>
+  <li><a href="#조건-평균" id="toc-조건-평균" class="nav-link" data-scroll-target="#조건-평균"><span class="header-section-number">3.2</span> 조건 평균</a>
+  <ul class="collapse">
+  <li><a href="#r-코드" id="toc-r-코드" class="nav-link" data-scroll-target="#r-코드"><span class="header-section-number">3.2.1</span> R 코드</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#중급" id="toc-중급" class="nav-link" data-scroll-target="#중급"><span class="header-section-number">4</span> 중급</a>
+  <ul class="collapse">
+  <li><a href="#남여식별" id="toc-남여식별" class="nav-link" data-scroll-target="#남여식별"><span class="header-section-number">4.1</span> 남여식별</a></li>
+  </ul></li>
+  <li><a href="#고급" id="toc-고급" class="nav-link" data-scroll-target="#고급"><span class="header-section-number">5</span> 고급</a>
+  <ul class="collapse">
+  <li><a href="#입사일-검색" id="toc-입사일-검색" class="nav-link" data-scroll-target="#입사일-검색"><span class="header-section-number">5.1</span> 입사일 검색</a>
+  <ul class="collapse">
+  <li><a href="#r-코드작성" id="toc-r-코드작성" class="nav-link" data-scroll-target="#r-코드작성"><span class="header-section-number">5.1.1</span> R 코드작성</a></li>
+  </ul></li>
+  <li><a href="#할인율-적용" id="toc-할인율-적용" class="nav-link" data-scroll-target="#할인율-적용"><span class="header-section-number">5.2</span> 할인율 적용</a>
+  <ul class="collapse">
+  <li><a href="#r-코드-1" id="toc-r-코드-1" class="nav-link" data-scroll-target="#r-코드-1"><span class="header-section-number">5.2.1</span> R 코드</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#전문가" id="toc-전문가" class="nav-link" data-scroll-target="#전문가"><span class="header-section-number">6</span> 전문가</a></li>
+  <li><a href="#실습-엑셀파일" id="toc-실습-엑셀파일" class="nav-link" data-scroll-target="#실습-엑셀파일"><span class="header-section-number">7</span> 실습 엑셀파일</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+노트
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><a href="https://sdf.seoul.kr/">서울 디지털재단</a>에서 챗GPT 활용 사례집을 업무활용과 일상생활/창작활동/교육분야 로 나눠 두번에 걸쳐 보고서를 발간했다. <span class="citation" data-cites="sdf2023">(<a href="#ref-sdf2023" role="doc-biblioref">"ChatGPT활용연구TFT, 2023</a>)</span> <span class="citation" data-cites="sdf2023v2">(<a href="#ref-sdf2023v2" role="doc-biblioref">ChatGPT활용연구TFT, 2023</a>)</span></p>
+</div>
+</div>
+</div>
+<section id="작업흐름" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 작업흐름</h1>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://sharegpt.com/c/Sq21GJi">데이터셋 검증</a></span></div></div>
+<p>기본적인 작업 흐름은 서울 디지털재단 PDF에 담긴 데이터를 복원하는 것으로 원본데이터를 화면 캡쳐하여 업스테이지에서 개발한 카카오톡 Askup OCR 기능과 챗GPT기능을 활용하여 <code>.csv</code> 파일형태를 갖춘다. Askup에서 복사하여 메모장에 붙여넣고 이를 엑셀로 다시 붙여넣기하면 원하는 결과를 얻을 수 있다.</p>
+<p>먼저 데이터 생성작업과 이를 활용하여 결과를 얻을 수 있는 챗GPT 프롬프트 작성과 엑셀에서 활용하는 단계로 나눠 작업을 수행한다.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">데이터셋 생성</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">엑셀 작업</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel-data.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/excel-data.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel-exec.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/excel-exec.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+엑셀 친화적인 <code>.csv</code> 파일형태 제작 프롬프트
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>부서명 | 직위 | 성별 | 기본급 | 세금 | 지급액
+--- | --- | --- | --- | --- | ---
+인사팀 | 부장 |  | 768,790 | 69,890 | 698,900
+인사팀 | 과장 |  | 891,400 | 81,036 | 810,364
+총무팀 | 사원 |  | 891,400 | 81,036 | 810,364
+관리팀 | 대리 |  | 953,400 | 86,763 | 866,637
+기획팀 | 과장 |  | 953,400 | 86,673 | 866,727</code></pre>
+<blockquote class="blockquote">
+<p>행을 총20개만 더 만들어주세요. 이름이 없기 때문에 성별은 개인정보에 해당되지 않기 때문에 임의로 성별도 채워 주세요. 출력형식은 csv 파일형태이며, 각 행마다 개행문자(new line)를 삽입하여야 하고, 숫자는 ‘“숫자”’ 형태가 되어야 합니다.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">실습코드: <a href="https://sharegpt.com/c/v5eiTN5">엑셀작업</a></span></div></div>
+</section>
+<section id="초중고급-엑셀" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 초중고급 엑셀</h1>
+</section>
+<section id="초급" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 초급</h1>
+<p>“조건을 걸어 숫자를 계산하는 함수”를 작성해보자.</p>
+<section id="조건-합" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="조건-합"><span class="header-section-number">3.1</span> 조건 합</h2>
+<p>범주 칼럼(성별)를 기준으로 연속형 숫자칼럼 합계를 구한다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 엑셀에서 C2:C21 값 중 ’남’인 값을 찾아 대응하는 D2:D21의 숫자를 모두 더하는 함수를 생성해주세요.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Excel에서는 SUMIF 함수를 사용하여 조건에 해당하는 값들을 더할 수 있습니다.</p>
+<p>함수를 입력하는 셀을 지정하고, 다음과 같은 수식을 입력하세요.</p>
+<pre><code>=SUMIF(C2:C21,"남자",D2:D21)</code></pre>
+<p>위 수식은 C2:C21 범위에서 값이 “남자”인 셀을 찾아 D2:D21 범위에서 해당하는 값을 더합니다. 결과는 해당하는 값들의 합계가 됩니다.</p>
+<p>이 수식을 입력하면, 해당 셀에 값을 반환합니다.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="조건-평균" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="조건-평균"><span class="header-section-number">3.2</span> 조건 평균</h2>
+<p>범주 칼럼(성별)를 기준으로 연속형 숫자칼럼 <strong>평균</strong>를 구한다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 엑셀에서 C2:C21 값 중 ’남’인 값을 찾아 대응하는 D2:D21의 숫자의 평균을 구하는 함수를 생성해주세요.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Excel에서는 AVERAGEIF 함수를 사용하여 조건에 해당하는 값들의 평균을 구할 수 있습니다.</p>
+<p>함수를 입력하는 셀을 지정하고, 다음과 같은 수식을 입력하세요.</p>
+<pre><code>=AVERAGEIF(C2:C21,"남자",D2:D21)</code></pre>
+<p>위 수식은 C2:C21 범위에서 값이 “남자”인 셀을 찾아 D2:D21 범위에서 해당하는 값들의 평균을 계산합니다. 결과는 해당하는 값들의 평균이 됩니다.</p>
+<p>이 수식을 입력하면, 해당 셀에 값을 반환합니다.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="r-코드" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="r-코드"><span class="header-section-number">3.2.1</span> R 코드</h3>
+<p>문서에 적용될 숫자를 계산하여 반영하는 작업이라 엑셀 대신 R 혹은 파이썬 프로그래밍 코드를 사용해서 작업해도 동일한 결과를 간략히 얻을 수 있다.</p>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>salary_tbl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/excel_data.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"초급"</span>, <span class="at">range =</span> <span class="st">"A1:F21"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>salary_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(성별) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(합계 <span class="ot">=</span> <span class="fu">sum</span>(기본급),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            평균 <span class="ot">=</span> <span class="fu">mean</span>(기본급))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 2 × 3</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   성별     합계   평균</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 남자  8794170 879417</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 여자  8792780 879278</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 상기 엑셀 코드를 dplyr R 코드로 작성해주세요
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>다음은 dplyr 패키지를 사용하여 R 코드로 작성한 예시입니다.</p>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(C <span class="sc">==</span> <span class="st">"남자"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg =</span> <span class="fu">mean</span>(D))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>위 코드에서 <code>data</code>는 분석할 데이터프레임을 나타냅니다. <code>filter</code> 함수는 조건에 해당하는 행만 추출하는 역할을 하며, <code>summarize</code> 함수는 통계량을 계산하는 역할을 합니다. 결과값은 <code>result</code>에 저장됩니다.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="중급" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 중급</h1>
+<p>“셀 값에서 조건을 찾아 원하는 값을 도출” 하는 사례를 살펴보자.</p>
+<section id="남여식별" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="남여식별"><span class="header-section-number">4.1</span> 남여식별</h2>
+<p>“C열의 주민등록번호에서 가운데 숫자가 1일 경우 ‘남자’, 2일 경우 ’여자’를 출력” 하는 엑셀코드를 작성해보자.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 엑셀에서 C2값의 형식이 ‘XXXXXX-1XXXXXX’ 또는 ‘XXXXXX-2XXXXXX’이다. ’XXXXXX-1XXXXXX’에서 가운데 - 다음 숫자가 1일 경우 ’남자’, 2일 경우 ’여자’를 출력하는 함수를 만들어 주세요.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>다음과 같은 엑셀 함수를 사용하여 구현할 수 있습니다.</p>
+<pre><code>=IF(MID(C2,8,1)="1","남자",IF(MID(C2,8,1)="2","여자",""))</code></pre>
+<p>위 함수를 사용하면 C2 셀의 값을 분석하여 성별을 출력할 수 있습니다. 먼저 MID 함수를 사용하여 C2 셀의 8번째 문자를 추출한 후, 이 문자가 1인지 2인지를 비교합니다. 만약 1이면 “남자”를, 2이면 “여자”를 출력하고, 그 외의 경우는 빈 문자열을 출력합니다. 이를 다른 셀에 복사하여 여러 행에 대해서도 동일하게 적용할 수 있습니다.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel/excel_mid_01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/excel/excel_mid_01.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="고급" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 고급</h1>
+<p>“데이터 참조 값 활용, 데이터 입력시 같은 행 값을 찾아주는 함수”를 작성해보자.</p>
+<section id="입사일-검색" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="입사일-검색"><span class="header-section-number">5.1</span> 입사일 검색</h2>
+<p><code>I3</code>열에 사번을 입력(A열의 사번을 참조), 입사일을 바로 출력하는 함수를 작성해보자.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 엑셀에서 $A<span class="math inline">\(2:\)</span>G$11의 전체 값 중, A열 값이 2인 값을 찾고, G열 값을 출력하는 함수를 만들어주세요.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>아래와 같이 엑셀 함수를 작성하시면 됩니다.</p>
+<pre><code>=VLOOKUP(2,$A$2:$G$11,7,FALSE)</code></pre>
+<p>설명:</p>
+<ul>
+<li><code>VLOOKUP</code>: 수직 조회 함수로, 첫 번째 인자로는 찾고자 하는 값(여기서는 2)을, 두 번째 인자로는 전체 범위($A<span class="math inline">\(2:\)</span>G$11)를, 세 번째 인자로는 결과 값을 반환할 열의 인덱스(여기서는 G열, 즉 7)을, 네 번째 인자로는 완전 일치하는 값을 찾을 것인지 부분 일치하는 값을 찾을 것인지 여부를 지정합니다(FALSE는 완전 일치를 의미합니다).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel/excel_vloopkup.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/excel/excel_vloopkup.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="r-코드작성" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="r-코드작성"><span class="header-section-number">5.1.1</span> R 코드작성</h3>
+<p>상기 엑셀 코드를 다음과 같이 R 코드로 작성할 수 있다.</p>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>join_tbl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/excel_data.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"고급"</span>, <span class="at">range =</span> <span class="st">"A1:G11"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>join_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(사번 <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(입사일)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 1</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   입사일             </span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;dttm&gt;             </span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 2002-04-30 00:00:00</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>함수로 사번을 넣게 되면 입사일을 반환하도록 일반화시킬 수도 있다.</p>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>get_join_date <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sabun =</span> <span class="dv">2</span>) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  join_date <span class="ot">&lt;-</span> join_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(사번 <span class="sc">==</span> sabun) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(입사일)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(join_date)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">get_join_date</span>(<span class="dv">5</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "2005-05-17 UTC"</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="할인율-적용" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="할인율-적용"><span class="header-section-number">5.2</span> 할인율 적용</h2>
+<p>“A1~E1 행의 할인율 기준에 따라서 결제금액에 따라 할인율이 다르게 적용될 때, 값의 범위에 따라서 할인율을 자동으로 넣는 함수” 함수를 작성해보자.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: C5의 값이 $B<span class="math inline">\(1:\)</span>E$1의 값과 비교하여 1) C5의 값이 $B<span class="math inline">\(1:\)</span>E$ 보다 이상이고, $B<span class="math inline">\(1:\)</span>E$값과 C5의 값이 근사한 값을 찾는다 2) 위에서 찾은 값의 2행인 $B<span class="math inline">\(2:\)</span>E$2 값을 출력하는 함수를 만들어줘
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>다음과 같이 수행할 수 있습니다.</p>
+<p>C5의 값과 $B<span class="math inline">\(1:\)</span>E$1의 값을 비교하여, $B<span class="math inline">\(1:\)</span>E$1의 값 중 C5의 값보다 크거나 같은 최초의 값을 찾습니다. 이를 위해 MATCH 함수를 사용합니다.</p>
+<p>MATCH 함수로 찾은 인덱스를 이용하여, $B<span class="math inline">\(2:\)</span>E$2 범위에서 해당 인덱스 위치의 값을 가져옵니다. 이를 위해 INDEX 함수를 사용합니다.</p>
+<p>따라서 다음과 같은 엑셀 함수 코드를 작성할 수 있습니다.</p>
+<pre><code>=INDEX($B$2:$E$2,MATCH(C5,$B$1:$E$1,1))</code></pre>
+<p>이 함수를 D5 셀에 입력하면, C5의 값과 $B<span class="math inline">\(1:\)</span>E$1의 값 중 C5의 값보다 크거나 같은 최초의 값을 찾은 후, 해당 인덱스 위치의 $B<span class="math inline">\(2:\)</span>E$2 범위 값을 출력합니다.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/excel/excel_match.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/excel/excel_match.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="r-코드-1" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="r-코드-1"><span class="header-section-number">5.2.1</span> R 코드</h3>
+<p>구매금액별로 할인율을 달리 적용하여 최종 결재금액을 계산한다.</p>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># discount_raw &lt;- read_excel("data/excel_data.xlsx", sheet = "고급2", range = "A1:E2")</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># discount_tbl &lt;- discount_raw %&gt;% </span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   pivot_longer(-구매가격, names_to = "구매가", values_to = "할인율") %&gt;% </span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(-구매가격) %&gt;% </span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   rename(구매가격=구매가)</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>purchase_tbl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/excel_data.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"고급2"</span>, <span class="at">range =</span> <span class="st">"A4:C24"</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>purchase_tbl <span class="sc">%&gt;%</span> </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(할인율 <span class="ot">=</span> <span class="fu">case_when</span>(<span class="fu">between</span>(구매금액, <span class="dv">1</span>, <span class="dv">30000</span>) <span class="sc">~</span> <span class="fl">0.02</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">between</span>(구매금액, <span class="dv">30001</span>, <span class="dv">50000</span>) <span class="sc">~</span> <span class="fl">0.05</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">between</span>(구매금액, <span class="dv">50001</span>, <span class="dv">100000</span>) <span class="sc">~</span> <span class="fl">0.1</span>,</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fl">0.2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(결재금액 <span class="ot">=</span> 구매금액 <span class="sc">*</span> (<span class="dv">1</span><span class="sc">-</span>할인율)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    gtExtras<span class="sc">::</span><span class="fu">gt_theme_nytimes</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+
+<div id="uyebswbiys" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#uyebswbiys .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uyebswbiys .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uyebswbiys .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uyebswbiys .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uyebswbiys .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uyebswbiys .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uyebswbiys .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uyebswbiys .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uyebswbiys .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uyebswbiys .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uyebswbiys .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uyebswbiys .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uyebswbiys .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uyebswbiys .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uyebswbiys .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uyebswbiys .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uyebswbiys .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uyebswbiys .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uyebswbiys .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uyebswbiys .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uyebswbiys .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#uyebswbiys .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uyebswbiys .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uyebswbiys .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uyebswbiys .gt_left {
+  text-align: left;
+}
+
+#uyebswbiys .gt_center {
+  text-align: center;
+}
+
+#uyebswbiys .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uyebswbiys .gt_font_normal {
+  font-weight: normal;
+}
+
+#uyebswbiys .gt_font_bold {
+  font-weight: bold;
+}
+
+#uyebswbiys .gt_font_italic {
+  font-style: italic;
+}
+
+#uyebswbiys .gt_super {
+  font-size: 65%;
+}
+
+#uyebswbiys .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#uyebswbiys .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uyebswbiys .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uyebswbiys .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uyebswbiys .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uyebswbiys .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uyebswbiys .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th id="날짜" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">날짜</th>
+<th id="고객명" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">고객명</th>
+<th id="구매금액" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">구매금액</th>
+<th id="할인율" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">할인율</th>
+<th id="결재금액" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">결재금액</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">1</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">105400</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">84320</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">2</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">87200</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">78480</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">3</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">59500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">53550</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">4</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">최ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">124800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">99840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">5</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">장ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">73500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">66150</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">6</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">홍ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">29000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.02</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">28420</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">7</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">송ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">43600</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.05</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">41420</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">8</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">정ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">91300</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">82170</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">9</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">12000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.02</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">11760</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">10</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">56000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">50400</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">11</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">112700</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">90160</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">12</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">46800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.05</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">44460</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">13</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">최ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">76200</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">68580</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">14</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">장ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">99800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">89820</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">15</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">홍ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">63000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">56700</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">16</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">송ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">118500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">94800</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">17</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">정ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">55700</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">50130</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">18</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">97600</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">87840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">19</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">84300</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">75870</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">20</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">51400</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">46260</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="전문가" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 전문가</h1>
+<p>“엑셀 내부 프로그래밍 VBA코드 활용”하는 경우 전문가라고 한다. 먼저 엑셀 상단 메뉴에서 <code>파일 &amp;rarr; 옵션 &amp;rarr; 리본 사용자 지정 &amp;rarr; 개발도구</code>를 클릭하여 활성화시키면된다. 그리고 챗GPT에서 작성된 VBA 코드는 해당 엑셀쉬트(Sheet)를 활성화시킨 후에 코드를 붙여넣고 상단 실행버튼을 클릭하면 된다.</p>
+<div id="fig-vba" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/excel/excel_vba.jpg" class="lightbox" title="VBA 개발도구 설정" data-gallery="quarto-lightbox-gallery-6"><img src="images/excel/excel_vba.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">VBA 개발도구 설정</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/excel/excel_vba_exec.jpg" class="lightbox" title="VBA 실행" data-gallery="quarto-lightbox-gallery-7"><img src="images/excel/excel_vba_exec.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">VBA 실행</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">그림&nbsp;1: 엑셀 내부 VBA 프로그래밍 언어 실행</figcaption><p></p>
+</figure>
+</div>
+<p>VBA는 Visual Basic for Applications의 약자로 Excel, Word, PowerPoint와 같은 Microsoft Office 응용 프로그램에 통합된 프로그래밍 언어입니다. VBA를 사용하면 이러한 애플리케이션 내에서 작업을 자동화하고 사용자 지정 함수를 만들 수 있다. VBA 코드는 애플리케이션 내에서 작성 및 편집할 수 있으므로 다양한 사용자 지정 및 자동화 가능성을 제공한다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트: 엑셀 A:G 행이 빈 칸일 경우 그 다음 텍스트가 나올 때까지 각각 행을 삭제하는 VBA코드를 생성해주세요.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>아래와 같은 VBA 코드를 사용하면 A:G 행이 빈 칸인 경우에는 그 다음에 있는 텍스트가 나올 때까지 해당 행을 삭제할 수 있습니다.</p>
+<pre class="vba"><code>Sub DeleteBlankRows()
+    Dim LastRow As Long
+    Dim i As Long
+    
+    LastRow = Range("A" &amp; Rows.Count).End(xlUp).Row
+    
+    For i = LastRow To 2 Step -1
+        If Range("A" &amp; i).Value = "" And Range("B" &amp; i).Value = "" And Range("C" &amp; i).Value = "" And Range("D" &amp; i).Value = "" And Range("E" &amp; i).Value = "" And Range("F" &amp; i).Value = "" And Range("G" &amp; i).Value = "" Then
+            Range("A" &amp; i &amp; ":G" &amp; i).Delete Shift:=xlUp
+        End If
+    Next i
+End Sub</code></pre>
+<p>이 코드는 엑셀 시트의 A열부터 G열까지를 순회하면서, 해당 행이 모든 열에서 빈 칸인 경우에는 해당 행을 삭제합니다. 이 때, 마지막 행부터 역순으로 삭제하기 때문에 삭제 후 다음 행으로 이동할 필요가 없습니다.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="실습-엑셀파일" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 실습 엑셀파일</h1>
+<p>상기 실습 내용이 담긴 엑셀 파일은 아래 다운로드 받을 수 있다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<a href="data:application/zip;base64,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" download="excel_data.zip">다운로드</a>
+</div>
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">참고문헌</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-sdf2023" class="csl-entry" role="listitem">
+"ChatGPT활용연구TFT. (2023). <em>[업무활용편] ChatGPT 활용사례 및 활용 팁</em>. 서울디지털재단. <a href="https://sdf.seoul.kr/research-report/2003">https://sdf.seoul.kr/research-report/2003</a>
+</div>
+<div id="ref-sdf2023v2" class="csl-entry" role="listitem">
+ChatGPT활용연구TFT. (2023). <em>[일상생활·창작활동·교육분야편] ChatGPT 활용사례 및 팁</em>. 서울디지털재단. <a href="https://sdf.seoul.kr/research-report/2059">https://sdf.seoul.kr/research-report/2059</a>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><a href="https://quarto.org/">Quarto</a> 로 제작</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+
+
+
+</body></html>
