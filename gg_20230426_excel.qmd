@@ -1,6 +1,6 @@
 ---
 title: "chatGPT"
-subtitle: "경기도 직무교육 (엑셀)"
+subtitle: "직무교육 - 엑셀"
 author:
   - name: 이광춘
     url: https://www.linkedin.com/in/kwangchunlee/
@@ -364,6 +364,21 @@ End Sub
 xfun::embed_files(c('data/excel_data.xlsx'),
                   text='다운로드')
 ```
+
+
+# 프로그래밍
+
+## 파이썬 : 계산기
+
+- [계산기 프로그램](https://r2bit.com/chatGPT/calculator.html)
+
+## 삼성전자 주가예측
+
+- [삼성전자 주가예측](https://r2bit.com/chatGPT/samsung.html)
+
+
+
+
 
 
 

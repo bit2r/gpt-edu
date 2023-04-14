@@ -6,7 +6,7 @@ author:
     url: https://www.linkedin.com/in/kwangchunlee/
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r
-date: "2023-04-26"
+date: "2023-04-07"
 title-block-banner: true
 #title-block-banner: "#562457"
 format:
@@ -40,38 +40,7 @@ editor:
     wrap: 72
 ---
 
-```{mermaid}
-flowchart LR
-   subgraph 주 강의범위
-    A[강의 PPT] --> AB["글쓰기<br>(write)"] --> B[실습: <br> 개회사 등]
-    A[강의 PPT] --> AC["그리기<br>(draw)"] --> C[그리기: <br> 이미지 작성자 등]
-    A[강의 PPT] --> AD["코딩<br>(code)"] --> D[실습: <br> 엑셀 등]
-    end
-    subgraph 부 강의범위
-    A[강의 PPT] -.-> AE["추론<br>(code)"] -.-> E[실습: <br> 수능 등]
-    end
-    B --> F["심화(선택)"]
-    C --> F["심화(선택)"]
-    D --> F["심화(선택)"]
-    E -.-> F["심화(선택)"]
-
-click A href "https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide"
-click AB href "https://r2bit.com/chatGPT/prompt_in_practice.html"
-click F href "https://r2bit.com/chatGPT/"
-
-class A nodeStyle
-class AB,AC,AD,AE theoryStyle
-class B,C,D,E practiceStyle
-class F taskStyle
-
-classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-classDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-classDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
-```
-
-
-# 기계가 학습을 정말(?)
+# 들어가며
 
 [Code.org](https://code.org/)는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.
 
@@ -152,40 +121,66 @@ Zenodo [Cats and Dogs sample](https://zenodo.org/record/5226945#.ZDSZ03ZBwuU) �
 1. 개발완료 후 웹링크 배포하여 공유
 :::
 
-# 챗GPT 보안사고
 
-- [정두용 (2023-03-30), "우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출", 이코노미스트](https://economist.co.kr/article/view/ecn202303300057)
-
-> 삼성전자 DS 부문 임직원 A씨는 **반도체 설비 계측 데이터베이스(DB)** 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.
-
-> 임직원 B씨는 수율·불량 설비 파악을 위해 작성한 **프로그램 코드**를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 **네이버 클로바 애플리케이션(앱)**을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.
+# 퀵 드로우
 
 
-- [민재용 (2023.04.02), "이탈리아도 챗GPT '차단'...서방 국가중 처음", 한국일보](https://m.hankookilbo.com/News/Read/A2023040208490005108)
+[Quick, Draw!](https://quickdraw.withgoogle.com/) 는 손으로 그린 낙서를 인식하기 위해 머신 러닝을 사용하는 Google에서 개발한 온라인 게임이다. 이 게임은 20초의 제한 시간 내에 개, 집, 나무와 같은 일련의 사물을 그리도록 사용자에게 요청하고, 사용자가 그림을 그리면 게임의 머신 러닝 모델이 실시간으로 사용자가 무엇을 그리는지 추측하여 결과를 보여준다.
 
-> 로이터 통신 등에 따르면 이탈리아 데이터 보호청은 "챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것"이라고 밝혔다.
+Quick, Draw! 의 목적은 (리)캡챠처럼 손으로 그린 대량의 낙서를 수집하여 머신 러닝 모델의 정확도를 훈련하고 개선하는 데 사용함으로써 Google의 머신 러닝 알고리즘을 개선하는 데 도움을 주는 것이다. 이 게임은 2016년 출시 이후 수백만 명이 플레이했으며, 그 결과 생성된 데이터는 이미지 인식, 언어 번역, 음성 인식과 같은 작업을 위한 Google의 머신 러닝 모델을 개선하는 데 사용되었다.
 
-> 접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.
+![](images/quick_draw.jpg)
 
-# 챗GPT 글쓰기
+## 실습
 
-- [바로가기](gg_20230426_write.html)
+:::{.callout-note collapse="true"}
+### 퀵 드로우 
 
-# 챗GPT 그리기
+[Quick, Draw!](https://quickdraw.withgoogle.com/) 웹사이트에 접속하여 **시작하기**를 
+클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 
+그리고, 결과를 공유해서 각자 그린 그림을 품평해보자. 
 
-- [바로가기](gg_20230426_draw.html)
+:::
 
-# 챗GPT 코딩
+# 딥 드림
 
-- [바로가기](gg_20230426_excel.html)
+[딥 드림 제너레이터](https://deepdreamgenerator.com/)는 인공 지능과 딥 러닝 알고리즘을 사용하여 이미지를 초현실적이고 꿈 같은 작품으로 변환하는 온라인 도구로 가입시 100개 번개를 무료로 나눠주고 
+그림 한개를 생성하게 되면 5번개가 차감되는데 AI를 사용하여 추상적이고 예술적인 이미지를 빠르게 생성할 수 있는 기능으로 아티스트, 디자이너, 사진작가들 사이에서 인기를 얻고 있다. 
+다음 세가지 스타일을 지원하기 때문에 원하는 기능을 선택하여 활용하면 좋다.
 
-# 사례분석
-
-- 오피스 전쟁: [마이크로소프트 오피스](https://r2bit.com/chatGPT/office.html)
-- 사례 분석: [AI부상과 일자리의 변화](https://r2bit.com/bitSlide/slideshow/202304-gpt/#/%ED%95%9C%EA%B3%84-limit)
-
-
-
+![](images/deep-dearm.-tutorialjpg)
 
 
+- Text 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성
+- Deep Style: 이미지를 업로드하여 스타일을 지정하게 되면 해당 스타일이 업로드한 이미지에 적용됨
+- Deep Dream: 이미지를 업로드하면 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성  
+
+::: {#fig-deep-dream layout-ncol=4}
+
+
+![텍스트: A sailing ship in a moonlight. Starry night. Style of van gogh](images/deep-dearm.jpg)
+
+![Deep Style: Van Gogh](images/deep-style.jpg)
+
+![Deep Style: 가장 마지막 스타일 적용](images/deep-style-2.jpg)
+
+![Deep Dream](images/deep-dream-dream.jpg)
+
+사례별 딥 드림 생성기(Deep Dream Generator) 
+
+:::
+
+
+## 실습
+
+:::{.callout-note collapse="true"}
+### 딥 드림
+
+[DEEP DREAM GENERATOR](https://deepdreamgenerator.com/) 웹사이트에 접속하여 다음을 각각 실습한다.
+
+1. Deep Style: 본인 이미지를 업로드하여 빈센트 반 고흐 혹은 다른 스타일을 적용한다. 
+1. Text 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성한다.
+1. Deep Dream: 이미지를 업로드하여 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성한다.
+
+:::
 

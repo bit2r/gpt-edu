@@ -88,7 +88,7 @@
     "href": "gg_20230426.html",
     "title": "chatGPT",
     "section": "",
-    "text": "flowchart LR\n   subgraph 주 강의범위\n    A[강의 PPT] --&gt; AB[\"글쓰기&lt;br&gt;(write)\"] --&gt; B[실습: &lt;br&gt; 개회사 등]\n    A[강의 PPT] --&gt; AC[\"그리기&lt;br&gt;(draw)\"] --&gt; C[그리기: &lt;br&gt; 이미지 작성자 등]\n    A[강의 PPT] --&gt; AD[\"코딩&lt;br&gt;(code)\"] --&gt; D[실습: &lt;br&gt; 엑셀 등]\n    end\n    subgraph 부 강의범위\n    A[강의 PPT] -.-&gt; AE[\"추론&lt;br&gt;(code)\"] -.-&gt; E[실습: &lt;br&gt; 수능 등]\n    end\n    B --&gt; F[\"심화(선택)\"]\n    C --&gt; F[\"심화(선택)\"]\n    D --&gt; F[\"심화(선택)\"]\n    E -.-&gt; F[\"심화(선택)\"]\n\nclick A href \"https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide\"\nclick AB href \"https://r2bit.com/chatGPT/prompt_in_practice.html\"\nclick F href \"https://r2bit.com/chatGPT/\"\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;\n\n\n\n\n\n\n1 챗GPT 실무교육\n\n챗GPT 글쓰기\n챗GPT 그리기\n챗GPT 코딩"
+    "text": "flowchart LR\n   subgraph 주 강의범위\n    A[강의 PPT] --&gt; AB[\"글쓰기&lt;br&gt;(write)\"] --&gt; B[실습: &lt;br&gt; 개회사 등]\n    A[강의 PPT] --&gt; AC[\"그리기&lt;br&gt;(draw)\"] --&gt; C[그리기: &lt;br&gt; 이미지 작성자 등]\n    A[강의 PPT] --&gt; AD[\"코딩&lt;br&gt;(code)\"] --&gt; D[실습: &lt;br&gt; 엑셀 등]\n    end\n    subgraph 부 강의범위\n    A[강의 PPT] -.-&gt; AE[\"추론&lt;br&gt;(code)\"] -.-&gt; E[실습: &lt;br&gt; 수능 등]\n    end\n    B --&gt; F[\"심화(선택)\"]\n    C --&gt; F[\"심화(선택)\"]\n    D --&gt; F[\"심화(선택)\"]\n    E -.-&gt; F[\"심화(선택)\"]\n\nclick A href \"https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide\"\nclick AB href \"https://r2bit.com/chatGPT/prompt_in_practice.html\"\nclick F href \"https://r2bit.com/chatGPT/\"\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;"
   },
   {
     "objectID": "gg_20230426.html#데이터셋",
@@ -291,7 +291,7 @@
     "href": "gg_20230426_draw.html",
     "title": "chatGPT",
     "section": "",
-    "text": "Code.org는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.\nCode.org에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자\n\nAI: Is this a fish?"
+    "text": "Quick, Draw! 는 손으로 그린 낙서를 인식하기 위해 머신 러닝을 사용하는 Google에서 개발한 온라인 게임이다. 이 게임은 20초의 제한 시간 내에 개, 집, 나무와 같은 일련의 사물을 그리도록 사용자에게 요청하고, 사용자가 그림을 그리면 게임의 머신 러닝 모델이 실시간으로 사용자가 무엇을 그리는지 추측하여 결과를 보여준다.\nQuick, Draw! 의 목적은 (리)캡챠처럼 손으로 그린 대량의 낙서를 수집하여 머신 러닝 모델의 정확도를 훈련하고 개선하는 데 사용함으로써 Google의 머신 러닝 알고리즘을 개선하는 데 도움을 주는 것이다. 이 게임은 2016년 출시 이후 수백만 명이 플레이했으며, 그 결과 생성된 데이터는 이미지 인식, 언어 번역, 음성 인식과 같은 작업을 위한 Google의 머신 러닝 모델을 개선하는 데 사용되었다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n퀵 드로우\n\n\n\n\n\nQuick, Draw! 웹사이트에 접속하여 시작하기를 클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 그리고, 결과를 공유해서 각자 그린 그림을 품평해보자."
   },
   {
     "objectID": "gg_20230426_draw.html#문제가-어려운-이유",
@@ -325,15 +325,15 @@
     "objectID": "gg_20230426_draw.html#실습",
     "href": "gg_20230426_draw.html#실습",
     "title": "chatGPT",
-    "section": "2.5 실습",
-    "text": "2.5 실습\n\n\n\n\n\n\n치와와 강아지와 머핀을 구분하는 인공지능 모형을 만드세요\n\n\n\n\n\n\n캐글 chihuahua or muffin 데이터셋 다운로드\nteachable machine 웹사이트 접속\n치와와 강아지와 머핀을 구분하는 기계학습 모형 개발\n\n치와와 강아지 이미지 (test 폴더)\n머핀 이미지 (test 폴더)\n\n개발완료 후 웹링크 배포하여 공유"
+    "section": "",
+    "text": "퀵 드로우\n\n\n\n\n\nQuick, Draw! 웹사이트에 접속하여 시작하기를 클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 그리고, 결과를 공유해서 각자 그린 그림을 품평해보자."
   },
   {
     "objectID": "gg_20230426_draw.html#실습-1",
     "href": "gg_20230426_draw.html#실습-1",
     "title": "chatGPT",
-    "section": "3.1 실습",
-    "text": "3.1 실습\n\n\n\n\n\n\n퀵 드로우\n\n\n\n\n\nQuick, Draw! 웹사이트에 접속하여 시작하기를 클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 그리고, 결과를 공유해서 각자 그린 그림을 품평해보자."
+    "section": "2.1 실습",
+    "text": "2.1 실습\n\n\n\n\n\n\n딥 드림\n\n\n\n\n\nDEEP DREAM GENERATOR 웹사이트에 접속하여 다음을 각각 실습한다.\n\nDeep Style: 본인 이미지를 업로드하여 빈센트 반 고흐 혹은 다른 스타일을 적용한다.\nText 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성한다.\nDeep Dream: 이미지를 업로드하여 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성한다."
   },
   {
     "objectID": "gg_20230426_draw.html#실습-2",
@@ -341,5 +341,82 @@
     "title": "chatGPT",
     "section": "4.1 실습",
     "text": "4.1 실습\n\n\n\n\n\n\n딥 드림\n\n\n\n\n\nDEEP DREAM GENERATOR 웹사이트에 접속하여 다음을 각각 실습한다.\n\nDeep Style: 본인 이미지를 업로드하여 빈센트 반 고흐 혹은 다른 스타일을 적용한다.\nText 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성한다.\nDeep Dream: 이미지를 업로드하여 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성한다."
+  },
+  {
+    "objectID": "gg_20230426_write.html",
+    "href": "gg_20230426_write.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "Code.org는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.\nCode.org에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자\n\nAI: Is this a fish?"
+  },
+  {
+    "objectID": "gg_20230426_write.html#문제가-어려운-이유",
+    "href": "gg_20230426_write.html#문제가-어려운-이유",
+    "title": "chatGPT",
+    "section": "2.1 문제가 어려운 이유",
+    "text": "2.1 문제가 어려운 이유\n기계학습(AI) 모형을 개발할 때 가장 중요한 것이 데이터셋이다. 과거 AI 모형은 강아지 그림과 고양이 그림을 잘 구별하지 못하였다. 하지만 2010년 전후로 새로운 인공지능 기술이 개발되면서 이런 문제는 자연히 해결되고 더 나아가 커다란 변혁이 일어났다.\n\n\n\n\n\n\n양치기 강아지와 마대자루 걸레\n\n\n\n\n\n치와와 강아지와 머핀\n\n\n\n\n\n강아지와 베이글 빵\n\n\n\n그림 1: 출처: Puppies Or Food? 12 Pics That Will Make You Question Reality"
+  },
+  {
+    "objectID": "gg_20230426_write.html#데이터셋",
+    "href": "gg_20230426_write.html#데이터셋",
+    "title": "chatGPT",
+    "section": "2.2 데이터셋",
+    "text": "2.2 데이터셋\nZenodo Cats and Dogs sample 데이터셋은 캐글 고양이와 개 데이터셋에서 추출한 소규모 개와 고양이 데이터셋으로 훈련 세트용 이미지 1000개(고양이 500개, 개 500개)와 테스트 세트용 이미지 400개(각각 200개)가 포함되어 있다.\n다운로드 받은 데이터셋을 로컬 컴퓨터에서 압축을 푼다. 고양이와 강아지 사진을 윈도우즈 탐색기를 사용해서 살펴본다."
+  },
+  {
+    "objectID": "gg_20230426_write.html#훈련",
+    "href": "gg_20230426_write.html#훈련",
+    "title": "chatGPT",
+    "section": "2.3 훈련",
+    "text": "2.3 훈련\n데이터에서 구분된 고양이와 강아지를 이미지를 각각 범주에 넣고 학습버튼을 눌러 학습을 완료시킨다. 필요한 경우 웹캠 혹은 고양이, 강아지 이미지를 구해 출력값이 제대로 나오는지 점검한다."
+  },
+  {
+    "objectID": "gg_20230426_write.html#배포",
+    "href": "gg_20230426_write.html#배포",
+    "title": "chatGPT",
+    "section": "2.4 배포",
+    "text": "2.4 배포\n고양이와 강아지 사진 분류 서비스\n우측 미리보기 모델 내보내기 버튼을 눌러 모형을 내보낸다. “공유 가능한 링크”의 복사 버튼을 클릭하면 웹 브라우져에서 접속이 가능한 URL이 생성되어 이를 공유한다."
+  },
+  {
+    "objectID": "gg_20230426_write.html#실습",
+    "href": "gg_20230426_write.html#실습",
+    "title": "chatGPT",
+    "section": "2.5 실습",
+    "text": "2.5 실습\n\n\n\n\n\n\n치와와 강아지와 머핀을 구분하는 인공지능 모형을 만드세요\n\n\n\n\n\n\n캐글 chihuahua or muffin 데이터셋 다운로드\nteachable machine 웹사이트 접속\n치와와 강아지와 머핀을 구분하는 기계학습 모형 개발\n\n치와와 강아지 이미지 (test 폴더)\n머핀 이미지 (test 폴더)\n\n개발완료 후 웹링크 배포하여 공유"
+  },
+  {
+    "objectID": "gg_20230426_write.html#실습-1",
+    "href": "gg_20230426_write.html#실습-1",
+    "title": "chatGPT",
+    "section": "3.1 실습",
+    "text": "3.1 실습\n\n\n\n\n\n\n퀵 드로우\n\n\n\n\n\nQuick, Draw! 웹사이트에 접속하여 시작하기를 클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 그리고, 결과를 공유해서 각자 그린 그림을 품평해보자."
+  },
+  {
+    "objectID": "gg_20230426_write.html#실습-2",
+    "href": "gg_20230426_write.html#실습-2",
+    "title": "chatGPT",
+    "section": "4.1 실습",
+    "text": "4.1 실습\n\n\n\n\n\n\n딥 드림\n\n\n\n\n\nDEEP DREAM GENERATOR 웹사이트에 접속하여 다음을 각각 실습한다.\n\nDeep Style: 본인 이미지를 업로드하여 빈센트 반 고흐 혹은 다른 스타일을 적용한다.\nText 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성한다.\nDeep Dream: 이미지를 업로드하여 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성한다."
+  },
+  {
+    "objectID": "gg_20230426_draw.html#공유의-장",
+    "href": "gg_20230426_draw.html#공유의-장",
+    "title": "chatGPT",
+    "section": "3.1 공유의 장",
+    "text": "3.1 공유의 장\n\n4월 26일\n4월 27일\n4월 28일"
+  },
+  {
+    "objectID": "gg_20230426_excel.html#파이썬-계산기",
+    "href": "gg_20230426_excel.html#파이썬-계산기",
+    "title": "chatGPT",
+    "section": "8.1 파이썬 : 계산기",
+    "text": "8.1 파이썬 : 계산기\n\n계산기 프로그램"
+  },
+  {
+    "objectID": "gg_20230426_excel.html#삼성전자-주가예측",
+    "href": "gg_20230426_excel.html#삼성전자-주가예측",
+    "title": "chatGPT",
+    "section": "8.2 삼성전자 주가예측",
+    "text": "8.2 삼성전자 주가예측\n\n삼성전자 주가예측"
   }
 ]

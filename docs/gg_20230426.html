@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +85,7 @@ ga('send', {
 <link rel="stylesheet" href="css/quarto.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -212,7 +215,7 @@ ga('send', {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gg_20230426_write.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./gg_20230426_write.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">직무교육 - 글쓰기</span></a>
   </div>
 </li>
@@ -240,12 +243,25 @@ ga('send', {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#챗gpt-실무교육" id="toc-챗gpt-실무교육" class="nav-link active" data-scroll-target="#챗gpt-실무교육"><span class="header-section-number">1</span> 챗GPT 실무교육</a></li>
+  <li><a href="#기계가-학습을-정말" id="toc-기계가-학습을-정말" class="nav-link active" data-scroll-target="#기계가-학습을-정말"><span class="header-section-number">1</span> 기계가 학습을 정말(?)</a></li>
+  <li><a href="#ai-모형-개발" id="toc-ai-모형-개발" class="nav-link" data-scroll-target="#ai-모형-개발"><span class="header-section-number">2</span> AI 모형 개발</a>
+  <ul class="collapse">
+  <li><a href="#문제가-어려운-이유" id="toc-문제가-어려운-이유" class="nav-link" data-scroll-target="#문제가-어려운-이유"><span class="header-section-number">2.1</span> 문제가 어려운 이유</a></li>
+  <li><a href="#데이터셋" id="toc-데이터셋" class="nav-link" data-scroll-target="#데이터셋"><span class="header-section-number">2.2</span> 데이터셋</a></li>
+  <li><a href="#훈련" id="toc-훈련" class="nav-link" data-scroll-target="#훈련"><span class="header-section-number">2.3</span> 훈련</a></li>
+  <li><a href="#배포" id="toc-배포" class="nav-link" data-scroll-target="#배포"><span class="header-section-number">2.4</span> 배포</a></li>
+  <li><a href="#실습" id="toc-실습" class="nav-link" data-scroll-target="#실습"><span class="header-section-number">2.5</span> 실습</a></li>
+  </ul></li>
+  <li><a href="#챗gpt-보안사고" id="toc-챗gpt-보안사고" class="nav-link" data-scroll-target="#챗gpt-보안사고"><span class="header-section-number">3</span> 챗GPT 보안사고</a></li>
+  <li><a href="#챗gpt-글쓰기" id="toc-챗gpt-글쓰기" class="nav-link" data-scroll-target="#챗gpt-글쓰기"><span class="header-section-number">4</span> 챗GPT 글쓰기</a></li>
+  <li><a href="#챗gpt-그리기" id="toc-챗gpt-그리기" class="nav-link" data-scroll-target="#챗gpt-그리기"><span class="header-section-number">5</span> 챗GPT 그리기</a></li>
+  <li><a href="#챗gpt-코딩" id="toc-챗gpt-코딩" class="nav-link" data-scroll-target="#챗gpt-코딩"><span class="header-section-number">6</span> 챗GPT 코딩</a></li>
+  <li><a href="#사례분석" id="toc-사례분석" class="nav-link" data-scroll-target="#사례분석"><span class="header-section-number">7</span> 사례분석</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -286,12 +302,161 @@ classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bo
 </div>
 </div>
 </div>
-<section id="챗gpt-실무교육" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 챗GPT 실무교육</h1>
+<section id="기계가-학습을-정말" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 기계가 학습을 정말(?)</h1>
+<p><a href="https://code.org/">Code.org</a>는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.</p>
+<p><a href="https://code.org/">Code.org</a>에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자</p>
 <ul>
-<li>챗GPT 글쓰기</li>
-<li>챗GPT 그리기</li>
-<li>챗GPT 코딩</li>
+<li><a href="https://studio.code.org/s/oceans/lessons/1/levels/2">AI: Is this a fish?</a></li>
+</ul>
+</section>
+<section id="ai-모형-개발" class="level1 page-columns page-full" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> AI 모형 개발</h1>
+<p><a href="https://teachablemachine.withgoogle.com/">티처블 머신(teachable machine)</a>을 사용하면 로컬 컴퓨터에 별다른 설치없이 기계학습(AI 인공지능) 모형을 개발하는 것은 물론 서비스로 출시도 가능하다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[데이터셋] --&gt; B(기계학습 &lt;br&gt; 훈련)
+  B --&gt; C[배포]
+  C --&gt; D[추론]
+  
+  style A fill:#9fe6a0,stroke:#333,stroke-width:2px;
+  style B fill:#80c1ff,stroke:#333,stroke-width:2px;
+  style C fill:#ffa080,stroke:#333,stroke-width:2px;
+  style D fill:#f7ddbb,stroke:#333,stroke-width:2px;  
+</pre>
+</div>
+</div>
+</div>
+</div>
+<section id="문제가-어려운-이유" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="문제가-어려운-이유"><span class="header-section-number">2.1</span> 문제가 어려운 이유</h2>
+<p>기계학습(AI) 모형을 개발할 때 가장 중요한 것이 데이터셋이다. 과거 AI 모형은 강아지 그림과 고양이 그림을 잘 구별하지 못하였다. 하지만 2010년 전후로 새로운 인공지능 기술이 개발되면서 이런 문제는 자연히 해결되고 더 나아가 커다란 변혁이 일어났다.</p>
+<div id="fig-dogs" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack-6__700.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="양치기 강아지와 마대자루 걸레"><img src="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack-6__700.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">양치기 강아지와 마대자루 걸레</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack-7__700.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="치와와 강아지와 머핀"><img src="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack-7__700.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">치와와 강아지와 머핀</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack__700.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="강아지와 베이글 빵"><img src="images/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack__700.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">강아지와 베이글 빵</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">그림&nbsp;1: 출처: <a href="https://www.boredpanda.com/dog-food-comparison-bagel-muffin-lookalike-teenybiscuit-karen-zack">Puppies Or Food? 12 Pics That Will Make You Question Reality</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="데이터셋" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="데이터셋"><span class="header-section-number">2.2</span> 데이터셋</h2>
+<p>Zenodo <a href="https://zenodo.org/record/5226945#.ZDSZ03ZBwuU">Cats and Dogs sample</a> 데이터셋은 <a href="https://www.kaggle.com/c/dogs-vs-cats/data">캐글 고양이와 개 데이터셋</a>에서 추출한 소규모 개와 고양이 데이터셋으로 훈련 세트용 이미지 1000개(고양이 500개, 개 500개)와 테스트 세트용 이미지 400개(각각 200개)가 포함되어 있다.</p>
+<p>다운로드 받은 데이터셋을 로컬 컴퓨터에서 압축을 푼다. 고양이와 강아지 사진을 윈도우즈 탐색기를 사용해서 살펴본다.</p>
+</section>
+<section id="훈련" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="훈련"><span class="header-section-number">2.3</span> 훈련</h2>
+<p>데이터에서 구분된 고양이와 강아지를 이미지를 각각 범주에 넣고 학습버튼을 눌러 학습을 완료시킨다. 필요한 경우 웹캠 혹은 고양이, 강아지 이미지를 구해 출력값이 제대로 나오는지 점검한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/cats_dogs_training.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/cats_dogs_training.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="배포" class="level2 page-columns page-full" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="배포"><span class="header-section-number">2.4</span> 배포</h2>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://teachablemachine.withgoogle.com/models/WDOR30DkZ/">고양이와 강아지 사진 분류 서비스</a></span></div></div>
+<p>우측 <strong>미리보기</strong> <strong>모델 내보내기</strong> 버튼을 눌러 모형을 내보낸다. “공유 가능한 링크”의 복사 버튼을 클릭하면 웹 브라우져에서 접속이 가능한 URL이 생성되어 이를 공유한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/cats_dogs_deploy.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/cats_dogs_deploy.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="실습" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="실습"><span class="header-section-number">2.5</span> 실습</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+치와와 강아지와 머핀을 구분하는 인공지능 모형을 만드세요
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>캐글 <a href="https://www.kaggle.com/datasets/returnofsputnik/chihuahua-or-muffin">chihuahua or muffin</a> 데이터셋 다운로드</li>
+<li><a href="https://teachablemachine.withgoogle.com/">teachable machine</a> 웹사이트 접속</li>
+<li>치와와 강아지와 머핀을 구분하는 기계학습 모형 개발
+<ul>
+<li>치와와 강아지 이미지 (<code>test</code> 폴더)</li>
+<li>머핀 이미지 (<code>test</code> 폴더)</li>
+</ul></li>
+<li>개발완료 후 웹링크 배포하여 공유</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="챗gpt-보안사고" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 챗GPT 보안사고</h1>
+<ul>
+<li><a href="https://economist.co.kr/article/view/ecn202303300057">정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트</a></li>
+</ul>
+<blockquote class="blockquote">
+<p>삼성전자 DS 부문 임직원 A씨는 <strong>반도체 설비 계측 데이터베이스(DB)</strong> 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>임직원 B씨는 수율·불량 설비 파악을 위해 작성한 <strong>프로그램 코드</strong>를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 <strong>네이버 클로바 애플리케이션(앱)</strong>을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.</p>
+</blockquote>
+<ul>
+<li><a href="https://m.hankookilbo.com/News/Read/A2023040208490005108">민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보</a></li>
+</ul>
+<blockquote class="blockquote">
+<p>로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.</p>
+</blockquote>
+</section>
+<section id="챗gpt-글쓰기" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 챗GPT 글쓰기</h1>
+<ul>
+<li><a href="gg_20230426_write.html">바로가기</a></li>
+</ul>
+</section>
+<section id="챗gpt-그리기" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 챗GPT 그리기</h1>
+<ul>
+<li><a href="gg_20230426_draw.html">바로가기</a></li>
+</ul>
+</section>
+<section id="챗gpt-코딩" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 챗GPT 코딩</h1>
+<ul>
+<li><a href="gg_20230426_excel.html">바로가기</a></li>
+</ul>
+</section>
+<section id="사례분석" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 사례분석</h1>
+<ul>
+<li>오피스 전쟁: <a href="https://r2bit.com/chatGPT/office.html">마이크로소프트 오피스</a></li>
+<li>사례 분석: <a href="https://r2bit.com/bitSlide/slideshow/202304-gpt/#/%ED%95%9C%EA%B3%84-limit">AI부상과 일자리의 변화</a></li>
 </ul>
 
 
@@ -539,6 +704,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right"><a href="https://github.com/bit2r/gpt-edu">Github 코드 저장소</a></div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 
