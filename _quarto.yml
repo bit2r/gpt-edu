@@ -35,12 +35,16 @@ website:
             text: "직무교육 심화(4/7)"
           - href: km_20230421.qmd
             text: "직무교육(4/21)"            
-      - section: "경기도"
+      - section: "경기도청"
         contents:
           - href: gg_20230426.qmd
-            text: "직무교육(4/26~28)"
+            text: "직무교육(4/26~28)"        
+          - href: gg_20230426_write.qmd
+            text: "직무교육 - 글쓰기"            
+          - href: gg_20230426_draw.qmd
+            text: "직무교육 - 그리기"
           - href: gg_20230426_excel.qmd
-            text: "직무교육(4/26) 엑셀"            
+            text: "직무교육 - 엑셀"            
 
 bibliography: bibliography.bib
 csl: apa-single-spaced.csl

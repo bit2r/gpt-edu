@@ -88,7 +88,7 @@
     "href": "gg_20230426.html",
     "title": "chatGPT",
     "section": "",
-    "text": "Code.org는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.\nCode.org에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자\n\nAI: Is this a fish?"
+    "text": "flowchart LR\n   subgraph 주 강의범위\n    A[강의 PPT] --&gt; AB[\"글쓰기&lt;br&gt;(write)\"] --&gt; B[실습: &lt;br&gt; 개회사 등]\n    A[강의 PPT] --&gt; AC[\"그리기&lt;br&gt;(draw)\"] --&gt; C[그리기: &lt;br&gt; 이미지 작성자 등]\n    A[강의 PPT] --&gt; AD[\"코딩&lt;br&gt;(code)\"] --&gt; D[실습: &lt;br&gt; 엑셀 등]\n    end\n    subgraph 부 강의범위\n    A[강의 PPT] -.-&gt; AE[\"추론&lt;br&gt;(code)\"] -.-&gt; E[실습: &lt;br&gt; 수능 등]\n    end\n    B --&gt; F[\"심화(선택)\"]\n    C --&gt; F[\"심화(선택)\"]\n    D --&gt; F[\"심화(선택)\"]\n    E -.-&gt; F[\"심화(선택)\"]\n\nclick A href \"https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide\"\nclick AB href \"https://r2bit.com/chatGPT/prompt_in_practice.html\"\nclick F href \"https://r2bit.com/chatGPT/\"\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;\n\n\n\n\n\n\n1 챗GPT 실무교육\n\n챗GPT 글쓰기\n챗GPT 그리기\n챗GPT 코딩"
   },
   {
     "objectID": "gg_20230426.html#데이터셋",
@@ -285,5 +285,61 @@
     "title": "chatGPT",
     "section": "5.2 보도자료 작성",
     "text": "5.2 보도자료 작성\n광명시 생활안정지원금 신청\n\n웹공고공고문 내용프롬프트1프롬프트2\n\n\n\n\n\n\n\n\n\n지급금액 : 세대 당 10만원 2023. 3. 6.일 24시 기준 광명시에 주민등록을 둔 세대주\n기간 온라인 : 2023. 03. 20(월) 09:00 ~ 4. 28(금) 오프라인 : 2023. 03. 27(월) ~ 5. 4(목) 18:00 (토요일, 공휴일 제외)\n문의처 광명사랑화폐 콜센터(1899-7997) 광명시 민원콜센터(1688-3399)\n※ 온라인 신청 시 동명이인이 다수 존재하는 경우 [오프라인 신청 대상]으로 표시 → 온라인 진행이 불가하며 오프라인 신청기간에 주소지 동 방문 신청 필요\n※ 광명사랑화폐 온라인 발급 방법 구글플레이 앱 스토어에서 ’경기지역화폐’앱 다운로드 받고 광명사랑화폐 신청, 광명사랑화폐가 배송되면 앱에 등록하고 사용\n온라인 카드 신청방법 : ’경기지역화폐’앱 설치 → 카드 신청 → 카드 발급 및 배송(약 1주일) → (수령 후)카드 등록(’경기지역화폐’앱) → 사용\n\n\n\n다음 사업공고를 홍보할 수 있도록 보도자료를 작성해주세요. writing_style : journalistic, temperature:0.0\n\n&lt;공고문 내용&gt;\n광명시가 생활안정지원금 신청을 받습니다. 세대 당 10만원의 지원금이 지급됩니다. 광명시에 주민등록을 둔 세대주라면 신청이 가능합니다.\n\n온라인 신청은 2023년 3월 20일(월) 09:00부터 4월 28일(금)까지 가능합니다. 오프라인 신청은 2023년 3월 27일(월)부터 5월 4일(목)까지 가능하며, 토요일과 공휴일은 제외됩니다.\n\n온라인 신청 시, 동명이인이 다수 존재하는 경우에는 오프라인 신청 대상으로 표시되며, 온라인 진행이 불가하므로 오프라인 신청기간에 주소지 동을 방문하여 신청해야 합니다.\n\n광명사랑화폐 콜센터(1899-7997) 또는 광명시 민원콜센터(1688-3399)로 문의하실 수 있습니다.\n\n또한, 광명사랑화폐 온라인 발급 방법은 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 받은 후, 광명사랑화폐를 신청하고, 배송된 광명사랑화폐를 앱에 등록하여 사용할 수 있습니다.\n\n온라인 카드 신청방법은 '경기지역화폐'앱을 설치한 후, 카드를 신청하고, 약 1주일 내에 카드가 발급되며, 수령 후에는 카드를 앱에 등록하여 사용할 수 있습니다.\n\n광명시에 거주하는 세대주라면 꼭 지원금 신청을 하시기 바랍니다.\n\n\n\n다음 사업공고를 홍보할 수 있도록 한글로 보도자료를 작성해주세요. writing_style : journalistic, temperature:1.0 tone: witty\n\n&lt;공고문 내용&gt;\n광명시민 여러분, 세금으로 납부하신 돈이 이제 생활안정지원금으로 돌아옵니다!\n\n지금부터 4월 말까지, 광명시에 주민등록을 둔 세대주님들은 10만원의 지원금을 받을 자격이 있습니다.\n\n어떻게 신청하냐고요?\n온라인으로 신청하실 분들은 3월 20일부터 4월 28일까지, 오프라인으로 신청하실 분들은 3월 27일부터 5월 4일까지 신청 기간이 주어집니다.\n\n아, 그리고 주의하셔야 할 점! 온라인 신청 시 동명이인이 다수 존재한다면, 오프라인 신청을 해야합니다. 집에서 뻥튀기한 성의는 알겠는데, 동명이인은 답이 없어요.\n\n궁금한 점이 있다면 광명사랑화폐 콜센터(1899-7997) 혹은 광명시 민원콜센터(1688-3399)로 연락주세요.\n\n그리고 광명사랑화폐 온라인 발급 방법도 알려드릴게요. 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 하신 후, 광명사랑화폐를 신청하시면 배송되면 앱에 등록하시고 사용하시면 됩니다.\n\n간단하죠? 이번 생활안정지원금으로 조금이라도 여유를 만들어 보세요!\n\n\n\n\n\n\n\n\n\n프롬프트 영혼 불어넣기\n\n\n\n\n\n챗GPT 패러미터를 확인하고 원하는 텍스트 출력물을 위해 다양한 시도를 해보세요.\n실습안내: 예를 들어, 보도자료 작성에 tone: positive를 추가하여 프롬프트를 실행시키세요"
+  },
+  {
+    "objectID": "gg_20230426_draw.html",
+    "href": "gg_20230426_draw.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "Code.org는 모든 학교의 모든 학생이 초중고 핵심 교육의 일환으로 컴퓨터 과학을 배울 수 있는 기회를 갖는다는 비전에 전념하는 교육 혁신 비영리 단체로 젊은 여성과 기타 소외 계층의 학생 참여를 늘리는 데 중점을 두고 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 있다.\nCode.org에서 제작한 인공지능 교육 사례를 살펴보고 다음 심화과정으로 넘어가자\n\nAI: Is this a fish?"
+  },
+  {
+    "objectID": "gg_20230426_draw.html#문제가-어려운-이유",
+    "href": "gg_20230426_draw.html#문제가-어려운-이유",
+    "title": "chatGPT",
+    "section": "2.1 문제가 어려운 이유",
+    "text": "2.1 문제가 어려운 이유\n기계학습(AI) 모형을 개발할 때 가장 중요한 것이 데이터셋이다. 과거 AI 모형은 강아지 그림과 고양이 그림을 잘 구별하지 못하였다. 하지만 2010년 전후로 새로운 인공지능 기술이 개발되면서 이런 문제는 자연히 해결되고 더 나아가 커다란 변혁이 일어났다.\n\n\n\n\n\n\n양치기 강아지와 마대자루 걸레\n\n\n\n\n\n치와와 강아지와 머핀\n\n\n\n\n\n강아지와 베이글 빵\n\n\n\n그림 1: 출처: Puppies Or Food? 12 Pics That Will Make You Question Reality"
+  },
+  {
+    "objectID": "gg_20230426_draw.html#데이터셋",
+    "href": "gg_20230426_draw.html#데이터셋",
+    "title": "chatGPT",
+    "section": "2.2 데이터셋",
+    "text": "2.2 데이터셋\nZenodo Cats and Dogs sample 데이터셋은 캐글 고양이와 개 데이터셋에서 추출한 소규모 개와 고양이 데이터셋으로 훈련 세트용 이미지 1000개(고양이 500개, 개 500개)와 테스트 세트용 이미지 400개(각각 200개)가 포함되어 있다.\n다운로드 받은 데이터셋을 로컬 컴퓨터에서 압축을 푼다. 고양이와 강아지 사진을 윈도우즈 탐색기를 사용해서 살펴본다."
+  },
+  {
+    "objectID": "gg_20230426_draw.html#훈련",
+    "href": "gg_20230426_draw.html#훈련",
+    "title": "chatGPT",
+    "section": "2.3 훈련",
+    "text": "2.3 훈련\n데이터에서 구분된 고양이와 강아지를 이미지를 각각 범주에 넣고 학습버튼을 눌러 학습을 완료시킨다. 필요한 경우 웹캠 혹은 고양이, 강아지 이미지를 구해 출력값이 제대로 나오는지 점검한다."
+  },
+  {
+    "objectID": "gg_20230426_draw.html#배포",
+    "href": "gg_20230426_draw.html#배포",
+    "title": "chatGPT",
+    "section": "2.4 배포",
+    "text": "2.4 배포\n고양이와 강아지 사진 분류 서비스\n우측 미리보기 모델 내보내기 버튼을 눌러 모형을 내보낸다. “공유 가능한 링크”의 복사 버튼을 클릭하면 웹 브라우져에서 접속이 가능한 URL이 생성되어 이를 공유한다."
+  },
+  {
+    "objectID": "gg_20230426_draw.html#실습",
+    "href": "gg_20230426_draw.html#실습",
+    "title": "chatGPT",
+    "section": "2.5 실습",
+    "text": "2.5 실습\n\n\n\n\n\n\n치와와 강아지와 머핀을 구분하는 인공지능 모형을 만드세요\n\n\n\n\n\n\n캐글 chihuahua or muffin 데이터셋 다운로드\nteachable machine 웹사이트 접속\n치와와 강아지와 머핀을 구분하는 기계학습 모형 개발\n\n치와와 강아지 이미지 (test 폴더)\n머핀 이미지 (test 폴더)\n\n개발완료 후 웹링크 배포하여 공유"
+  },
+  {
+    "objectID": "gg_20230426_draw.html#실습-1",
+    "href": "gg_20230426_draw.html#실습-1",
+    "title": "chatGPT",
+    "section": "3.1 실습",
+    "text": "3.1 실습\n\n\n\n\n\n\n퀵 드로우\n\n\n\n\n\nQuick, Draw! 웹사이트에 접속하여 시작하기를 클릭하여 인공지능이 제시하는 문제를 그림으로 그려보자!!! 그리고, 결과를 공유해서 각자 그린 그림을 품평해보자."
+  },
+  {
+    "objectID": "gg_20230426_draw.html#실습-2",
+    "href": "gg_20230426_draw.html#실습-2",
+    "title": "chatGPT",
+    "section": "4.1 실습",
+    "text": "4.1 실습\n\n\n\n\n\n\n딥 드림\n\n\n\n\n\nDEEP DREAM GENERATOR 웹사이트에 접속하여 다음을 각각 실습한다.\n\nDeep Style: 본인 이미지를 업로드하여 빈센트 반 고흐 혹은 다른 스타일을 적용한다.\nText 2 Dream: 텍스트 프롬프트를 작성하여 이미지 생성한다.\nDeep Dream: 이미지를 업로드하여 꿈을 꾸는 듯 몽환적인 스타일의 이미지를 생성한다."
   }
 ]
