@@ -13,7 +13,13 @@ website:
   google-analytics: "UA-229551680-1"  
   site-url: https://quartopub.com/sites/statkclee/quarto-ds
   page-footer:
-    left: "[Quarto](https://quarto.org/) 로 제작"
+    center: |
+      [한국 R 사용자회](mailto:admin@r2bit.com)
+    left: |
+      [Quarto](https://quarto.org/) 개발
+    right: |
+      [Github 코드 저장소](https://github.com/bit2r/gpt-edu)
+    background: "#2780e3"
   sidebar: 
     style: floating
     contents: 
