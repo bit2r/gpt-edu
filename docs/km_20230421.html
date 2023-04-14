@@ -77,6 +77,9 @@ ga('send', {
   'anonymizeIp': true,
 });
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="css/quarto.css">
@@ -91,7 +94,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./km_20230407.html">광명시</a></li><li class="breadcrumb-item"><a href="./km_20230407.html">직무교육(4/7)</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./km_20230407.html">광명시</a></li><li class="breadcrumb-item"><a href="./km_20230421.html">직무교육(4/21)</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -105,7 +108,7 @@ ga('send', {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">chatGPT</h1>
-            <p class="subtitle lead">광명시 직무교육</p>
+            <p class="subtitle lead">광명시 직무교육(4/21)</p>
                       </div>
   </div>
     
@@ -131,7 +134,7 @@ ga('send', {
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2023년 4월 7일</p>
+        <p class="date">2023년 4월 21일</p>
       </div>
     </div>
     
@@ -177,7 +180,7 @@ ga('send', {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./km_20230407.html" class="sidebar-item-text sidebar-link active">
+  <a href="./km_20230407.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">직무교육(4/7)</span></a>
   </div>
 </li>
@@ -189,7 +192,7 @@ ga('send', {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./km_20230421.html" class="sidebar-item-text sidebar-link">
+  <a href="./km_20230421.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">직무교육(4/21)</span></a>
   </div>
 </li>
@@ -228,18 +231,20 @@ ga('send', {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#강의-교재" id="toc-강의-교재" class="nav-link active" data-scroll-target="#강의-교재"><span class="header-section-number">1</span> 강의 교재</a></li>
-  <li><a href="#챗gpt-보안사고" id="toc-챗gpt-보안사고" class="nav-link" data-scroll-target="#챗gpt-보안사고"><span class="header-section-number">2</span> 챗GPT 보안사고</a></li>
-  <li><a href="#강의노트" id="toc-강의노트" class="nav-link" data-scroll-target="#강의노트"><span class="header-section-number">3</span> 강의노트</a></li>
-  <li><a href="#실습" id="toc-실습" class="nav-link" data-scroll-target="#실습"><span class="header-section-number">4</span> 실습</a>
+  <li><a href="#챗gpt-실무교육" id="toc-챗gpt-실무교육" class="nav-link active" data-scroll-target="#챗gpt-실무교육"><span class="header-section-number">1</span> 챗GPT 실무교육</a></li>
+  <li><a href="#강의-교재" id="toc-강의-교재" class="nav-link" data-scroll-target="#강의-교재"><span class="header-section-number">2</span> 강의 교재</a></li>
+  <li><a href="#챗gpt-보안사고" id="toc-챗gpt-보안사고" class="nav-link" data-scroll-target="#챗gpt-보안사고"><span class="header-section-number">3</span> 챗GPT 보안사고</a></li>
+  <li><a href="#강의노트" id="toc-강의노트" class="nav-link" data-scroll-target="#강의노트"><span class="header-section-number">4</span> 강의노트</a></li>
+  <li><a href="#실습" id="toc-실습" class="nav-link" data-scroll-target="#실습"><span class="header-section-number">5</span> 실습</a>
   <ul class="collapse">
-  <li><a href="#dalle-그리기" id="toc-dalle-그리기" class="nav-link" data-scroll-target="#dalle-그리기"><span class="header-section-number">4.1</span> DALL·E 그리기</a></li>
-  <li><a href="#개회사-작성" id="toc-개회사-작성" class="nav-link" data-scroll-target="#개회사-작성"><span class="header-section-number">4.2</span> 개회사 작성</a></li>
+  <li><a href="#개회사-작성" id="toc-개회사-작성" class="nav-link" data-scroll-target="#개회사-작성"><span class="header-section-number">5.1</span> 개회사 작성</a></li>
+  <li><a href="#보도자료-작성" id="toc-보도자료-작성" class="nav-link" data-scroll-target="#보도자료-작성"><span class="header-section-number">5.2</span> 보도자료 작성</a></li>
+  <li><a href="#dalle-그리기" id="toc-dalle-그리기" class="nav-link" data-scroll-target="#dalle-그리기"><span class="header-section-number">5.3</span> DALL·E 그리기</a></li>
   </ul></li>
-  <li><a href="#공유의-장" id="toc-공유의-장" class="nav-link" data-scroll-target="#공유의-장"><span class="header-section-number">5</span> 공유의 장</a>
+  <li><a href="#공유의-장" id="toc-공유의-장" class="nav-link" data-scroll-target="#공유의-장"><span class="header-section-number">6</span> 공유의 장</a>
   <ul class="collapse">
-  <li><a href="#그리기" id="toc-그리기" class="nav-link" data-scroll-target="#그리기"><span class="header-section-number">5.1</span> 그리기</a></li>
-  <li><a href="#글쓰기" id="toc-글쓰기" class="nav-link" data-scroll-target="#글쓰기"><span class="header-section-number">5.2</span> 글쓰기</a></li>
+  <li><a href="#글쓰기" id="toc-글쓰기" class="nav-link" data-scroll-target="#글쓰기"><span class="header-section-number">6.1</span> 글쓰기</a></li>
+  <li><a href="#그리기" id="toc-그리기" class="nav-link" data-scroll-target="#그리기"><span class="header-section-number">6.2</span> 그리기</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -250,15 +255,43 @@ ga('send', {
 
 
 
-<section id="강의-교재" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 강의 교재</h1>
+<section id="챗gpt-실무교육" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 챗GPT 실무교육</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[강의 PPT] --&gt; B[실습: 글쓰기 &lt;br&gt; 개회사]
+    B --&gt; C[실습: 글쓰기 &lt;br&gt; 보도자료]
+    C --&gt; D[실습: 그리기]
+    D --&gt; E["심화(선택)"]
+
+click A href "https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide"
+click C href "https://r2bit.com/chatGPT/prompt_in_practice.html"
+click E href "https://r2bit.com/chatGPT/"
+
+class A,B,C,D nodeStyle
+class E taskStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef taskStyle fill:#fdfd96,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="강의-교재" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 강의 교재</h1>
 <p><strong>ChatGPT(Chatbot Generative Pre-trained Transformer)</strong>는 OpenAI에서 개발한 거대언어 모델이다. ChatGPT는 입력한 텍스트를 사람과 유사한 텍스트를 이해하고 생성하도록 설계되었다. 인터넷의 방대한 텍스트 데이터로 학습되어 다양한 주제에 응답, 정보 제공, 질문응답, 제안, 사용자와 대화를 이어나갈 수 있다.</p>
 <ul>
-<li><a href="https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide">챗GPT</a></li>
+<li><a href="https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide">챗GPT PPT</a></li>
+<li><a href="https://r2bit.com/chatGPT">챗GPT 심화교재</a></li>
 </ul>
 </section>
-<section id="챗gpt-보안사고" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 챗GPT 보안사고</h1>
+<section id="챗gpt-보안사고" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 챗GPT 보안사고</h1>
 <ul>
 <li><a href="https://economist.co.kr/article/view/ecn202303300057">정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트</a></li>
 </ul>
@@ -278,8 +311,8 @@ ga('send', {
 <p>접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.</p>
 </blockquote>
 </section>
-<section id="강의노트" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 강의노트</h1>
+<section id="강의노트" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 강의노트</h1>
 <ul>
 <li><a href="https://hackmd.io/qYEvZtGYSW6Aldit839ZNA">강의노트</a>
 <ul>
@@ -287,26 +320,18 @@ ga('send', {
 </ul></li>
 </ul>
 </section>
-<section id="실습" class="level1 page-columns page-full" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 실습</h1>
+<section id="실습" class="level1 page-columns page-full" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 실습</h1>
 <ul>
 <li>마크다운 글쓰기: <a href="http://hackmd.io/" class="uri">http://hackmd.io/</a></li>
-<li>챗GPT 글쓰기: <a href="https://chat.openai.com/chat" class="uri">https://chat.openai.com/chat</a></li>
-<li>그리기: <a href="https://www.bing.com/images/create/" class="uri">https://www.bing.com/images/create/</a></li>
+<li>챗GPT 바로가기(OpenAI): <a href="https://chat.openai.com/chat" class="uri">https://chat.openai.com/chat</a></li>
+<li>Text-to-Image 그리기: <a href="https://www.bing.com/images/create/" class="uri">https://www.bing.com/images/create/</a></li>
 </ul>
-<section id="dalle-그리기" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dalle-그리기"><span class="header-section-number">4.1</span> DALL·E 그리기</h2>
+<section id="개회사-작성" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="개회사-작성"><span class="header-section-number">5.1</span> 개회사 작성</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/image-creator.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/image-creator.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</section>
-<section id="개회사-작성" class="level2 page-columns page-full" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="개회사-작성"><span class="header-section-number">4.2</span> 개회사 작성</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/workflow.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/workflow.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="tabset-margin-container page-columns page-full"><div class="no-row-height column-margin column-container"><div class="tabset-margin-content tabset-1-1-tab-margin-content">
@@ -375,12 +400,12 @@ ga('send', {
 </div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<section id="영문" class="level4" data-number="4.2.0.1">
-<h4 data-number="4.2.0.1" class="anchored" data-anchor-id="영문"><span class="header-section-number">4.2.0.1</span> 영문</h4>
+<section id="영문" class="level4" data-number="5.1.0.1">
+<h4 data-number="5.1.0.1" class="anchored" data-anchor-id="영문"><span class="header-section-number">5.1.0.1</span> 영문</h4>
 <p>“Imagine you are the keynote speaker at the Gyeonggi Province AI Summit, a prestigious event that brings together experts, researchers, and industry leaders in the field of artificial intelligence. Please provide a compelling opening statement that highlights the importance of AI technology, its potential impact on society and the economy, and how Gyeonggi Province can become a leading hub for AI innovation.”</p>
 </section>
-<section id="번역" class="level4" data-number="4.2.0.2">
-<h4 data-number="4.2.0.2" class="anchored" data-anchor-id="번역"><span class="header-section-number">4.2.0.2</span> 번역</h4>
+<section id="번역" class="level4" data-number="5.1.0.2">
+<h4 data-number="5.1.0.2" class="anchored" data-anchor-id="번역"><span class="header-section-number">5.1.0.2</span> 번역</h4>
 <p>“인공지능 분야의 전문가, 연구자, 업계 리더들이 한자리에 모이는 권위 있는 행사인 경기도 AI 서밋의 <strong>기조 연설자</strong>가 되었다고 상상해 보세요. 인공지능 기술의 중요성, 사회와 경제에 미칠 잠재적 영향, 경기도가 인공지능 혁신의 선도적 허브가 될 수 있는 방법을 강조하는 매력적인 오프닝 멘트를 준비해 주세요.”</p>
 </section>
 </div>
@@ -412,28 +437,125 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-프롬프트 템플릿
+실습: 프롬프트 템플릿
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>“XXX 분야의 전문가, XXX, 업계 리더들이 한자리에 모이는 권위 있는 행사인 광명시 XXX 행사의 기조 연설자가 되었다고 상상해 보세요. XXX 기술의 중요성, 사회와 경제에 미칠 잠재적 영향, 광명시가 XXX 혁신의 선도적 허브가 될 수 있는 방법을 강조하는 매력적인 오프닝 멘트를 준비해 주세요.”</p>
+<p>실습안내: <code>XXX</code>를 본인 업무에 맞춰 채워넣고 이를 복사하여 챗GPT에 붙여넣어 실행하시오</p>
 </div>
 </div>
 </div>
 </section>
+<section id="보도자료-작성" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="보도자료-작성"><span class="header-section-number">5.2</span> 보도자료 작성</h2>
+<p><a href="https://tdis.konacard.co.kr/41210/1">광명시 생활안정지원금 신청</a></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">웹공고</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">공고문 내용</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">프롬프트1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">프롬프트2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/kwangmyung_application.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/kwangmyung_application.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>지급금액 : 세대 당 10만원 2023. 3. 6.일 24시 기준 광명시에 주민등록을 둔 세대주</p>
+<p>기간 온라인 : 2023. 03. 20(월) 09:00 ~ 4. 28(금) 오프라인 : 2023. 03. 27(월) ~ 5. 4(목) 18:00 (토요일, 공휴일 제외)</p>
+<p>문의처 광명사랑화폐 콜센터(1899-7997) 광명시 민원콜센터(1688-3399)</p>
+<p>※ 온라인 신청 시 동명이인이 다수 존재하는 경우 [오프라인 신청 대상]으로 표시 → 온라인 진행이 불가하며 오프라인 신청기간에 주소지 동 방문 신청 필요</p>
+<p>※ 광명사랑화폐 온라인 발급 방법 구글플레이 앱 스토어에서 ’경기지역화폐’앱 다운로드 받고 광명사랑화폐 신청, 광명사랑화폐가 배송되면 앱에 등록하고 사용</p>
+<p>온라인 카드 신청방법 : ’경기지역화폐’앱 설치 → 카드 신청 → 카드 발급 및 배송(약 1주일) → (수령 후)카드 등록(’경기지역화폐’앱) → 사용</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<blockquote class="blockquote">
+<p>다음 사업공고를 홍보할 수 있도록 보도자료를 작성해주세요. writing_style : journalistic, temperature:0.0</p>
+</blockquote>
+<p>&lt;공고문 내용&gt;</p>
+<pre><code>광명시가 생활안정지원금 신청을 받습니다. 세대 당 10만원의 지원금이 지급됩니다. 광명시에 주민등록을 둔 세대주라면 신청이 가능합니다.
+
+온라인 신청은 2023년 3월 20일(월) 09:00부터 4월 28일(금)까지 가능합니다. 오프라인 신청은 2023년 3월 27일(월)부터 5월 4일(목)까지 가능하며, 토요일과 공휴일은 제외됩니다.
+
+온라인 신청 시, 동명이인이 다수 존재하는 경우에는 오프라인 신청 대상으로 표시되며, 온라인 진행이 불가하므로 오프라인 신청기간에 주소지 동을 방문하여 신청해야 합니다.
+
+광명사랑화폐 콜센터(1899-7997) 또는 광명시 민원콜센터(1688-3399)로 문의하실 수 있습니다.
+
+또한, 광명사랑화폐 온라인 발급 방법은 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 받은 후, 광명사랑화폐를 신청하고, 배송된 광명사랑화폐를 앱에 등록하여 사용할 수 있습니다.
+
+온라인 카드 신청방법은 '경기지역화폐'앱을 설치한 후, 카드를 신청하고, 약 1주일 내에 카드가 발급되며, 수령 후에는 카드를 앱에 등록하여 사용할 수 있습니다.
+
+광명시에 거주하는 세대주라면 꼭 지원금 신청을 하시기 바랍니다.</code></pre>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<blockquote class="blockquote">
+<p>다음 사업공고를 홍보할 수 있도록 한글로 보도자료를 작성해주세요. writing_style : journalistic, temperature:1.0 tone: witty</p>
+</blockquote>
+<p>&lt;공고문 내용&gt;</p>
+<pre><code>광명시민 여러분, 세금으로 납부하신 돈이 이제 생활안정지원금으로 돌아옵니다!
+
+지금부터 4월 말까지, 광명시에 주민등록을 둔 세대주님들은 10만원의 지원금을 받을 자격이 있습니다.
+
+어떻게 신청하냐고요?
+온라인으로 신청하실 분들은 3월 20일부터 4월 28일까지, 오프라인으로 신청하실 분들은 3월 27일부터 5월 4일까지 신청 기간이 주어집니다.
+
+아, 그리고 주의하셔야 할 점! 온라인 신청 시 동명이인이 다수 존재한다면, 오프라인 신청을 해야합니다. 집에서 뻥튀기한 성의는 알겠는데, 동명이인은 답이 없어요.
+
+궁금한 점이 있다면 광명사랑화폐 콜센터(1899-7997) 혹은 광명시 민원콜센터(1688-3399)로 연락주세요.
+
+그리고 광명사랑화폐 온라인 발급 방법도 알려드릴게요. 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 하신 후, 광명사랑화폐를 신청하시면 배송되면 앱에 등록하시고 사용하시면 됩니다.
+
+간단하죠? 이번 생활안정지원금으로 조금이라도 여유를 만들어 보세요!</code></pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+프롬프트 영혼 불어넣기
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://r2bit.com/chatGPT/prompt_in_practice.html#%EC%B1%97gpt-%ED%8C%A8%EB%9F%AC%EB%AF%B8%ED%84%B0">챗GPT 패러미터</a>를 확인하고 원하는 텍스트 출력물을 위해 다양한 시도를 해보세요.</p>
+<p>실습안내: 예를 들어, 보도자료 작성에 <code>tone: positive</code>를 추가하여 프롬프트를 실행시키세요</p>
+</div>
+</div>
+</div>
 </section>
-<section id="공유의-장" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 공유의 장</h1>
-<section id="그리기" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="그리기"><span class="header-section-number">5.1</span> 그리기</h2>
+<section id="dalle-그리기" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="dalle-그리기"><span class="header-section-number">5.3</span> DALL·E 그리기</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/image-creator.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/image-creator.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <ul>
-<li>강사: <a href="https://www.bing.com/images/create/korean-garden/641ad9b05f1e4d4b9cf8617c14f5c38b?id=5cdC8AJDsUS3BCQr%2btl0gg%3d%3d&amp;view=detailv2&amp;idpp=genimg&amp;FORM=GCRIDP&amp;mode=overlay">Korean Garden</a></li>
+<li><a href="https://hackmd.io/@_NnKkWt7T5iYIToOD1QWRg/SJMy0V8Z3">이전 참여자 명작 감상</a></li>
+<li>Text-to-Image 그리기: <a href="https://www.bing.com/images/create/" class="uri">https://www.bing.com/images/create/</a></li>
+<li><a href="https://quickdraw.withgoogle.com/">퀵 드로우</a></li>
+<li><a href="https://teachablemachine.withgoogle.com/">티처블 머신(teachable machine)</a></li>
+<li><a href="https://deepdreamgenerator.com/">딥 드림 제너레이터</a></li>
 </ul>
 </section>
-<section id="글쓰기" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="글쓰기"><span class="header-section-number">5.2</span> 글쓰기</h2>
+</section>
+<section id="공유의-장" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 공유의 장</h1>
+<ul>
+<li><a href="https://bit.ly/3oeEmgt">오전교육</a></li>
+<li><a href="http://bit.ly/3KC1NYn">오후교육</a></li>
+</ul>
+<section id="글쓰기" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="글쓰기"><span class="header-section-number">6.1</span> 글쓰기</h2>
+</section>
+<section id="그리기" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="그리기"><span class="header-section-number">6.2</span> 그리기</h2>
 
 
 </section>
@@ -685,7 +807,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
 
 
 

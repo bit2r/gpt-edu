@@ -1,6 +1,6 @@
 ---
 title: "chatGPT"
-subtitle: "경기도 직무교육"
+subtitle: "경기도 직무교육(4/26~28)"
 author:
   - name: 이광춘
     url: https://www.linkedin.com/in/kwangchunlee/
