@@ -37,6 +37,12 @@ editor_options:
   chunk_output_type: console
 ---
 
+# 강의노트
+
+- [강의노트 (오전)](https://hackmd.io/a-M3VOO1T8uxY4oohrNyzQ)
+- [강의노트 (오후)](https://hackmd.io/EnuEh84dRP-j8ckYJGDtzA)
+    - 정보보안을 위해서 강의 후 접속불가합니다.
+
 
 # 챗GPT 실무교육
 
@@ -81,11 +87,6 @@ classDef taskStyle fill:#fdfd96,stroke:#000000,stroke-width:0.7px,font-weight:bo
 > 로이터 통신 등에 따르면 이탈리아 데이터 보호청은 "챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것"이라고 밝혔다.
 
 > 접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.
-
-# 강의노트
-
-- [강의노트](https://hackmd.io/qYEvZtGYSW6Aldit839ZNA)
-    - 정보보안을 위해서 강의 후 접속불가합니다.
 
  
 # 실습
