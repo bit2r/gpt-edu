@@ -60,21 +60,21 @@
     "href": "prerequisite.html",
     "title": "chatGPT",
     "section": "",
-    "text": "챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다. 만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다. 개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다."
+    "text": "OpenAI 챗GPT 도입으로 사용자 입장에서 가장 큰 변화는 컴퓨터를 접하는 인터페이스의 변화를 꼽을 수 있다. 컴퓨터에 업무지시 및 자동화를 통해 가치를 창출하는 작업에 더이상 프로그래밍을 통할 필요가 없게 된 것이다. 애플이 스마트폰 모바일 환경변화에 어쩔 수 없이 도입한 혁신적인 UI 도입으로 변화된 환경이 챗GPT의 경험을 통해 전혀 새로운 세상을 열고 있다.\nchatGPT - 인터페이스\n\n\n\n\ngraph LR\n\n    A[구글] --&gt; B[Gmail]\n\n    subgraph Google\n        direction LR\n        B --&gt; GA[OpenAI &lt;br&gt; ChatGPT]\n        B --&gt; GC[\"HackMD &lt;br&gt; 마크다운\"]\n        B --&gt; GB[Deep Dream]\n        B --&gt; Amazon[클라우드 &lt;br&gt; GCP]\n    end\n\n    style Google fill:#f0e68c,stroke:#333,stroke-width:1px\n\n    GC -.-&gt; BA[\"디지털 글쓰기 &lt;br&gt; (외양)\"]\n    GA -.-&gt; CA[\"디지털 글쓰기 &lt;br&gt; (콘텐츠)\"]\n    GB -.-&gt; DA[\"Text 2 Dream\"]\n    GB -.-&gt; DB[\"Deep Style\"]\n    GB -.-&gt; DC[\"Deep Dream\"]\n\n    F[마이크로소프트] --&gt; G[\"Outlook &lt;br&gt; Hotmail, Live Mail\"]\n\n    subgraph Microsoft\n        direction LR\n        G --&gt; I[\"New Bing&lt;br&gt; GPT-4\" ]\n        G --&gt; J[\"Image Creator\"]\n        G --&gt; H[\"클라우드 &lt;br&gt; Azure\"]\n    end\n\n    style Microsoft fill:#98fb98,stroke:#333,stroke-width:1px\n\n    K([카카오]) --&gt; KA[\"아숙업(AskUp)\" ]"
   },
   {
     "objectID": "prerequisite.html#챗gpt-로그인",
     "href": "prerequisite.html#챗gpt-로그인",
     "title": "chatGPT",
-    "section": "2.1 챗GPT 로그인",
-    "text": "2.1 챗GPT 로그인\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+    "section": "1.1 챗GPT 로그인",
+    "text": "1.1 챗GPT 로그인\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
   },
   {
     "objectID": "prerequisite.html#마이크로소프트",
     "href": "prerequisite.html#마이크로소프트",
     "title": "chatGPT",
-    "section": "2.2 마이크로소프트",
-    "text": "2.2 마이크로소프트\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
+    "section": "1.2 마이크로소프트",
+    "text": "1.2 마이크로소프트\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
   },
   {
     "objectID": "km_20230407_adv.html",
@@ -418,5 +418,96 @@
     "title": "chatGPT",
     "section": "8.2 삼성전자 주가예측",
     "text": "8.2 삼성전자 주가예측\n\n삼성전자 주가예측"
+  },
+  {
+    "objectID": "prerequisite.html#구글-gmail",
+    "href": "prerequisite.html#구글-gmail",
+    "title": "chatGPT",
+    "section": "2.1 구글 Gmail",
+    "text": "2.1 구글 Gmail"
+  },
+  {
+    "objectID": "prerequisite.html#마이크로소프트-outlook",
+    "href": "prerequisite.html#마이크로소프트-outlook",
+    "title": "chatGPT",
+    "section": "2.2 마이크로소프트 Outlook",
+    "text": "2.2 마이크로소프트 Outlook"
+  },
+  {
+    "objectID": "prerequisite.html#open-ai-챗gpt",
+    "href": "prerequisite.html#open-ai-챗gpt",
+    "title": "chatGPT",
+    "section": "3.1 Open AI 챗GPT",
+    "text": "3.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+  },
+  {
+    "objectID": "prerequisite.html#ms-image-creator",
+    "href": "prerequisite.html#ms-image-creator",
+    "title": "chatGPT",
+    "section": "3.2 MS Image Creator",
+    "text": "3.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
+  },
+  {
+    "objectID": "prerequisite.html#hackmd",
+    "href": "prerequisite.html#hackmd",
+    "title": "chatGPT",
+    "section": "3.3 HackMD",
+    "text": "3.3 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 마크다운 디지털 글쓰기"
+  },
+  {
+    "objectID": "prerequisite.html#마크다운-글쓰기",
+    "href": "prerequisite.html#마크다운-글쓰기",
+    "title": "chatGPT",
+    "section": "3.4 마크다운 글쓰기",
+    "text": "3.4 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
+  },
+  {
+    "objectID": "gg_hr_20230515.html",
+    "href": "gg_hr_20230515.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "1"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#구글-gmail",
+    "href": "gg_hr_20230515.html#구글-gmail",
+    "title": "chatGPT",
+    "section": "2.1 구글 Gmail",
+    "text": "2.1 구글 Gmail"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#마이크로소프트-outlook",
+    "href": "gg_hr_20230515.html#마이크로소프트-outlook",
+    "title": "chatGPT",
+    "section": "2.2 마이크로소프트 Outlook",
+    "text": "2.2 마이크로소프트 Outlook"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#open-ai-챗gpt",
+    "href": "gg_hr_20230515.html#open-ai-챗gpt",
+    "title": "chatGPT",
+    "section": "3.1 Open AI 챗GPT",
+    "text": "3.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#ms-image-creator",
+    "href": "gg_hr_20230515.html#ms-image-creator",
+    "title": "chatGPT",
+    "section": "3.2 MS Image Creator",
+    "text": "3.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#hackmd",
+    "href": "gg_hr_20230515.html#hackmd",
+    "title": "chatGPT",
+    "section": "3.3 HackMD",
+    "text": "3.3 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 마크다운 디지털 글쓰기"
+  },
+  {
+    "objectID": "gg_hr_20230515.html#마크다운-글쓰기",
+    "href": "gg_hr_20230515.html#마크다운-글쓰기",
+    "title": "chatGPT",
+    "section": "3.4 마크다운 글쓰기",
+    "text": "3.4 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
   }
 ]

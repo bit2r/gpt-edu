@@ -6,7 +6,7 @@ author:
     url: https://www.linkedin.com/in/kwangchunlee/
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r
-date: "2023-04-05"
+date: "2023-04-26"
 title-block-banner: true
 #title-block-banner: "#562457"
 format:
@@ -37,14 +37,49 @@ editor_options:
   chunk_output_type: console
 ---
 
+# AI 인터페이스
 
-# 컴퓨터
+OpenAI 챗GPT 도입으로 사용자 입장에서 가장 큰 변화는 컴퓨터를 접하는 인터페이스의 변화를 꼽을 수 있다. 컴퓨터에 업무지시 및 자동화를 통해 가치를 창출하는 작업에 더이상 프로그래밍을 통할 필요가 없게 된 것이다. 애플이 스마트폰 모바일 환경변화에 어쩔 수 없이 도입한 혁신적인 UI 도입으로 변화된 환경이 챗GPT의 경험을 통해 전혀 새로운 세상을 열고 있다.
 
-챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다.
-만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다.
-개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.
+[[chatGPT - 인터페이스](https://r2bit.com/chatGPT/interface.html)]{.aside}
 
-# AI 서비스
+```{mermaid}
+graph LR
+
+    A[구글] --> B[Gmail]
+
+    subgraph Google
+        direction LR
+        B --> GA[OpenAI <br> ChatGPT]
+        B --> GC["HackMD <br> 마크다운"]
+        B --> GB[Deep Dream]
+        B --> Amazon[클라우드 <br> GCP]
+    end
+
+    style Google fill:#f0e68c,stroke:#333,stroke-width:1px
+
+    GC -.-> BA["디지털 글쓰기 <br> (외양)"]
+    GA -.-> CA["디지털 글쓰기 <br> (콘텐츠)"]
+    GB -.-> DA["Text 2 Dream"]
+    GB -.-> DB["Deep Style"]
+    GB -.-> DC["Deep Dream"]
+
+    F[마이크로소프트] --> G["Outlook <br> Hotmail, Live Mail"]
+
+    subgraph Microsoft
+        direction LR
+        G --> I["New Bing<br> GPT-4" ]
+        G --> J["Image Creator"]
+        G --> H["클라우드 <br> Azure"]
+    end
+
+    style Microsoft fill:#98fb98,stroke:#333,stroke-width:1px
+
+    K([카카오]) --> KA["아숙업(AskUp)" ]
+```
+
+
+# AI 인증계정
 
 AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종량제(Pay-as-you-go) 요금제를 
 따른다. 하지만 거의 모든 AI 서비스는 일정량 무료(사용횟수, 사용기간 등)를 제공하고 
@@ -52,7 +87,20 @@ AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종�
 
 오픈AI 챗GPT, 마이크로소프트 Image Creator도 크게 다르지 않다.
 
-## 챗GPT 로그인
+다양한 AI 서비스를 사용하는 시작점은 글로벌 **본인확인(전자우편)**과 API 사용에 대한 
+비용지불을 위한 **신용카드** 정보가 가장 중요하다. 이를 위해서 결국 구글(지메일, GMail)과 마이크로소프트(Outlook) 계정을 생성하고 구글과 마이크로소프트에 지불할 수 있는 신용카드(비자, 마스터 등)을 등록한다.
+
+![](images/email_account.jpg)
+
+## 구글 Gmail
+
+## 마이크로소프트 Outlook
+
+# AI 서비스
+
+구글 Gmail, 마이크로소프트 Outlook 전자우편주소를 생성했다면 다음 단계로 다양한 AI 서비스를 구글 Gmail 혹은 MS Outlook 전자우편계정으로 연동시켜 서비스에 가입한다.
+
+## Open AI 챗GPT
 
 챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.
 
@@ -78,7 +126,7 @@ AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종�
 
 :::
 
-## 마이크로소프트
+## MS Image Creator
 
 텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트
 [이미지 작성자(Image Creator) 웹사이트](https://www.bing.com/images/create?)에 접속한다.
@@ -104,7 +152,7 @@ AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종�
 :::
 
 
-# 디지털 글쓰기
+## HackMD
 
 챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 
 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 
@@ -132,29 +180,20 @@ AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종�
 :::
 
 
-# 마크다운 글쓰기
+## 마크다운 글쓰기
+
+[[프롬프트 잘 작성하는 방법](https://r2bit.com/chatGPT/prompt.html)]{.aside}
 
 마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.
 
 - [마크다운 기초](http://statkclee.github.io/modern-scientific-authoring/02-markdown-kr.html)
-- [디지털 글쓰기 - chatGPT와 함께 AI 글쓰기](https://r2bit.com/bitBook/)
+- [디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기](https://r2bit.com/bitBook/markdown_02_markdown.html)
 
 챗GPT 프롬프트를 [HackMD](https://hackmd.io/)에 잘 기록하고 챗GPT 실행결과도 
 [HackMD](https://hackmd.io/)에 정리하여 동료와 공유와 품평 등 
 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다.
 
 ![](images/workflow.jpg)
-
-
-# 프롬프트
-
-[[프롬프트 잘 작성하는 방법](https://r2bit.com/chatGPT/prompt.html)]{.aside}
-
-**프롬프트(Prompt)**는 목표한 작업을 수행하기 위해 챗GPT와 같은 거대언어모형(LLM)에 
-명령어와 맥락, 사례, 절차 등의 정보를 텍스트에 담아내야만 한다.
-
-![](images/prompt-component.jpg)
-
 
 # 코딩
 
@@ -201,4 +240,15 @@ AI 실습 웹서비스 로그아웃
 :::
 
 
+
+
+:::{.callout-warning collapse="false"}
+
+### 컴퓨터 {.unnumbered}
+
+챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다.
+만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다.
+개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.
+
+:::
 

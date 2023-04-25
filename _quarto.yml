@@ -45,6 +45,8 @@ website:
             text: "직무교육 - 그리기"
           - href: gg_20230426_excel.qmd
             text: "직무교육 - 엑셀"            
+      - href: gg_hr_20230515.qmd
+        text: "경기도 직무교육"
 
 bibliography: bibliography.bib
 csl: apa-single-spaced.csl

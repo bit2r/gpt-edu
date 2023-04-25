@@ -79,6 +79,9 @@ ga('send', {
   'anonymizeIp': true,
 });
 </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="css/quarto.css">
@@ -133,7 +136,7 @@ ga('send', {
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2023년 4월 5일</p>
+        <p class="date">2023년 4월 26일</p>
       </div>
     </div>
     
@@ -189,12 +192,18 @@ ga('send', {
  <span class="menu-text">직무교육 심화(4/7)</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./km_20230421.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/21)</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">경기도</span></a>
+ <span class="menu-text">경기도청</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -203,17 +212,35 @@ ga('send', {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./gg_20230426.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">직무교육(4/26)</span></a>
+ <span class="menu-text">직무교육(4/26~28)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gg_20230426_write.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 - 글쓰기</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gg_20230426_draw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 - 그리기</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./gg_20230426_excel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">직무교육(4/26) 엑셀</span></a>
+ <span class="menu-text">직무교육 - 엑셀</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gg_hr_20230515.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">경기도 직무교육</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -224,17 +251,21 @@ ga('send', {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#컴퓨터" id="toc-컴퓨터" class="nav-link active" data-scroll-target="#컴퓨터"><span class="header-section-number">1</span> 컴퓨터</a></li>
-  <li><a href="#ai-서비스" id="toc-ai-서비스" class="nav-link" data-scroll-target="#ai-서비스"><span class="header-section-number">2</span> AI 서비스</a>
+  <li><a href="#ai-인터페이스" id="toc-ai-인터페이스" class="nav-link active" data-scroll-target="#ai-인터페이스"><span class="header-section-number">1</span> AI 인터페이스</a></li>
+  <li><a href="#ai-인증계정" id="toc-ai-인증계정" class="nav-link" data-scroll-target="#ai-인증계정"><span class="header-section-number">2</span> AI 인증계정</a>
   <ul class="collapse">
-  <li><a href="#챗gpt-로그인" id="toc-챗gpt-로그인" class="nav-link" data-scroll-target="#챗gpt-로그인"><span class="header-section-number">2.1</span> 챗GPT 로그인</a></li>
-  <li><a href="#마이크로소프트" id="toc-마이크로소프트" class="nav-link" data-scroll-target="#마이크로소프트"><span class="header-section-number">2.2</span> 마이크로소프트</a></li>
+  <li><a href="#구글-gmail" id="toc-구글-gmail" class="nav-link" data-scroll-target="#구글-gmail"><span class="header-section-number">2.1</span> 구글 Gmail</a></li>
+  <li><a href="#마이크로소프트-outlook" id="toc-마이크로소프트-outlook" class="nav-link" data-scroll-target="#마이크로소프트-outlook"><span class="header-section-number">2.2</span> 마이크로소프트 Outlook</a></li>
   </ul></li>
-  <li><a href="#디지털-글쓰기" id="toc-디지털-글쓰기" class="nav-link" data-scroll-target="#디지털-글쓰기"><span class="header-section-number">3</span> 디지털 글쓰기</a></li>
-  <li><a href="#마크다운-글쓰기" id="toc-마크다운-글쓰기" class="nav-link" data-scroll-target="#마크다운-글쓰기"><span class="header-section-number">4</span> 마크다운 글쓰기</a></li>
-  <li><a href="#프롬프트" id="toc-프롬프트" class="nav-link" data-scroll-target="#프롬프트"><span class="header-section-number">5</span> 프롬프트</a></li>
-  <li><a href="#코딩" id="toc-코딩" class="nav-link" data-scroll-target="#코딩"><span class="header-section-number">6</span> 코딩</a></li>
-  <li><a href="#마무리" id="toc-마무리" class="nav-link" data-scroll-target="#마무리"><span class="header-section-number">7</span> 마무리</a></li>
+  <li><a href="#ai-서비스" id="toc-ai-서비스" class="nav-link" data-scroll-target="#ai-서비스"><span class="header-section-number">3</span> AI 서비스</a>
+  <ul class="collapse">
+  <li><a href="#open-ai-챗gpt" id="toc-open-ai-챗gpt" class="nav-link" data-scroll-target="#open-ai-챗gpt"><span class="header-section-number">3.1</span> Open AI 챗GPT</a></li>
+  <li><a href="#ms-image-creator" id="toc-ms-image-creator" class="nav-link" data-scroll-target="#ms-image-creator"><span class="header-section-number">3.2</span> MS Image Creator</a></li>
+  <li><a href="#hackmd" id="toc-hackmd" class="nav-link" data-scroll-target="#hackmd"><span class="header-section-number">3.3</span> HackMD</a></li>
+  <li><a href="#마크다운-글쓰기" id="toc-마크다운-글쓰기" class="nav-link" data-scroll-target="#마크다운-글쓰기"><span class="header-section-number">3.4</span> 마크다운 글쓰기</a></li>
+  </ul></li>
+  <li><a href="#코딩" id="toc-코딩" class="nav-link" data-scroll-target="#코딩"><span class="header-section-number">4</span> 코딩</a></li>
+  <li><a href="#마무리" id="toc-마무리" class="nav-link" data-scroll-target="#마무리"><span class="header-section-number">5</span> 마무리</a></li>
   </ul>
 </nav>
     </div>
@@ -244,16 +275,74 @@ ga('send', {
 
 
 
-<section id="컴퓨터" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 컴퓨터</h1>
-<p>챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다. 만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다. 개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.</p>
+<section id="ai-인터페이스" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> AI 인터페이스</h1>
+<p>OpenAI 챗GPT 도입으로 사용자 입장에서 가장 큰 변화는 컴퓨터를 접하는 인터페이스의 변화를 꼽을 수 있다. 컴퓨터에 업무지시 및 자동화를 통해 가치를 창출하는 작업에 더이상 프로그래밍을 통할 필요가 없게 된 것이다. 애플이 스마트폰 모바일 환경변화에 어쩔 수 없이 도입한 혁신적인 UI 도입으로 변화된 환경이 챗GPT의 경험을 통해 전혀 새로운 세상을 열고 있다.</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://r2bit.com/chatGPT/interface.html">chatGPT - 인터페이스</a></span></div></div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+
+    A[구글] --&gt; B[Gmail]
+
+    subgraph Google
+        direction LR
+        B --&gt; GA[OpenAI &lt;br&gt; ChatGPT]
+        B --&gt; GC["HackMD &lt;br&gt; 마크다운"]
+        B --&gt; GB[Deep Dream]
+        B --&gt; Amazon[클라우드 &lt;br&gt; GCP]
+    end
+
+    style Google fill:#f0e68c,stroke:#333,stroke-width:1px
+
+    GC -.-&gt; BA["디지털 글쓰기 &lt;br&gt; (외양)"]
+    GA -.-&gt; CA["디지털 글쓰기 &lt;br&gt; (콘텐츠)"]
+    GB -.-&gt; DA["Text 2 Dream"]
+    GB -.-&gt; DB["Deep Style"]
+    GB -.-&gt; DC["Deep Dream"]
+
+    F[마이크로소프트] --&gt; G["Outlook &lt;br&gt; Hotmail, Live Mail"]
+
+    subgraph Microsoft
+        direction LR
+        G --&gt; I["New Bing&lt;br&gt; GPT-4" ]
+        G --&gt; J["Image Creator"]
+        G --&gt; H["클라우드 &lt;br&gt; Azure"]
+    end
+
+    style Microsoft fill:#98fb98,stroke:#333,stroke-width:1px
+
+    K([카카오]) --&gt; KA["아숙업(AskUp)" ]
+</pre>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="ai-서비스" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> AI 서비스</h1>
+<section id="ai-인증계정" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> AI 인증계정</h1>
 <p>AI 서비스는 기본적으로 사용하는 만큼 비용을 지불하는 종량제(Pay-as-you-go) 요금제를 따른다. 하지만 거의 모든 AI 서비스는 일정량 무료(사용횟수, 사용기간 등)를 제공하고 사용량 혹은 사용기간에 따라 과금하는 구조를 따른다.</p>
 <p>오픈AI 챗GPT, 마이크로소프트 Image Creator도 크게 다르지 않다.</p>
-<section id="챗gpt-로그인" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="챗gpt-로그인"><span class="header-section-number">2.1</span> 챗GPT 로그인</h2>
+<p>다양한 AI 서비스를 사용하는 시작점은 글로벌 <strong>본인확인(전자우편)</strong>과 API 사용에 대한 비용지불을 위한 <strong>신용카드</strong> 정보가 가장 중요하다. 이를 위해서 결국 구글(지메일, GMail)과 마이크로소프트(Outlook) 계정을 생성하고 구글과 마이크로소프트에 지불할 수 있는 신용카드(비자, 마스터 등)을 등록한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/email_account.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/email_account.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="구글-gmail" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="구글-gmail"><span class="header-section-number">2.1</span> 구글 Gmail</h2>
+</section>
+<section id="마이크로소프트-outlook" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="마이크로소프트-outlook"><span class="header-section-number">2.2</span> 마이크로소프트 Outlook</h2>
+</section>
+</section>
+<section id="ai-서비스" class="level1 page-columns page-full" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> AI 서비스</h1>
+<p>구글 Gmail, 마이크로소프트 Outlook 전자우편주소를 생성했다면 다음 단계로 다양한 AI 서비스를 구글 Gmail 혹은 MS Outlook 전자우편계정으로 연동시켜 서비스에 가입한다.</p>
+<section id="open-ai-챗gpt" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="open-ai-챗gpt"><span class="header-section-number">3.1</span> Open AI 챗GPT</h2>
 <p>챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.</p>
 <ol type="1">
 <li>OpenAI 웹사이트(<a href="https://openai.com/blog/chatgpt" class="uri">https://openai.com/blog/chatgpt</a>)를 방문</li>
@@ -266,27 +355,27 @@ ga('send', {
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/chatgpt-signup-01.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/chatgpt-signup-01.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/chatgpt-signup-02.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/chatgpt-signup-02.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/chatgpt-signup-03.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/chatgpt-signup-03.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/chatgpt-signup-05.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/chatgpt-signup-05.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -294,45 +383,45 @@ ga('send', {
 </figure>
 </div>
 </section>
-<section id="마이크로소프트" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="마이크로소프트"><span class="header-section-number">2.2</span> 마이크로소프트</h2>
+<section id="ms-image-creator" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ms-image-creator"><span class="header-section-number">3.2</span> MS Image Creator</h2>
 <p>텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 <a href="https://www.bing.com/images/create?">이미지 작성자(Image Creator) 웹사이트</a>에 접속한다.</p>
 <div id="fig-ms-signup" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-00.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/microsoft-singup-00.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-00.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/microsoft-singup-00.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/microsoft-singup-01.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/microsoft-singup-01.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/microsoft-singup-02.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/microsoft-singup-02.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/microsoft-singup-04.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/microsoft-singup-04.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/microsoft-singup-05.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/microsoft-singup-05.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-06.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/microsoft-singup-06.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-06.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/microsoft-singup-06.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 14.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/microsoft-singup-07.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/microsoft-singup-07.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/microsoft-singup-07.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/microsoft-singup-07.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -340,9 +429,8 @@ ga('send', {
 </figure>
 </div>
 </section>
-</section>
-<section id="디지털-글쓰기" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 디지털 글쓰기</h1>
+<section id="hackmd" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="hackmd"><span class="header-section-number">3.3</span> HackMD</h2>
 <p>챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 <a href="https://hackmd.io/">HackMD</a> 마크다운 편집기를 사용한다.</p>
 <p><a href="https://hackmd.io/">HackMD</a> 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.</p>
 <div id="fig-ms-signup" class="quarto-layout-panel">
@@ -350,27 +438,27 @@ ga('send', {
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/hackmd-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/hackmd-singup-01.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/hackmd-singup-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/hackmd-singup-01.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/hackmd-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/hackmd-singup-02.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/hackmd-singup-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/hackmd-singup-02.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/chatgpt-signup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/chatgpt-signup-04.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/hackmd-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/hackmd-singup-04.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/hackmd-singup-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/hackmd-singup-04.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 20.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/hackmd-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/hackmd-singup-05.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/hackmd-singup-05.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/hackmd-singup-05.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -378,32 +466,24 @@ ga('send', {
 </figure>
 </div>
 </section>
-<section id="마크다운-글쓰기" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 마크다운 글쓰기</h1>
+<section id="마크다운-글쓰기" class="level2 page-columns page-full" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="마크다운-글쓰기"><span class="header-section-number">3.4</span> 마크다운 글쓰기</h2>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://r2bit.com/chatGPT/prompt.html">프롬프트 잘 작성하는 방법</a></span></div></div>
 <p>마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.</p>
 <ul>
 <li><a href="http://statkclee.github.io/modern-scientific-authoring/02-markdown-kr.html">마크다운 기초</a></li>
-<li><a href="https://r2bit.com/bitBook/">디지털 글쓰기 - chatGPT와 함께 AI 글쓰기</a></li>
+<li><a href="https://r2bit.com/bitBook/markdown_02_markdown.html">디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기</a></li>
 </ul>
 <p>챗GPT 프롬프트를 <a href="https://hackmd.io/">HackMD</a>에 잘 기록하고 챗GPT 실행결과도 <a href="https://hackmd.io/">HackMD</a>에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/workflow.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/workflow.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
-<section id="프롬프트" class="level1 page-columns page-full" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 프롬프트</h1>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://r2bit.com/chatGPT/prompt.html">프롬프트 잘 작성하는 방법</a></span></div></div>
-<p><strong>프롬프트(Prompt)</strong>는 목표한 작업을 수행하기 위해 챗GPT와 같은 거대언어모형(LLM)에 명령어와 맥락, 사례, 절차 등의 정보를 텍스트에 담아내야만 한다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/prompt-component.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/prompt-component.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
 </section>
-<section id="코딩" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 코딩</h1>
+<section id="코딩" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 코딩</h1>
 <p>코딩 실습을 위해서 파이썬을 설치한다. <a href="https://www.python.org/">파이썬 홈페이지</a>에서 운영체제에 맞는 파이썬 버전을 선택하여 설치한다. 파이썬 코드 작성에 필요한 편집기는 파이썬 설치할 때 내장되어 있으니 설치가 정상처리되면 <code>아이들(IDLE)</code> 편집기를 실행하여 헬로월드 파이썬 확장자를 갖는 파일을 생성하여 키보드 <kbd>F5</kbd> 키를 누르면 실행된다. 즉 바탕화면에 <code>hello.py</code> 파일명으로 코드를 저장하고 키보드 <kbd>F5</kbd> 키로 실행한다.</p>
 <div id="fig-logout" class="quarto-layout-panel">
 <figure class="figure">
@@ -443,33 +523,49 @@ ga('send', {
 </figure>
 </div>
 </section>
-<section id="마무리" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 마무리</h1>
+<section id="마무리" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 마무리</h1>
 <p>개인 노트북이 아니고 전산실의 공용 PC 혹은 지급받은 노트북인 경우 개인 정보보호를 위해서 사용한 컴퓨터에서 모두 로그아웃한다. 인공지능 API를 사용한 경우 실습한 정보는 로컬 컴퓨터에 별도 저장을 하고나 공개대상을 외부로 노출시키지 않은 경우 웹브라우져를 통해 클라우드 서버에 접속했기 때문에 로그아웃하게 되면 로컬 컴퓨터에서 다시 로그인하지 않는 이상 이론상 남아있지 않게 된다.</p>
 <div id="fig-logout" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/logout-chatGPT.jpg" class="lightbox" title="챗GPT" data-gallery="quarto-lightbox-gallery-26"><img src="images/logout-chatGPT.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/logout-chatGPT.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="챗GPT"><img src="images/logout-chatGPT.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">챗GPT</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/logout-newbing.jpg" class="lightbox" title="Image Creator" data-gallery="quarto-lightbox-gallery-27"><img src="images/logout-newbing.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/logout-newbing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Image Creator"><img src="images/logout-newbing.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Image Creator</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/logout-hackMD.jpg" class="lightbox" title="HackMD" data-gallery="quarto-lightbox-gallery-28"><img src="images/logout-hackMD.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/logout-hackMD.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="HackMD"><img src="images/logout-hackMD.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">HackMD</figcaption><p></p>
 </figure>
 </div>
 </div>
 <p></p><figcaption class="figure-caption">그림&nbsp;5: AI 실습 웹서비스 로그아웃</figcaption><p></p>
 </figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+컴퓨터
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>챗GPT 실무를 위한 컴퓨터 장비로 개인용 노트북 지참을 추천한다. 만약 개인용 노트북 지참이 어려울 경우 전산실 실습실에 장착된 PC를 사용한다. 개인 노트북이 아닌 공용 PC를 사용하는 경우 개인정보를 공용 PC에 남기지 않도록 특별히 주의한다.</p>
+</div>
+</div>
 </div>
 
 
@@ -712,16 +808,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://quarto.org/">Quarto</a> 로 제작</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
+    <div class="nav-footer-left"><a href="https://quarto.org/">Quarto</a> 개발</div>   
+    <div class="nav-footer-center"><a href="mailto:admin@r2bit.com">한국 R 사용자회</a></div>
+    <div class="nav-footer-right"><a href="https://github.com/bit2r/gpt-edu">Github 코드 저장소</a></div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
