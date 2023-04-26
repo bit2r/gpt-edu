@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/index.html</loc>
-    <lastmod>2023-04-01T22:49:14.806Z</lastmod>
-  </url>
-  <url>
     <loc>https://quartopub.com/sites/statkclee/quarto-ds/about.html</loc>
-    <lastmod>2023-04-01T22:49:12.414Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230407.html</loc>
-    <lastmod>2023-04-20T23:58:24.409Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/timer.html</loc>
-    <lastmod>2023-04-20T23:58:25.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230421.html</loc>
-    <lastmod>2023-04-25T11:10:09.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/prerequisite.html</loc>
-    <lastmod>2023-04-25T11:10:16.087Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_hr_20230515.html</loc>
-    <lastmod>2023-04-25T11:10:24.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230407_adv.html</loc>
-    <lastmod>2023-04-25T11:10:30.575Z</lastmod>
+    <lastmod>2023-04-26T00:33:25.519Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_20230426.html</loc>
-    <lastmod>2023-04-25T11:10:37.055Z</lastmod>
+    <lastmod>2023-04-26T00:33:48.285Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_20230426_draw.html</loc>
+    <lastmod>2023-04-26T11:35:13.471Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_20230426_excel.html</loc>
+    <lastmod>2023-04-26T11:35:15.091Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_20230426_write.html</loc>
+    <lastmod>2023-04-26T11:35:24.607Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_hr_20230515.html</loc>
+    <lastmod>2023-04-26T00:33:28.433Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230407.html</loc>
+    <lastmod>2023-04-26T00:33:29.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230407_adv.html</loc>
+    <lastmod>2023-04-26T00:33:30.444Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/km_20230421.html</loc>
+    <lastmod>2023-04-26T00:33:30.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/prerequisite.html</loc>
+    <lastmod>2023-04-26T00:33:53.674Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/statkclee/quarto-ds/timer.html</loc>
+    <lastmod>2023-04-26T00:33:31.658Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/statkclee/quarto-ds/gg_20230426_write.html</loc>
