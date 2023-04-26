@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.299">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,9 +18,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,48 +48,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -102,8 +74,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -134,15 +105,15 @@ div.csl-indent {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
   }
 }</script>
 
@@ -160,6 +131,7 @@ ga('send', {
 });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="css/quarto.css">
@@ -169,11 +141,16 @@ ga('send', {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">chatGPT</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gg_20230426.html">경기도청</a></li><li class="breadcrumb-item"><a href="./gg_20230426_excel.html">직무교육 - 엑셀</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -182,17 +159,17 @@ ga('send', {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">chatGPT</h1>
+      <h1 class="title">chatGPT</h1>
             <p class="subtitle lead">직무교육 - 엑셀</p>
                       </div>
   </div>
     
   <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-heading">Affiliation</div>
+    <div class="quarto-title-meta-heading">저자</div>
+    <div class="quarto-title-meta-heading">소속</div>
     
       <div class="quarto-title-meta-contents">
-      <a href="https://www.linkedin.com/in/kwangchunlee/">이광춘</a> 
+      <p class="author"><a href="https://www.linkedin.com/in/kwangchunlee/">이광춘</a> </p>
     </div>
       <div class="quarto-title-meta-contents">
           <p class="affiliation">
@@ -207,7 +184,7 @@ ga('send', {
 
         
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
         <p class="date">2023년 4월 7일</p>
       </div>
@@ -219,80 +196,91 @@ ga('send', {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">챗GPT 교육</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prerequisite.html" class="sidebar-item-text sidebar-link">사전 준비</a>
+  <a href="./prerequisite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">사전 준비</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./timer.html" class="sidebar-item-text sidebar-link">실습시간</a>
+  <a href="./timer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">실습시간</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">광명시</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">광명시</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./km_20230407.html" class="sidebar-item-text sidebar-link">직무교육(4/7)</a>
+  <a href="./km_20230407.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/7)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./km_20230407_adv.html" class="sidebar-item-text sidebar-link">직무교육 심화(4/7)</a>
+  <a href="./km_20230421.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/21)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./km_20230421.html" class="sidebar-item-text sidebar-link">직무교육(4/21)</a>
+  <a href="./km_20230407_adv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 심화</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">경기도청</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">경기도청</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gg_20230426.html" class="sidebar-item-text sidebar-link">직무교육(4/26~28)</a>
+  <a href="./gg_20230426.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육(4/26~28)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gg_20230426_write.html" class="sidebar-item-text sidebar-link">직무교육 - 글쓰기</a>
+  <a href="./gg_20230426_write.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 - 글쓰기</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gg_20230426_draw.html" class="sidebar-item-text sidebar-link">직무교육 - 그리기</a>
+  <a href="./gg_20230426_draw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">직무교육 - 그리기</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gg_20230426_excel.html" class="sidebar-item-text sidebar-link active">직무교육 - 엑셀</a>
+  <a href="./gg_20230426_excel.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">직무교육 - 엑셀</span></a>
   </div>
 </li>
       </ul>
@@ -306,43 +294,44 @@ ga('send', {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#작업흐름" id="toc-작업흐름" class="nav-link active" data-scroll-target="#작업흐름"><span class="toc-section-number">1</span>  작업흐름</a></li>
-  <li><a href="#초중고급-엑셀" id="toc-초중고급-엑셀" class="nav-link" data-scroll-target="#초중고급-엑셀"><span class="toc-section-number">2</span>  초중고급 엑셀</a></li>
-  <li><a href="#초급" id="toc-초급" class="nav-link" data-scroll-target="#초급"><span class="toc-section-number">3</span>  초급</a>
+  <li><a href="#작업흐름" id="toc-작업흐름" class="nav-link active" data-scroll-target="#작업흐름"><span class="header-section-number">1</span> 작업흐름</a></li>
+  <li><a href="#초중고급-엑셀" id="toc-초중고급-엑셀" class="nav-link" data-scroll-target="#초중고급-엑셀"><span class="header-section-number">2</span> 초중고급 엑셀</a></li>
+  <li><a href="#초급" id="toc-초급" class="nav-link" data-scroll-target="#초급"><span class="header-section-number">3</span> 초급</a>
   <ul class="collapse">
-  <li><a href="#조건-합" id="toc-조건-합" class="nav-link" data-scroll-target="#조건-합"><span class="toc-section-number">3.1</span>  조건 합</a></li>
-  <li><a href="#조건-평균" id="toc-조건-평균" class="nav-link" data-scroll-target="#조건-평균"><span class="toc-section-number">3.2</span>  조건 평균</a>
+  <li><a href="#조건-합" id="toc-조건-합" class="nav-link" data-scroll-target="#조건-합"><span class="header-section-number">3.1</span> 조건 합</a></li>
+  <li><a href="#조건-평균" id="toc-조건-평균" class="nav-link" data-scroll-target="#조건-평균"><span class="header-section-number">3.2</span> 조건 평균</a>
   <ul class="collapse">
-  <li><a href="#r-코드" id="toc-r-코드" class="nav-link" data-scroll-target="#r-코드"><span class="toc-section-number">3.2.1</span>  R 코드</a></li>
+  <li><a href="#r-코드" id="toc-r-코드" class="nav-link" data-scroll-target="#r-코드"><span class="header-section-number">3.2.1</span> R 코드</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#중급" id="toc-중급" class="nav-link" data-scroll-target="#중급"><span class="toc-section-number">4</span>  중급</a>
+  <li><a href="#중급" id="toc-중급" class="nav-link" data-scroll-target="#중급"><span class="header-section-number">4</span> 중급</a>
   <ul class="collapse">
-  <li><a href="#남여식별" id="toc-남여식별" class="nav-link" data-scroll-target="#남여식별"><span class="toc-section-number">4.1</span>  남여식별</a></li>
+  <li><a href="#남여식별" id="toc-남여식별" class="nav-link" data-scroll-target="#남여식별"><span class="header-section-number">4.1</span> 남여식별</a></li>
   </ul></li>
-  <li><a href="#고급" id="toc-고급" class="nav-link" data-scroll-target="#고급"><span class="toc-section-number">5</span>  고급</a>
+  <li><a href="#고급" id="toc-고급" class="nav-link" data-scroll-target="#고급"><span class="header-section-number">5</span> 고급</a>
   <ul class="collapse">
-  <li><a href="#입사일-검색" id="toc-입사일-검색" class="nav-link" data-scroll-target="#입사일-검색"><span class="toc-section-number">5.1</span>  입사일 검색</a>
+  <li><a href="#입사일-검색" id="toc-입사일-검색" class="nav-link" data-scroll-target="#입사일-검색"><span class="header-section-number">5.1</span> 입사일 검색</a>
   <ul class="collapse">
-  <li><a href="#r-코드작성" id="toc-r-코드작성" class="nav-link" data-scroll-target="#r-코드작성"><span class="toc-section-number">5.1.1</span>  R 코드작성</a></li>
+  <li><a href="#r-코드작성" id="toc-r-코드작성" class="nav-link" data-scroll-target="#r-코드작성"><span class="header-section-number">5.1.1</span> R 코드작성</a></li>
   </ul></li>
-  <li><a href="#할인율-적용" id="toc-할인율-적용" class="nav-link" data-scroll-target="#할인율-적용"><span class="toc-section-number">5.2</span>  할인율 적용</a>
+  <li><a href="#할인율-적용" id="toc-할인율-적용" class="nav-link" data-scroll-target="#할인율-적용"><span class="header-section-number">5.2</span> 할인율 적용</a>
   <ul class="collapse">
-  <li><a href="#r-코드-1" id="toc-r-코드-1" class="nav-link" data-scroll-target="#r-코드-1"><span class="toc-section-number">5.2.1</span>  R 코드</a></li>
+  <li><a href="#r-코드-1" id="toc-r-코드-1" class="nav-link" data-scroll-target="#r-코드-1"><span class="header-section-number">5.2.1</span> R 코드</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#전문가" id="toc-전문가" class="nav-link" data-scroll-target="#전문가"><span class="toc-section-number">6</span>  전문가</a></li>
-  <li><a href="#실습-엑셀파일" id="toc-실습-엑셀파일" class="nav-link" data-scroll-target="#실습-엑셀파일"><span class="toc-section-number">7</span>  실습 엑셀파일</a></li>
-  <li><a href="#프로그래밍" id="toc-프로그래밍" class="nav-link" data-scroll-target="#프로그래밍"><span class="toc-section-number">8</span>  프로그래밍</a>
+  <li><a href="#전문가" id="toc-전문가" class="nav-link" data-scroll-target="#전문가"><span class="header-section-number">6</span> 전문가</a></li>
+  <li><a href="#실습-엑셀파일" id="toc-실습-엑셀파일" class="nav-link" data-scroll-target="#실습-엑셀파일"><span class="header-section-number">7</span> 실습 엑셀파일</a></li>
+  <li><a href="#프로그래밍" id="toc-프로그래밍" class="nav-link" data-scroll-target="#프로그래밍"><span class="header-section-number">8</span> 프로그래밍</a>
   <ul class="collapse">
-  <li><a href="#파이썬-계산기" id="toc-파이썬-계산기" class="nav-link" data-scroll-target="#파이썬-계산기"><span class="toc-section-number">8.1</span>  파이썬 : 계산기</a></li>
-  <li><a href="#삼성전자-주가예측" id="toc-삼성전자-주가예측" class="nav-link" data-scroll-target="#삼성전자-주가예측"><span class="toc-section-number">8.2</span>  삼성전자 주가예측</a></li>
+  <li><a href="#파이썬-계산기" id="toc-파이썬-계산기" class="nav-link" data-scroll-target="#파이썬-계산기"><span class="header-section-number">8.1</span> 파이썬 : 계산기</a></li>
+  <li><a href="#삼성전자-주가예측" id="toc-삼성전자-주가예측" class="nav-link" data-scroll-target="#삼성전자-주가예측"><span class="header-section-number">8.2</span> 삼성전자 주가예측</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -353,13 +342,13 @@ ga('send', {
 
 
 
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
+<div class="callout-title-container flex-fill">
+노트
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -374,31 +363,31 @@ Note
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://sharegpt.com/c/Sq21GJi">데이터셋 검증</a></span></div></div>
 <p>기본적인 작업 흐름은 서울 디지털재단 PDF에 담긴 데이터를 복원하는 것으로 원본데이터를 화면 캡쳐하여 업스테이지에서 개발한 카카오톡 Askup OCR 기능과 챗GPT기능을 활용하여 <code>.csv</code> 파일형태를 갖춘다. Askup에서 복사하여 메모장에 붙여넣고 이를 엑셀로 다시 붙여넣기하면 원하는 결과를 얻을 수 있다.</p>
 <p>먼저 데이터 생성작업과 이를 활용하여 결과를 얻을 수 있는 챗GPT 프롬프트 작성과 엑셀에서 활용하는 단계로 나눠 작업을 수행한다.</p>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">데이터셋 생성</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">엑셀 작업</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="unnumbered tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel-data.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/excel-data.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel-data.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/excel-data.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-2" class="unnumbered tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel-exec.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/excel-exec.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel-exec.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/excel-exec.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 엑셀 친화적인 <code>.csv</code> 파일형태 제작 프롬프트
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -429,12 +418,12 @@ Note
 <section id="조건-합" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="조건-합"><span class="header-section-number">3.1</span> 조건 합</h2>
 <p>범주 칼럼(성별)를 기준으로 연속형 숫자칼럼 합계를 구한다.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 엑셀에서 C2:C21 값 중 ’남’인 값을 찾아 대응하는 D2:D21의 숫자를 모두 더하는 함수를 생성해주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -451,19 +440,19 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
 <section id="조건-평균" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="조건-평균"><span class="header-section-number">3.2</span> 조건 평균</h2>
 <p>범주 칼럼(성별)를 기준으로 연속형 숫자칼럼 <strong>평균</strong>를 구한다.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 엑셀에서 C2:C21 값 중 ’남’인 값을 찾아 대응하는 D2:D21의 숫자의 평균을 구하는 함수를 생성해주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -480,7 +469,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_sumif.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/excel/excel_sumif.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="r-코드" class="level3" data-number="3.2.1">
@@ -488,7 +477,7 @@ Note
 <p>문서에 적용될 숫자를 계산하여 반영하는 작업이라 엑셀 대신 R 혹은 파이썬 프로그래밍 코드를 사용해서 작업해도 동일한 결과를 간략히 얻을 수 있다.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -502,15 +491,15 @@ Note
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   성별     합계   평균</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 남자  8794170 879417</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 여자  8792780 879278</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 여자  8792780 879278</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 상기 엑셀 코드를 dplyr R 코드로 작성해주세요
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -520,12 +509,12 @@ Note
 <p>다음은 dplyr 패키지를 사용하여 R 코드로 작성한 예시입니다.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(C <span class="sc">==</span> <span class="st">"남자"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg =</span> <span class="fu">mean</span>(D))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg =</span> <span class="fu">mean</span>(D))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>위 코드에서 <code>data</code>는 분석할 데이터프레임을 나타냅니다. <code>filter</code> 함수는 조건에 해당하는 행만 추출하는 역할을 하며, <code>summarize</code> 함수는 통계량을 계산하는 역할을 합니다. 결과값은 <code>result</code>에 저장됩니다.</p>
@@ -541,12 +530,12 @@ Note
 <section id="남여식별" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="남여식별"><span class="header-section-number">4.1</span> 남여식별</h2>
 <p>“C열의 주민등록번호에서 가운데 숫자가 1일 경우 ‘남자’, 2일 경우 ’여자’를 출력” 하는 엑셀코드를 작성해보자.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 엑셀에서 C2값의 형식이 ‘XXXXXX-1XXXXXX’ 또는 ‘XXXXXX-2XXXXXX’이다. ’XXXXXX-1XXXXXX’에서 가운데 - 다음 숫자가 1일 경우 ’남자’, 2일 경우 ’여자’를 출력하는 함수를 만들어 주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -561,7 +550,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel/excel_mid_01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/excel/excel_mid_01.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_mid_01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/excel/excel_mid_01.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -572,12 +561,12 @@ Note
 <section id="입사일-검색" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="입사일-검색"><span class="header-section-number">5.1</span> 입사일 검색</h2>
 <p><code>I3</code>열에 사번을 입력(A열의 사번을 참조), 입사일을 바로 출력하는 함수를 작성해보자.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 엑셀에서 $A<span class="math inline">\(2:\)</span>G$11의 전체 값 중, A열 값이 2인 값을 찾고, G열 값을 출력하는 함수를 만들어주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -595,7 +584,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel/excel_vloopkup.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/excel/excel_vloopkup.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_vloopkup.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/excel/excel_vloopkup.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="r-코드작성" class="level3" data-number="5.1.1">
@@ -603,7 +592,7 @@ Note
 <p>상기 엑셀 코드를 다음과 같이 R 코드로 작성할 수 있다.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>join_tbl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/excel_data.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"고급"</span>, <span class="at">range =</span> <span class="st">"A1:G11"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>join_tbl <span class="sc">%&gt;%</span> </span>
@@ -612,13 +601,13 @@ Note
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 1 × 1</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   입사일             </span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;dttm&gt;             </span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 2002-04-30 00:00:00</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 2002-04-30 00:00:00</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>함수로 사번을 넣게 되면 입사일을 반환하도록 일반화시킬 수도 있다.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>get_join_date <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sabun =</span> <span class="dv">2</span>) {</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  join_date <span class="ot">&lt;-</span> join_tbl <span class="sc">%&gt;%</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(사번 <span class="sc">==</span> sabun) <span class="sc">%&gt;%</span> </span>
@@ -628,7 +617,7 @@ Note
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">get_join_date</span>(<span class="dv">5</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "2005-05-17 UTC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "2005-05-17 UTC"</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -636,12 +625,12 @@ Note
 <section id="할인율-적용" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="할인율-적용"><span class="header-section-number">5.2</span> 할인율 적용</h2>
 <p>“A1~E1 행의 할인율 기준에 따라서 결제금액에 따라 할인율이 다르게 적용될 때, 값의 범위에 따라서 할인율을 자동으로 넣는 함수” 함수를 작성해보자.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: C5의 값이 $B<span class="math inline">\(1:\)</span>E$1의 값과 비교하여 1) C5의 값이 $B<span class="math inline">\(1:\)</span>E$ 보다 이상이고, $B<span class="math inline">\(1:\)</span>E$값과 C5의 값이 근사한 값을 찾는다 2) 위에서 찾은 값의 2행인 $B<span class="math inline">\(2:\)</span>E$2 값을 출력하는 함수를 만들어줘
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -659,7 +648,7 @@ Note
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/excel/excel_match.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/excel/excel_match.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_match.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/excel/excel_match.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="r-코드-1" class="level3" data-number="5.2.1">
@@ -667,7 +656,7 @@ Note
 <p>구매금액별로 할인율을 달리 적용하여 최종 결재금액을 계산한다.</p>
 <div class="cell">
 <details>
-<summary>Code</summary>
+<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># discount_raw &lt;- read_excel("data/excel_data.xlsx", sheet = "고급2", range = "A1:E2")</span></span>
@@ -686,7 +675,7 @@ Note
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fl">0.2</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(결재금액 <span class="ot">=</span> 구매금액 <span class="sc">*</span> (<span class="dv">1</span><span class="sc">-</span>할인율)) <span class="sc">%&gt;%</span> </span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    gtExtras<span class="sc">::</span><span class="fu">gt_theme_nytimes</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    gtExtras<span class="sc">::</span><span class="fu">gt_theme_nytimes</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
@@ -698,7 +687,7 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#lkqpdtbxzd) .gt_table {
+#lkqpdtbxzd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -723,7 +712,7 @@ html {
   border-left-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_heading {
+#lkqpdtbxzd .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -735,12 +724,12 @@ html {
   border-right-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_caption {
+#lkqpdtbxzd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#lkqpdtbxzd) .gt_title {
+#lkqpdtbxzd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -752,7 +741,7 @@ html {
   border-bottom-width: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_subtitle {
+#lkqpdtbxzd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -764,13 +753,13 @@ html {
   border-top-width: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_bottom_border {
+#lkqpdtbxzd .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_col_headings {
+#lkqpdtbxzd .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -785,7 +774,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_col_heading {
+#lkqpdtbxzd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -805,7 +794,7 @@ html {
   overflow-x: hidden;
 }
 
-:where(#lkqpdtbxzd) .gt_column_spanner_outer {
+#lkqpdtbxzd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 12px;
@@ -817,15 +806,15 @@ html {
   padding-right: 4px;
 }
 
-:where(#lkqpdtbxzd) .gt_column_spanner_outer:first-child {
+#lkqpdtbxzd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_column_spanner_outer:last-child {
+#lkqpdtbxzd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_column_spanner {
+#lkqpdtbxzd .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 1px;
   border-bottom-color: #334422;
@@ -837,7 +826,7 @@ html {
   width: 100%;
 }
 
-:where(#lkqpdtbxzd) .gt_group_heading {
+#lkqpdtbxzd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -863,7 +852,7 @@ html {
   text-align: left;
 }
 
-:where(#lkqpdtbxzd) .gt_empty_group_heading {
+#lkqpdtbxzd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -878,15 +867,15 @@ html {
   vertical-align: middle;
 }
 
-:where(#lkqpdtbxzd) .gt_from_md > :first-child {
+#lkqpdtbxzd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_from_md > :last-child {
+#lkqpdtbxzd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_row {
+#lkqpdtbxzd .gt_row {
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 5px;
@@ -905,7 +894,7 @@ html {
   overflow-x: hidden;
 }
 
-:where(#lkqpdtbxzd) .gt_stub {
+#lkqpdtbxzd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -918,7 +907,7 @@ html {
   padding-right: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_stub_row_group {
+#lkqpdtbxzd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -932,11 +921,11 @@ html {
   vertical-align: top;
 }
 
-:where(#lkqpdtbxzd) .gt_row_group_first td {
+#lkqpdtbxzd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#lkqpdtbxzd) .gt_summary_row {
+#lkqpdtbxzd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -946,16 +935,16 @@ html {
   padding-right: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_first_summary_row {
+#lkqpdtbxzd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_first_summary_row.thick {
+#lkqpdtbxzd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#lkqpdtbxzd) .gt_last_summary_row {
+#lkqpdtbxzd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -965,7 +954,7 @@ html {
   border-bottom-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_grand_summary_row {
+#lkqpdtbxzd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -975,7 +964,7 @@ html {
   padding-right: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_first_grand_summary_row {
+#lkqpdtbxzd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -985,11 +974,11 @@ html {
   border-top-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_striped {
+#lkqpdtbxzd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#lkqpdtbxzd) .gt_table_body {
+#lkqpdtbxzd .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -998,7 +987,7 @@ html {
   border-bottom-color: #FFFFFF;
 }
 
-:where(#lkqpdtbxzd) .gt_footnotes {
+#lkqpdtbxzd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1012,7 +1001,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_footnote {
+#lkqpdtbxzd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1021,7 +1010,7 @@ html {
   padding-right: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_sourcenotes {
+#lkqpdtbxzd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1035,7 +1024,7 @@ html {
   border-right-color: #D3D3D3;
 }
 
-:where(#lkqpdtbxzd) .gt_sourcenote {
+#lkqpdtbxzd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1043,183 +1032,222 @@ html {
   padding-right: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_left {
+#lkqpdtbxzd .gt_left {
   text-align: left;
 }
 
-:where(#lkqpdtbxzd) .gt_center {
+#lkqpdtbxzd .gt_center {
   text-align: center;
 }
 
-:where(#lkqpdtbxzd) .gt_right {
+#lkqpdtbxzd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#lkqpdtbxzd) .gt_font_normal {
+#lkqpdtbxzd .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#lkqpdtbxzd) .gt_font_bold {
+#lkqpdtbxzd .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#lkqpdtbxzd) .gt_font_italic {
+#lkqpdtbxzd .gt_font_italic {
   font-style: italic;
 }
 
-:where(#lkqpdtbxzd) .gt_super {
+#lkqpdtbxzd .gt_super {
   font-size: 65%;
 }
 
-:where(#lkqpdtbxzd) .gt_footnote_marks {
+#lkqpdtbxzd .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#lkqpdtbxzd) .gt_asterisk {
+#lkqpdtbxzd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#lkqpdtbxzd) .gt_indent_1 {
+#lkqpdtbxzd .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#lkqpdtbxzd) .gt_indent_2 {
+#lkqpdtbxzd .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#lkqpdtbxzd) .gt_indent_3 {
+#lkqpdtbxzd .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#lkqpdtbxzd) .gt_indent_4 {
+#lkqpdtbxzd .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#lkqpdtbxzd) .gt_indent_5 {
+#lkqpdtbxzd .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="날짜">날짜</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="고객명">고객명</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="구매금액">구매금액</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="할인율">할인율</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="결재금액">결재금액</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">1</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">김ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">105400</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.20</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">84320</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">2</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">박ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">87200</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">78480</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">3</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">이ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">59500</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">53550</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">4</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">최ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">124800</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.20</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">99840</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">5</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">장ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">73500</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">66150</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">6</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">홍ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">29000</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.02</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">28420</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">7</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">송ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">43600</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.05</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">41420</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">8</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">정ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">91300</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">82170</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">9</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">이ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">12000</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.02</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">11760</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">10</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">김ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">56000</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">50400</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">11</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">박ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">112700</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.20</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">90160</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">12</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">이ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">46800</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.05</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">44460</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">13</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">최ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">76200</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">68580</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">14</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">장ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">99800</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">89820</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">15</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">홍ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">63000</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">56700</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">16</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">송ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">118500</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.20</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">94800</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">17</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">정ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">55700</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">50130</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">18</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">이ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">97600</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">87840</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">19</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">김ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">84300</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">75870</td></tr>
-    <tr><td headers="날짜" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">20</td>
-<td headers="고객명" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">박ㅇㅇ</td>
-<td headers="구매금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">51400</td>
-<td headers="할인율" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">0.10</td>
-<td headers="결재금액" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">46260</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th id="날짜" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">날짜</th>
+<th id="고객명" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">고객명</th>
+<th id="구매금액" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">구매금액</th>
+<th id="할인율" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">할인율</th>
+<th id="결재금액" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase" scope="col">결재금액</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">1</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">105400</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">84320</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">2</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">87200</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">78480</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">3</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">59500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">53550</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">4</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">최ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">124800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">99840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">5</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">장ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">73500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">66150</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">6</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">홍ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">29000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.02</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">28420</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">7</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">송ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">43600</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.05</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">41420</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">8</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">정ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">91300</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">82170</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">9</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">12000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.02</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">11760</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">10</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">56000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">50400</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">11</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">112700</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">90160</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">12</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">46800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.05</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">44460</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">13</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">최ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">76200</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">68580</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">14</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">장ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">99800</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">89820</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">15</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">홍ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">63000</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">56700</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">16</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">송ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">118500</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.20</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">94800</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">17</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">정ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">55700</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">50130</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">18</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">이ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">97600</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">87840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">19</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">김ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">84300</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">75870</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="날짜" style="font-family: 'Source Sans Pro'; font-weight: 400">20</td>
+<td class="gt_row gt_left" headers="고객명" style="font-family: 'Source Sans Pro'; font-weight: 400">박ㅇㅇ</td>
+<td class="gt_row gt_right" headers="구매금액" style="font-family: 'Source Sans Pro'; font-weight: 400">51400</td>
+<td class="gt_row gt_right" headers="할인율" style="font-family: 'Source Sans Pro'; font-weight: 400">0.10</td>
+<td class="gt_row gt_right" headers="결재금액" style="font-family: 'Source Sans Pro'; font-weight: 400">46260</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1234,27 +1262,27 @@ html {
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/excel/excel_vba.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="VBA 개발도구 설정"><img src="images/excel/excel_vba.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_vba.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="VBA 개발도구 설정"><img src="images/excel/excel_vba.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">VBA 개발도구 설정</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/excel/excel_vba_exec.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="VBA 실행"><img src="images/excel/excel_vba_exec.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/excel/excel_vba_exec.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="VBA 실행"><img src="images/excel/excel_vba_exec.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">VBA 실행</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: 엑셀 내부 VBA 프로그래밍 언어 실행</figcaption><p></p>
+<p></p><figcaption class="figure-caption">그림&nbsp;1: 엑셀 내부 VBA 프로그래밍 언어 실행</figcaption><p></p>
 </figure>
 </div>
 <p>VBA는 Visual Basic for Applications의 약자로 Excel, Word, PowerPoint와 같은 Microsoft Office 응용 프로그램에 통합된 프로그래밍 언어입니다. VBA를 사용하면 이러한 애플리케이션 내에서 작업을 자동화하고 사용자 지정 함수를 만들 수 있다. VBA 코드는 애플리케이션 내에서 작성 및 편집할 수 있으므로 다양한 사용자 지정 및 자동화 가능성을 제공한다.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 프롬프트: 엑셀 A:G 행이 빈 칸일 경우 그 다음 텍스트가 나올 때까지 각각 행을 삭제하는 VBA코드를 생성해주세요.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -1307,11 +1335,11 @@ End Sub</code></pre>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-sdf2023" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">참고문헌</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-sdf2023" class="csl-entry" role="listitem">
 "ChatGPT활용연구TFT. (2023). <em>[업무활용편] ChatGPT 활용사례 및 활용 팁</em>. 서울디지털재단. <a href="https://sdf.seoul.kr/research-report/2003">https://sdf.seoul.kr/research-report/2003</a>
 </div>
-<div id="ref-sdf2023v2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sdf2023v2" class="csl-entry" role="listitem">
 ChatGPT활용연구TFT. (2023). <em>[일상생활·창작활동·교육분야편] ChatGPT 활용사례 및 팁</em>. 서울디지털재단. <a href="https://sdf.seoul.kr/research-report/2059">https://sdf.seoul.kr/research-report/2059</a>
 </div>
 </div></section></div></main> <!-- /main -->
@@ -1342,9 +1370,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1355,12 +1397,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "복사완료!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "복사완료!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1409,6 +1451,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1452,15 +1580,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://quarto.org/">Quarto</a> 개발</div>   
-      <div class="nav-footer-center"><a href="mailto:admin@r2bit.com">한국 R 사용자회</a></div>
+    <div class="nav-footer-center"><a href="mailto:admin@r2bit.com">한국 R 사용자회</a></div>
     <div class="nav-footer-right"><a href="https://github.com/bit2r/gpt-edu">Github 코드 저장소</a></div>
   </div>
 </footer>
-<<<<<<< HEAD
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
-=======
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom"});</script>
->>>>>>> a26ee861825dbc35cc5449f0b4ff9aec50336b29
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
