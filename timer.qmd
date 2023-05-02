@@ -6,7 +6,11 @@ author:
     url: https://www.linkedin.com/in/kwangchunlee/
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r
-date: "2023-04-07"
+  - name: 신종화
+    url: https://modernity.tistory.com/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r    
+date: "2023-05-15"
 title-block-banner: true
 #title-block-banner: "#562457"
 format:
