@@ -277,7 +277,7 @@
     "href": "prerequisite.html",
     "title": "chatGPT",
     "section": "",
-    "text": "OpenAI 챗GPT 도입으로 사용자 입장에서 가장 큰 변화는 컴퓨터를 접하는 인터페이스의 변화를 꼽을 수 있다. 컴퓨터에 업무지시 및 자동화를 통해 가치를 창출하는 작업에 더이상 프로그래밍을 통할 필요가 없게 된 것이다. 애플이 스마트폰 모바일 환경변화에 어쩔 수 없이 도입한 혁신적인 UI 도입으로 변화된 환경이 챗GPT의 경험을 통해 전혀 새로운 세상을 열고 있다.\nchatGPT - 인터페이스\n\n\n\n\ngraph LR\n\n    A[구글] --&gt; B[Gmail]\n\n    subgraph Google\n        direction LR\n        B --&gt; GA[OpenAI &lt;br&gt; ChatGPT]\n        B --&gt; GC[\"HackMD &lt;br&gt; 마크다운\"]\n        B --&gt; GB[Deep Dream]\n        B --&gt; Amazon[클라우드 &lt;br&gt; GCP]\n    end\n\n    style Google fill:#f0e68c,stroke:#333,stroke-width:1px\n\n    GC -.-&gt; BA[\"디지털 글쓰기 &lt;br&gt; (외양)\"]\n    GA -.-&gt; CA[\"디지털 글쓰기 &lt;br&gt; (콘텐츠)\"]\n    GB -.-&gt; DA[\"Text 2 Dream\"]\n    GB -.-&gt; DB[\"Deep Style\"]\n    GB -.-&gt; DC[\"Deep Dream\"]\n\n    F[마이크로소프트] --&gt; G[\"Outlook &lt;br&gt; Hotmail, Live Mail\"]\n\n    subgraph Microsoft\n        direction LR\n        G --&gt; I[\"New Bing&lt;br&gt; GPT-4\" ]\n        G --&gt; J[\"Image Creator\"]\n        G --&gt; H[\"클라우드 &lt;br&gt; Azure\"]\n    end\n\n    style Microsoft fill:#98fb98,stroke:#333,stroke-width:1px\n\n    K([카카오]) --&gt; KA[\"아숙업(AskUp)\" ]"
+    "text": "챗GPT AI 서비스를 활용방법은 PC 환경에서 작업하는 경우가 많지만 경우에 따라서는 모바일/태블릿 환경에서 활용하는 것도 가능하다. 다만, 모바일 스마트폰 위주의 작은 화면을 갖는 경우 PC 데스크톱 환경과 비교하여 상대적으로 동일한 기능을 제공한다고 하더라도 일부 불편한 점이 존재할 수 있다.\n\n\n\n\n\ngraph TB\n\n    A[\"PC/Desktop\"] --&gt; Google[Google]\n    A[\"PC/Desktop\"] --&gt; Microsfot[Microsoft]\n    A[\"PC/Desktop\"] --&gt; Naver[Naver]\n    A[\"PC/Desktop\"] --&gt; Kakao[\"Daum/Kakao\"]\n\n    subgraph PC/Desktop\n        direction LR\n        Naver --&gt; Clova[\"OCR\"]\n        Google --&gt; ChatGPT[\"OpenAI &lt;br&gt; ChatGPT\"]\n        Microsfot --&gt; ImageCreator[\"Image Creator\"]\n        Kakao --&gt; BEdit[\"B^Edit &lt;br&gt; (Text 2 Image)\"]\n    end\n\n    style PC/Desktop fill:#fcec03,stroke:#333,stroke-width:1px\n\n    F[Mobile] --&gt; G[\"구글 메일 &lt;br&gt; Gmail\"]\n\n    subgraph Mobile\n        direction LR\n        G --&gt; Chrome[\"크롬 브라우저\"]\n        G --&gt; AppStore[\"앱스토어\"]\n        AppStore --&gt; Edge[\"엣지 브라우져\"]\n    end\n\n    Chrome --&gt; Mobile_ChatGPT[\"OpenAI &lt;br&gt; ChatGPT\"]\n    Edge --&gt; New_Bing[\"Image Creator\"]\n    Edge --&gt; New_Bing_GPT4[\"뉴 빙(GPT-4)\"]\n\n    style Mobile fill:#059fff,stroke:#333,stroke-width:1px"
   },
   {
     "objectID": "prerequisite.html#구글-gmail",
@@ -297,29 +297,29 @@
     "objectID": "prerequisite.html#open-ai-챗gpt",
     "href": "prerequisite.html#open-ai-챗gpt",
     "title": "chatGPT",
-    "section": "3.1 Open AI 챗GPT",
-    "text": "3.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+    "section": "5.1 Open AI 챗GPT",
+    "text": "5.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
   },
   {
     "objectID": "prerequisite.html#ms-image-creator",
     "href": "prerequisite.html#ms-image-creator",
     "title": "chatGPT",
-    "section": "3.2 MS Image Creator",
-    "text": "3.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
+    "section": "5.2 MS Image Creator",
+    "text": "5.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
   },
   {
     "objectID": "prerequisite.html#hackmd",
     "href": "prerequisite.html#hackmd",
     "title": "chatGPT",
-    "section": "3.3 HackMD",
-    "text": "3.3 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 마크다운 디지털 글쓰기"
+    "section": "5.5 HackMD",
+    "text": "5.5 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n마크다운 디지털 글쓰기"
   },
   {
     "objectID": "prerequisite.html#마크다운-글쓰기",
     "href": "prerequisite.html#마크다운-글쓰기",
     "title": "chatGPT",
-    "section": "3.4 마크다운 글쓰기",
-    "text": "3.4 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
+    "section": "5.6 마크다운 글쓰기",
+    "text": "5.6 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
   },
   {
     "objectID": "timer.html",
@@ -355,5 +355,110 @@
     "title": "chatGPT",
     "section": "5.2 보도자료 작성",
     "text": "5.2 보도자료 작성\n광명시 생활안정지원금 신청\n\n웹공고공고문 내용프롬프트1프롬프트2\n\n\n\n\n\n\n\n\n\n지급금액 : 세대 당 10만원 2023. 3. 6.일 24시 기준 광명시에 주민등록을 둔 세대주\n기간 온라인 : 2023. 03. 20(월) 09:00 ~ 4. 28(금) 오프라인 : 2023. 03. 27(월) ~ 5. 4(목) 18:00 (토요일, 공휴일 제외)\n문의처 광명사랑화폐 콜센터(1899-7997) 광명시 민원콜센터(1688-3399)\n※ 온라인 신청 시 동명이인이 다수 존재하는 경우 [오프라인 신청 대상]으로 표시 → 온라인 진행이 불가하며 오프라인 신청기간에 주소지 동 방문 신청 필요\n※ 광명사랑화폐 온라인 발급 방법 구글플레이 앱 스토어에서 ’경기지역화폐’앱 다운로드 받고 광명사랑화폐 신청, 광명사랑화폐가 배송되면 앱에 등록하고 사용\n온라인 카드 신청방법 : ’경기지역화폐’앱 설치 → 카드 신청 → 카드 발급 및 배송(약 1주일) → (수령 후)카드 등록(’경기지역화폐’앱) → 사용\n\n\n\n다음 사업공고를 홍보할 수 있도록 보도자료를 작성해주세요. writing_style : journalistic, temperature:0.0\n\n&lt;공고문 내용&gt;\n광명시가 생활안정지원금 신청을 받습니다. 세대 당 10만원의 지원금이 지급됩니다. 광명시에 주민등록을 둔 세대주라면 신청이 가능합니다.\n\n온라인 신청은 2023년 3월 20일(월) 09:00부터 4월 28일(금)까지 가능합니다. 오프라인 신청은 2023년 3월 27일(월)부터 5월 4일(목)까지 가능하며, 토요일과 공휴일은 제외됩니다.\n\n온라인 신청 시, 동명이인이 다수 존재하는 경우에는 오프라인 신청 대상으로 표시되며, 온라인 진행이 불가하므로 오프라인 신청기간에 주소지 동을 방문하여 신청해야 합니다.\n\n광명사랑화폐 콜센터(1899-7997) 또는 광명시 민원콜센터(1688-3399)로 문의하실 수 있습니다.\n\n또한, 광명사랑화폐 온라인 발급 방법은 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 받은 후, 광명사랑화폐를 신청하고, 배송된 광명사랑화폐를 앱에 등록하여 사용할 수 있습니다.\n\n온라인 카드 신청방법은 '경기지역화폐'앱을 설치한 후, 카드를 신청하고, 약 1주일 내에 카드가 발급되며, 수령 후에는 카드를 앱에 등록하여 사용할 수 있습니다.\n\n광명시에 거주하는 세대주라면 꼭 지원금 신청을 하시기 바랍니다.\n\n\n\n다음 사업공고를 홍보할 수 있도록 한글로 보도자료를 작성해주세요. writing_style : journalistic, temperature:1.0 tone: witty\n\n&lt;공고문 내용&gt;\n광명시민 여러분, 세금으로 납부하신 돈이 이제 생활안정지원금으로 돌아옵니다!\n\n지금부터 4월 말까지, 광명시에 주민등록을 둔 세대주님들은 10만원의 지원금을 받을 자격이 있습니다.\n\n어떻게 신청하냐고요?\n온라인으로 신청하실 분들은 3월 20일부터 4월 28일까지, 오프라인으로 신청하실 분들은 3월 27일부터 5월 4일까지 신청 기간이 주어집니다.\n\n아, 그리고 주의하셔야 할 점! 온라인 신청 시 동명이인이 다수 존재한다면, 오프라인 신청을 해야합니다. 집에서 뻥튀기한 성의는 알겠는데, 동명이인은 답이 없어요.\n\n궁금한 점이 있다면 광명사랑화폐 콜센터(1899-7997) 혹은 광명시 민원콜센터(1688-3399)로 연락주세요.\n\n그리고 광명사랑화폐 온라인 발급 방법도 알려드릴게요. 구글플레이 앱 스토어에서 '경기지역화폐'앱을 다운로드 하신 후, 광명사랑화폐를 신청하시면 배송되면 앱에 등록하시고 사용하시면 됩니다.\n\n간단하죠? 이번 생활안정지원금으로 조금이라도 여유를 만들어 보세요!\n\n\n\n\n\n\n\n\n\n프롬프트 영혼 불어넣기\n\n\n\n\n\n챗GPT 패러미터를 확인하고 원하는 텍스트 출력물을 위해 다양한 시도를 해보세요.\n실습안내: 예를 들어, 보도자료 작성에 tone: positive를 추가하여 프롬프트를 실행시키세요"
+  },
+  {
+    "objectID": "prerequisite.html#네이버-ocr",
+    "href": "prerequisite.html#네이버-ocr",
+    "title": "chatGPT",
+    "section": "5.4 네이버 OCR",
+    "text": "5.4 네이버 OCR\n네이버 클로버 OCR 은 한글 광학문자인식 업무에 높은 성능을 보이고 있다. 네이버 클로버 OCR은 초기 한글에서 일본어 영어로 언어인식을 범위를 넓혀가고 있으며 영수증, 신용카드, 사업자 등록증, 고지서, 명함, 신분증 등 서류 양식에 맞춰 OCR 판독작업 문서종류도 다양화하고 있다.\n\n\n\n\n\n사용동의\n\n\n\n\n\n접속 화면\n\n\n\n\n\n문서 업로드\n\n\n\n\n\nOCR 텍스트 복사/붙여넣기\n\n\n\n\n\n네이버 클로바 OCR(광학문자판독) 스캔된 문서 텍스트 추출 복사/붙여넣기"
+  },
+  {
+    "objectID": "prerequisite.html#구글",
+    "href": "prerequisite.html#구글",
+    "title": "chatGPT",
+    "section": "구글",
+    "text": "구글\n\n\n\n\n\ngraph TB\n\nA[구글] --&gt; B[Gmail]\n\nsubgraph Google\n    direction LR\n    B --&gt; GA[OpenAI &lt;br&gt; ChatGPT]\n    B --&gt; GC[\"HackMD &lt;br&gt; 마크다운\"]\n    B --&gt; GB[\"&lt;s&gt;Deep Dream&lt;/s&gt;&lt;br&gt;유료\"]\n    B --&gt; Amazon[클라우드 &lt;br&gt; GCP]\nend\n\nstyle Google fill:#fcec03,stroke:#333,stroke-width:1px\n\nGC -.-&gt; BA[\"디지털 글쓰기 &lt;br&gt; (외양)\"]\nGA -.-&gt; CA[\"디지털 글쓰기 &lt;br&gt; (콘텐츠)\"]\nGB -.-&gt; DA[\"&lt;s&gt;Text 2 Dream&lt;/s&gt;\"]\nGB -.-&gt; DB[\"&lt;s&gt;Deep Style&lt;/s&gt;\"]\nGB -.-&gt; DC[\"&lt;s&gt;Deep Dream&lt;/s&gt;\"]\n\n\n\n\n\n\n\n\n\ngraph TB\n    F[마이크로소프트] --&gt; G[\"Outlook &lt;br&gt; Hotmail, Live Mail\"]\n\n    subgraph Microsoft\n        direction LR\n        G --&gt; I[\"New Bing&lt;br&gt; GPT-4\" ]\n        G --&gt; J[\"Image Creator\"]\n        G --&gt; H[\"클라우드 &lt;br&gt; Azure\"]\n    end\n\n    J --&gt; JI[\"Text 2 Image\"]\n\n    style Microsoft fill:#0594fa,stroke:#333,stroke-width:1px\n\n\n\n\n\n\n네이버/카카오\n\n\n\n\ngraph TB\n    K[\"네이버/카카오\"] --&gt; Naver[\"네이버 메일\"]\n    K[\"네이버/카카오\"] --&gt; Kakao[\"다음/카카오 메일\"]\n\n    subgraph NAVER/KAKAO\n        direction LR\n        Naver --&gt; Clova[\"OCR\"]\n        Kakao --&gt; Askup[\"&lt;s&gt;아숙업(AskUp)&lt;/s&gt;\"]\n        Kakao --&gt; Bedit[\"B^EDIT\"]\n    end\n\n    style NAVER/KAKAO fill:#05fa15, stroke:#333,stroke-width:1px\n\n    Clova -.-&gt; ClovaOCR[\"광학문자인식\"]\n    Bedit -.-&gt; BeditImage[\"Text 2 Image\"]"
+  },
+  {
+    "objectID": "prerequisite.html#네이버카카오",
+    "href": "prerequisite.html#네이버카카오",
+    "title": "chatGPT",
+    "section": "2.3 네이버/카카오",
+    "text": "2.3 네이버/카카오\n\n\n\n\ngraph TB\n    K[\"네이버/카카오\"] --&gt; Naver[\"네이버 메일\"]\n    K[\"네이버/카카오\"] --&gt; Kakao[\"다음/카카오 메일\"]\n\n    subgraph NAVER/KAKAO\n        direction LR\n        Naver --&gt; Clova[\"OCR\"]\n        Kakao --&gt; Askup[\"&lt;s&gt;아숙업(AskUp)&lt;/s&gt;\"]\n        Kakao --&gt; Bedit[\"B^EDIT\"]\n    end\n\n    style NAVER/KAKAO fill:#05fa15, stroke:#333,stroke-width:1px\n\n    Clova -.-&gt; ClovaOCR[\"광학문자인식\"]\n    Bedit -.-&gt; BeditImage[\"Text 2 Image\"]"
+  },
+  {
+    "objectID": "prerequisite.html#구글-google",
+    "href": "prerequisite.html#구글-google",
+    "title": "chatGPT",
+    "section": "2.1 구글 (Google)",
+    "text": "2.1 구글 (Google)\n\n\n\n\n\ngraph TB\n\nA[구글] --&gt; B[Gmail]\n\nsubgraph Google\n    direction LR\n    B --&gt; GA[OpenAI &lt;br&gt; ChatGPT]\n    B --&gt; GC[\"HackMD &lt;br&gt; 마크다운\"]\n    B --&gt; GB[\"&lt;s&gt;Deep Dream&lt;/s&gt;&lt;br&gt;유료\"]\n    B --&gt; Amazon[클라우드 &lt;br&gt; GCP]\nend\n\nstyle Google fill:#fcec03,stroke:#333,stroke-width:1px\n\nGC -.-&gt; BA[\"디지털 글쓰기 &lt;br&gt; (외양)\"]\nGA -.-&gt; CA[\"디지털 글쓰기 &lt;br&gt; (콘텐츠)\"]\nGB -.-&gt; DA[\"&lt;s&gt;Text 2 Dream&lt;/s&gt;\"]\nGB -.-&gt; DB[\"&lt;s&gt;Deep Style&lt;/s&gt;\"]\nGB -.-&gt; DC[\"&lt;s&gt;Deep Dream&lt;/s&gt;\"]"
+  },
+  {
+    "objectID": "prerequisite.html#마이크로소프트",
+    "href": "prerequisite.html#마이크로소프트",
+    "title": "chatGPT",
+    "section": "2.2 마이크로소프트",
+    "text": "2.2 마이크로소프트\n\n\n\n\ngraph TB\n    F[마이크로소프트] --&gt; G[\"Outlook &lt;br&gt; Hotmail, Live Mail\"]\n\n    subgraph Microsoft\n        direction LR\n        G --&gt; I[\"New Bing&lt;br&gt; GPT-4\" ]\n        G --&gt; J[\"Image Creator\"]\n        G --&gt; H[\"클라우드 &lt;br&gt; Azure\"]\n    end\n\n    J --&gt; JI[\"Text 2 Image\"]\n\n    style Microsoft fill:#0594fa,stroke:#333,stroke-width:1px"
+  },
+  {
+    "objectID": "prerequisite.html#행정문서",
+    "href": "prerequisite.html#행정문서",
+    "title": "chatGPT",
+    "section": "7.1 행정문서",
+    "text": "7.1 행정문서\n\n경기도 긴급복지 위기상담 콜센터 문서: 바로가기\n광명시 생활안정지원금 신청 웹사이트: 바로가기\n\n\n\n\n\n\n경기도 긴급복지 위기상담 콜센터\n\n\n\n\n\n광명시 생활안정지원금 신청\n\n\n\n\n\n행정 문서"
+  },
+  {
+    "objectID": "prerequisite.html#엑셀-데이터",
+    "href": "prerequisite.html#엑셀-데이터",
+    "title": "chatGPT",
+    "section": "7.2 엑셀 데이터",
+    "text": "7.2 엑셀 데이터\n\n\n다운로드"
+  },
+  {
+    "objectID": "prerequisite.html#카카오-bedit",
+    "href": "prerequisite.html#카카오-bedit",
+    "title": "chatGPT",
+    "section": "5.3 카카오 B^Edit",
+    "text": "5.3 카카오 B^Edit\n카카오브레인이 개발하여 공개한 ‘B^ EDIT(비 에디트)’ 웹 서비스를 통해 Text-to-Image 기능을 통해 다양한 AI 이미지를 얻을 수 있다.\n성현희 (2023-03-07), “카카오브레인, ‘B^ EDIT’ 오픈 베타서비스 글로벌 출시” 전자신문\n’B^ EDIT’에 접속해 바로크, 3D 렌더, 일본 애니메이션 등 총 30가지 화풍 중 원하는 화풍과 제시어(프롬프트)를 입력하면, AI가 화풍 및 프롬프트에 적합한 이미지 8장을 5~10초 이내로 생성한다. 그외에도 아웃페인팅(Outpainting), 인페이팅(Inpainting), CS2I(Color Sketch To Image) 등의 기능도 제공한다."
+  },
+  {
+    "objectID": "prerequisite.html#모바일-챗gpt",
+    "href": "prerequisite.html#모바일-챗gpt",
+    "title": "chatGPT",
+    "section": "4.1 모바일 챗GPT",
+    "text": "4.1 모바일 챗GPT\n안드로이드 계열 핸드폰의 경우 자체 내장된 크롬 웹브라우져를 찾아 주소창에 챗GPT 접속 주소를 넣어 로그인 과정을 거쳐 챗GPT 서비스를 사용한다. 챗GPT 안드로이드 앱이 없기 때문에 웹앱형태로 챗GPT 서비스를 사용한다."
+  },
+  {
+    "objectID": "prerequisite.html#gpt-4-챗gpt",
+    "href": "prerequisite.html#gpt-4-챗gpt",
+    "title": "chatGPT",
+    "section": "4.2 GPT-4 챗GPT",
+    "text": "4.2 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
+  },
+  {
+    "objectID": "prerequisite.html#gpt-4-챗gpt-1",
+    "href": "prerequisite.html#gpt-4-챗gpt-1",
+    "title": "chatGPT",
+    "section": "4.3 GPT-4 챗GPT",
+    "text": "4.3 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
+  },
+  {
+    "objectID": "prerequisite.html#image-creator",
+    "href": "prerequisite.html#image-creator",
+    "title": "chatGPT",
+    "section": "4.4 Image Creator",
+    "text": "4.4 Image Creator\nText-to-Image를 모바일에서 사용하는 방식은 마이크로소프트 엣지 브라우저에서 이미지 작성자(Image Creator) 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 “Play 스토어”(앱스토어)에서 “엣지브라우저”를 검색하여 엣지 브라우저 앱을 설치한 후 주소 검색창에 https://bing.com/create를 넣어 이미지 작성자 웹사이트에 접속한 후 적절한 프롬프트를 넣어 AI 이미지를 얻는다."
+  },
+  {
+    "objectID": "prerequisite.html#클로바-ocr",
+    "href": "prerequisite.html#클로바-ocr",
+    "title": "chatGPT",
+    "section": "4.5 클로바 OCR",
+    "text": "4.5 클로바 OCR\nImage-to-Text, 광학문자인식(OCR) 기능을 모바일에서 사용하는 방식은 크롬 브라우저에서 CLOVA OCR 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 크롬/엣지 등 웹브라우저 주소 검색창에 https://clova.ai/ocr를 넣어 이미지를 올리거나 사진을 찍으면 해당 이미지에서 텍스트를 탐지하고 텍스트를 추출하는 OCR 작업을 자동 수행한다. 추출된 텍스트를 복사하여 다른 곳에 붙여넣고 후속 작업을 수행하면 된다."
+  },
+  {
+    "objectID": "prerequisite.html#파이썬",
+    "href": "prerequisite.html#파이썬",
+    "title": "chatGPT",
+    "section": "6.1 파이썬",
+    "text": "6.1 파이썬\n코딩 실습을 위해서 파이썬을 설치한다. 파이썬 홈페이지에서 운영체제에 맞는 파이썬 버전을 선택하여 설치한다. 파이썬 코드 작성에 필요한 편집기는 파이썬 설치할 때 내장되어 있으니 설치가 정상처리되면 아이들(IDLE) 편집기를 실행하여 헬로월드 파이썬 확장자를 갖는 파일을 생성하여 키보드 F5 키를 누르면 실행된다. 즉 바탕화면에 hello.py 파일명으로 코드를 저장하고 키보드 F5 키로 실행한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 파이썬과 편집기(IDLE)"
+  },
+  {
+    "objectID": "prerequisite.html#엑셀-vba",
+    "href": "prerequisite.html#엑셀-vba",
+    "title": "chatGPT",
+    "section": "6.2 엑셀 VBA",
+    "text": "6.2 엑셀 VBA\n먼저 엑셀 상단 메뉴에서 파일 &rarr; 옵션 &rarr; 리본 사용자 지정 &rarr; 개발도구를 클릭하여 활성화시키면된다. 그리고 챗GPT에서 작성된 VBA 코드는 해당 엑셀쉬트(Sheet)를 활성화시킨 후에 코드를 붙여넣고 상단 실행버튼을 클릭하면 된다.\n\n\n\n\n\n\nVBA 개발도구 설정\n\n\n\n\n\nVBA 실행\n\n\n\n그림 4: 엑셀 내부 VBA 프로그래밍 언어 실행\n\n\nVBA는 Visual Basic for Applications의 약자로 Excel, Word, PowerPoint와 같은 Microsoft Office 응용 프로그램에 통합된 프로그래밍 언어입니다. VBA를 사용하면 이러한 애플리케이션 내에서 작업을 자동화하고 사용자 지정 함수를 만들 수 있다. VBA 코드는 애플리케이션 내에서 작성 및 편집할 수 있으므로 다양한 사용자 지정 및 자동화 가능성을 제공한다."
   }
 ]
