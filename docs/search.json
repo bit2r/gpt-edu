@@ -186,7 +186,7 @@
     "href": "gg_hr_20230515.html",
     "title": "chatGPT",
     "section": "",
-    "text": "1"
+    "text": "1 강의노트\n\n디지털 강의노트\n\n정보보안을 위해서 강의 후 접속불가합니다.\n\n\n\n\n2 챗GPT 실무교육\n\n\n\n\nflowchart TB\n    A[강의 PPT] --&gt; B[실습: 글쓰기]\n    B --&gt; C[실습: OCR &lt;br&gt; 보도자료]\n    A --&gt; D[\"실습: 그리기\"]\n    A --&gt; E[\"추론(수능)\"]\n\nclick A href \"https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide\"\nclick C href \"https://r2bit.com/gpt-edu/gg_20230426_write.html\"\nclick D href \"https://r2bit.com/gpt-edu/gg_20230426_draw.html\"\nclick E href \"https://r2bit.com/gpt-edu/gg_20230426_draw.html\"\n\nclass A,B,C,D nodeStyle\nclass E taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#fdfd96,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;\n\n\n\n\n\n\n\n3 강의 교재\nChatGPT(Chatbot Generative Pre-trained Transformer)는 OpenAI에서 개발한 거대언어 모델이다. ChatGPT는 입력한 텍스트를 사람과 유사한 텍스트를 이해하고 생성하도록 설계되었다. 인터넷의 방대한 텍스트 데이터로 학습되어 다양한 주제에 응답, 정보 제공, 질문응답, 제안, 사용자와 대화를 이어나갈 수 있다.\n\n챗GPT PPT\n챗GPT 심화교재\n(후속) 챗GPT 개발자 과정\n\n\n\n4 AI 소양\n\nAI 기본기\n\n\n\n5 실습 데이터\n\n행정 문서\n\n\n\n6 실습 시나리오\n\n행정문서 OCR 기계판독 텍스트 추출\n요약\n보도자료 작성\n\n길이 조절(장문, 단문)\n보도자료 독자 차별화\n보도자료 어조 변화(전문적, 유머, 감성적 등)\n보도자료 제목 + 이미티콘\n\n보도자료 요약 → 이미지 생성\n최종 보도자료 마무리\n\n보도자료 제목\n보도자료 본문\n보도자료 맥락을 품은 AI 이미지\n\n\n\n\n7 스마트폰\n\nSpeech-to-Text 프롬프트 생성 (스마트폰 음성인식)\n휴대용 스캐너 (아날로그 문서 디지털화)\n수능문제 풀이(추론)"
   },
   {
     "objectID": "km_20230407.html",

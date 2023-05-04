@@ -8,7 +8,6 @@ author:
     affiliation-url: https://github.com/bit2r
 date: "2023-05-15"
 title-block-banner: true
-#title-block-banner: "#562457"
 format:
   html:
     css: css/quarto.css
@@ -37,6 +36,71 @@ editor_options:
   chunk_output_type: console
 ---
 
-# 
+# 강의노트
+
+- [디지털 강의노트](https://bit.ly/41ZXzBi)
+    - 정보보안을 위해서 강의 후 접속불가합니다.
+
+
+# 챗GPT 실무교육
+
+```{mermaid}
+flowchart TB
+    A[강의 PPT] --> B[실습: 글쓰기]
+    B --> C[실습: OCR <br> 보도자료]
+    A --> D["실습: 그리기"]
+    A --> E["추론(수능)"]
+
+click A href "https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide"
+click C href "https://r2bit.com/gpt-edu/gg_20230426_write.html"
+click D href "https://r2bit.com/gpt-edu/gg_20230426_draw.html"
+click E href "https://r2bit.com/gpt-edu/gg_20230426_draw.html"
+
+class A,B,C,D nodeStyle
+class E taskStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef taskStyle fill:#fdfd96,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
+```
+
+
+# 강의 교재
+
+**ChatGPT(Chatbot Generative Pre-trained Transformer)**는 OpenAI에서 개발한 거대언어 모델이다. ChatGPT는 입력한 텍스트를 사람과 유사한 텍스트를 이해하고 생성하도록 설계되었다. 인터넷의 방대한 텍스트 데이터로 학습되어 다양한 주제에 응답, 정보 제공, 질문응답, 제안, 사용자와 대화를 이어나갈 수 있다.
+
+- [챗GPT PPT](https://r2bit.com/bitSlide/slideshow/202304-gpt/#/title-slide)
+- [챗GPT 심화교재](https://r2bit.com/chatGPT)
+- (후속) [챗GPT 개발자 과정](https://r2bit.com/chatGPT/prompt_for_develoopers.html)
+
+
+# AI 소양
+
+- [AI 기본기](https://r2bit.com/gpt-edu/gg_20230426.html#ai-%EB%AA%A8%ED%98%95-%EA%B0%9C%EB%B0%9C)
+
+# 실습 데이터
+
+- [행정 문서](https://r2bit.com/gpt-edu/prerequisite.html#%EC%8B%A4%EC%8A%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0)
+
+# 실습 시나리오
+
+1. 행정문서 OCR 기계판독 텍스트 추출
+1. 요약
+1. 보도자료 작성
+    - 길이 조절(장문, 단문)
+    - 보도자료 독자 차별화
+    - 보도자료 어조 변화(전문적, 유머, 감성적 등)
+    - 보도자료 제목 + 이미티콘
+1. 보도자료 요약 &rarr; 이미지 생성
+1. 최종 보도자료 마무리
+    - 보도자료 제목
+    - 보도자료 본문
+    - 보도자료 맥락을 품은 AI 이미지
+
+# 스마트폰
+
+1. Speech-to-Text 프롬프트 생성 (스마트폰 음성인식)
+1. 휴대용 스캐너 (아날로그 문서 디지털화)
+1. 수능문제 풀이(추론)
+
 
 
