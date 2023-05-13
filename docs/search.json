@@ -466,7 +466,7 @@
     "href": "gseek_20230530.html",
     "title": "chatGPT",
     "section": "",
-    "text": "챗GPT 디지털 글쓰기 학습 후\n\n\n\n\n\n\n워드 편집기(아래한글, 워드 등) 없이 다양한 형태 문서를 무료로 저작한다.\n전세계 사람들과 동일한 방식으로 공유와 협업을 통해 디지털 저작물을 만든다.\n유료 소프트웨어(오피스 구입), 무료 블로그 광고 없이도 디지털 저작물을 생산하고 저작권자는 본인으로 챗GPT 시대 디지털 글쓰기 주체로 자리매김한다."
+    "text": "챗GPT 디지털 글쓰기 학습 후\n\n\n\n\n\n\n워드 편집기(아래한글, 워드 등) 없이 다양한 형태 문서를 무료로 저작한다.\n전세계 사람들과 동일한 방식으로 공유와 협업을 통해 디지털 저작물을 만든다.\n유료 소프트웨어(오피스 구입), 무료 블로그 광고 없이도 디지털 저작물을 생산하고 저작권자는 본인으로 챗GPT 시대 디지털 글쓰기 주체로 자리매김한다.\n경기도평생학습포털 지식(GSEEK) 지식홈페이지에 개설되는 “챗GPT 디지털 글쓰기” 교육과정이다."
   },
   {
     "objectID": "gseek_20230530.html#한국영화-10선",
@@ -571,7 +571,7 @@
     "href": "gseek_20230530_format.html",
     "title": "chatGPT",
     "section": "",
-    "text": "1"
+    "text": "노트\n\n\n\n\n\n비영리법인 한국 R 사용자회에서 추진하고 있는 디지털 글쓰기 : chatGPT와 함께 AI 글쓰기, 쿼토 데이터 과학를 참고한다.\n\n\n코드\nxfun::embed_file(\"data/writing_penguin.zip\", text=\"실습파일 압축(zip) 다운로드\")\n\n\n실습파일 압축(zip) 다운로드"
   },
   {
     "objectID": "gseek_20230530_format.html#실제-데이터",
@@ -600,5 +600,96 @@
     "title": "chatGPT",
     "section": "3.3 사람 작가",
     "text": "3.3 사람 작가\n???"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#환경설정",
+    "href": "gseek_20230530_format.html#환경설정",
+    "title": "chatGPT",
+    "section": "1.1 환경설정",
+    "text": "1.1 환경설정\n디지털 저작 출판을 위한 저작환경을 준비한다.\n\nQuarto 설치/출판 - Quarto 윈도우 설치부터 웹사이트 배포까지"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#마크다운",
+    "href": "gseek_20230530_format.html#마크다운",
+    "title": "chatGPT",
+    "section": "1.2 마크다운",
+    "text": "1.2 마크다운\n디지털 글쓰기 마크다운 기초를 참조한다.\n\n마크다운 기초"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#레이아웃",
+    "href": "gseek_20230530_format.html#레이아웃",
+    "title": "chatGPT",
+    "section": "1.3 레이아웃",
+    "text": "1.3 레이아웃\n쿼토 레이아웃을 참조한다.\n\nQuarto 레이아웃(Layout)"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#데이터셋",
+    "href": "gseek_20230530_format.html#데이터셋",
+    "title": "chatGPT",
+    "section": "2.1 데이터셋",
+    "text": "2.1 데이터셋\n\n\n\n코드\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins %&gt;% \n  head() %&gt;% \n  gt::gt()\n\n\n\n\n\n\n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n      flipper_length_mm\n      body_mass_g\n      sex\n      year\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n    Adelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n    Adelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n    Adelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n    Adelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n    Adelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#표",
+    "href": "gseek_20230530_format.html#표",
+    "title": "chatGPT",
+    "section": "2.2 표",
+    "text": "2.2 표\n\n\n코드\npenguins %&gt;% \n  # 데이터 전처리\n  drop_na() %&gt;% \n  # 요약통계량\n  count(species, sex) %&gt;% \n  # 자료구조 변환\n  pivot_wider(names_from = sex, values_from = n) %&gt;% \n  # 표 요약\n  gt::gt()\n\n\n\n\n\n\n  \n    \n    \n      species\n      female\n      male\n    \n  \n  \n    Adelie\n73\n73\n    Chinstrap\n34\n34\n    Gentoo\n58\n61"
+  },
+  {
+    "objectID": "gseek_20230530_format.html#그래프",
+    "href": "gseek_20230530_format.html#그래프",
+    "title": "chatGPT",
+    "section": "2.3 그래프",
+    "text": "2.3 그래프\n\n\n코드\nmass_flipper &lt;- penguins %&gt;% drop_na() %&gt;% \n  ggplot(aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 3,\n             alpha = 0.8) +\n  theme_minimal(base_family = \"NanumGothic\") +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"펭귄 크기\",\n       subtitle = \"남극 펭귄 3종 물갈퀴 길이와 체질량 관계\",\n       x = \"물갈퀴 길이 (mm)\",\n       y = \"체질량 (g)\",\n       color = \"펭귄 3종\",\n       shape = \"펭귄 3종\") +\n  theme(legend.position = c(0.2, 0.7),\n        legend.background = element_rect(fill = \"white\", color = NA),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nmass_flipper"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html",
+    "href": "gseek_20230530_deploy.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "1 글쓰기 콘텐츠\n\n\n\n\n\n\nHTML 웹페이지\nPDF 파일\nPPT 슬라이드\n\n\n\n2 배포\nQuarto Pub 출판을 참고하여 Quarto Pub에 출판한다.\n\n\n\n\n\n\nGitHub Pages\nQuarto Pub"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#환경설정",
+    "href": "gseek_20230530_deploy.html#환경설정",
+    "title": "chatGPT",
+    "section": "1.1 환경설정",
+    "text": "1.1 환경설정\n디지털 저작 출판을 위한 저작환경을 준비한다.\n-Quarto 설치/출판 - Quarto 윈도우 설치부터 웹사이트 배포까지"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#마크다운",
+    "href": "gseek_20230530_deploy.html#마크다운",
+    "title": "chatGPT",
+    "section": "1.2 마크다운",
+    "text": "1.2 마크다운\n디지털 글쓰기 마크다운 기초를 참조한다.\n\n마크다운 기초"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#레이아웃",
+    "href": "gseek_20230530_deploy.html#레이아웃",
+    "title": "chatGPT",
+    "section": "1.3 레이아웃",
+    "text": "1.3 레이아웃\n쿼토 레이아웃을 참조한다.\n\nQuarto 레이아웃(Layout)"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#데이터셋",
+    "href": "gseek_20230530_deploy.html#데이터셋",
+    "title": "chatGPT",
+    "section": "2.1 데이터셋",
+    "text": "2.1 데이터셋\n\n\n\n코드\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins %&gt;% \n  head() %&gt;% \n  gt::gt()\n\n\n\n\n\n\n  \n    \n    \n      species\n      island\n      bill_length_mm\n      bill_depth_mm\n      flipper_length_mm\n      body_mass_g\n      sex\n      year\n    \n  \n  \n    Adelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n    Adelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n    Adelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n    Adelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n    Adelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n    Adelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#표",
+    "href": "gseek_20230530_deploy.html#표",
+    "title": "chatGPT",
+    "section": "2.2 표",
+    "text": "2.2 표\n\n\n코드\npenguins %&gt;% \n  # 데이터 전처리\n  drop_na() %&gt;% \n  # 요약통계량\n  count(species, sex) %&gt;% \n  # 자료구조 변환\n  pivot_wider(names_from = sex, values_from = n) %&gt;% \n  # 표 요약\n  gt::gt()\n\n\n\n\n\n\n  \n    \n    \n      species\n      female\n      male\n    \n  \n  \n    Adelie\n73\n73\n    Chinstrap\n34\n34\n    Gentoo\n58\n61"
+  },
+  {
+    "objectID": "gseek_20230530_deploy.html#그래프",
+    "href": "gseek_20230530_deploy.html#그래프",
+    "title": "chatGPT",
+    "section": "2.3 그래프",
+    "text": "2.3 그래프\n\n\n코드\nmass_flipper &lt;- penguins %&gt;% drop_na() %&gt;% \n  ggplot(aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 3,\n             alpha = 0.8) +\n  theme_minimal(base_family = \"NanumGothic\") +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"펭귄 크기\",\n       subtitle = \"남극 펭귄 3종 물갈퀴 길이와 체질량 관계\",\n       x = \"물갈퀴 길이 (mm)\",\n       y = \"체질량 (g)\",\n       color = \"펭귄 3종\",\n       shape = \"펭귄 3종\") +\n  theme(legend.position = c(0.2, 0.7),\n        legend.background = element_rect(fill = \"white\", color = NA),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nmass_flipper"
   }
 ]

@@ -46,7 +46,97 @@ editor:
     wrap: 72
 ---
 
-# 
+:::{.callout-note collapse=false}
+
+비영리법인 한국 R 사용자회에서 추진하고 있는 
+[디지털 글쓰기 : chatGPT와 함께 AI 글쓰기](https://r2bit.com/bitBook/), [쿼토 데이터 과학](https://r2bit.com/quarto/)를 참고한다.
+
+```{r}
+xfun::embed_file("data/writing_penguin.zip", text="실습파일 압축(zip) 다운로드")
+```
+
+:::
 
 
+# 사전 준비
+
+## 환경설정
+
+디지털 저작 출판을 위한 저작환경을 준비한다.
+
+- [Quarto 설치/출판 - Quarto 윈도우 설치부터 웹사이트 배포까지](https://r2bit.com/quarto/quarto_install.html)
+
+
+## 마크다운
+
+디지털 글쓰기 마크다운 기초를 참조한다.
+
+- [마크다운 기초](https://r2bit.com/bitBook/markdown_02_markdown.html)
+
+## 레이아웃
+
+쿼토 레이아웃을 참조한다.
+
+- [Quarto 레이아웃(Layout)](https://r2bit.com/quarto/quarto_layout.html)
+
+
+# 펭귄
+
+## 데이터셋
+
+:::{.column-body-outset}
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(palmerpenguins)
+
+penguins %>% 
+  head() %>% 
+  gt::gt()
+```
+
+:::
+
+## 표
+
+```{r}
+penguins %>% 
+  # 데이터 전처리
+  drop_na() %>% 
+  # 요약통계량
+  count(species, sex) %>% 
+  # 자료구조 변환
+  pivot_wider(names_from = sex, values_from = n) %>% 
+  # 표 요약
+  gt::gt()
+```
+
+## 그래프
+
+```{r}
+mass_flipper <- penguins %>% drop_na() %>% 
+  ggplot(aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  theme_minimal(base_family = "NanumGothic") +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "펭귄 크기",
+       subtitle = "남극 펭귄 3종 물갈퀴 길이와 체질량 관계",
+       x = "물갈퀴 길이 (mm)",
+       y = "체질량 (g)",
+       color = "펭귄 3종",
+       shape = "펭귄 3종") +
+  theme(legend.position = c(0.2, 0.7),
+        legend.background = element_rect(fill = "white", color = NA),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+mass_flipper
+```
 

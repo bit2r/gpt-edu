@@ -58,6 +58,12 @@ editor:
     주체로 자리매김한다.
 :::
 
+경기도평생학습포털 지식(GSEEK) [지식홈페이지](https://www.gseek.kr/)에 개설되는 "챗GPT 디지털 글쓰기" 교육과정이다.
+
+[![GSEEK 01](images/GSEEK_001.jpg), ![GSEEK 02](images/GSEEK_002.jpg)]{.aside}
+
+
+
 # (챗GPT) 디지털 글쓰기 [^quarto]
 
 [^quarto]: 한국 R 사용자회 [데이터 과학 글쓰기](https://r2bit.com/quarto/)
