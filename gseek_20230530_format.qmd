@@ -1,0 +1,52 @@
+---
+title: "chatGPT"
+subtitle: "지식(GSeek): 디지털 글쓰기"
+description: | 
+  챗GPT가 이목을 집중하고 있는 가장 근본적인 이유는 디지털 글쓰기를 사람보다 신속하고 빠르게 하기 때문입니다. 챗GPT 글쓰기에는 다양한 종류의 글쓰기, 코딩, 그리고, 추론 등이 포함되고 있습니다. 챗GPT 글쓰기 첫 번째 주제로 “디지털 글쓰기”를 챗GPT 출현 이전과 이후 확연히 달라진 디지털 글쓰기를 실습을 통해 진행합니다.
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+  - name: 신종화
+    url: https://modernity.tistory.com/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r    
+date: "2023-04-07"
+title-block-banner: true
+#title-block-banner: "#562457"
+format:
+  html:
+    css: css/quarto.css
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# 
+
+
+

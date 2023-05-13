@@ -1,0 +1,14 @@
+{
+  "hash": "943d34385f6923b33110c47a79c84861",
+  "result": {
+    "markdown": "---\ntitle: \"chatGPT\"\nsubtitle: \"지식(GSeek): 디지털 글쓰기\"\ndescription: | \n  챗GPT가 이목을 집중하고 있는 가장 근본적인 이유는 디지털 글쓰기를 사람보다 신속하고 빠르게 하기 때문입니다. 챗GPT 글쓰기에는 다양한 종류의 글쓰기, 코딩, 그리고, 추론 등이 포함되고 있습니다. 챗GPT 글쓰기 첫 번째 주제로 “디지털 글쓰기”를 챗GPT 출현 이전과 이후 확연히 달라진 디지털 글쓰기를 실습을 통해 진행합니다.\nauthor:\n  - name: 이광춘\n    url: https://www.linkedin.com/in/kwangchunlee/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r\n  - name: 신종화\n    url: https://modernity.tistory.com/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r    \ndate: \"2023-04-07\"\ntitle-block-banner: true\n#title-block-banner: \"#562457\"\nformat:\n  html:\n    css: css/quarto.css\n    theme: flatly\n    code-fold: true\n    code-overflow: wrap\n    toc: true\n    toc-depth: 3\n    toc-title: 목차\n    number-sections: true\n    highlight-style: github    \n    self-contained: false\nfilters:\n   - lightbox\nlightbox: auto\nlink-citations: true\nknitr:\n  opts_chunk: \n    message: false\n    warning: false\n    collapse: true\n    comment: \"#>\" \n    R.options:\n      knitr.graphics.auto_pdf: true\neditor_options: \n  chunk_output_type: console\neditor: \n  markdown: \n    wrap: 72\n---\n\n\n# \n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

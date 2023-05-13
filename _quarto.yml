@@ -27,14 +27,18 @@ website:
         text: "사전 준비"
       - href: timer.qmd
         text: "실습시간"
-      - section: "광명시"
+      - section: "경기도 지식(GSeek):"        
         contents:
-          - href: km_20230407.qmd
-            text: "직무교육(4/7)"
-          - href: km_20230421.qmd
-            text: "직무교육(4/21)"
-          - href: km_20230407_adv.qmd
-            text: "직무교육 심화"            
+          - href: gseek_20230530.qmd
+            text: "챗GPT 디지털 글쓰기(5/30)"
+          - href: gseek_20230530_write.qmd
+            text: "챗GPT 글쓰기 콘텐츠(글감)"
+          - href: gseek_20230530_format.qmd
+            text: "챗GPT 구조와 외양"
+          - href: gseek_20230530_deploy.qmd
+            text: "챗GPT 배포와 공유"
+      - href: gg_hr_20230515.qmd
+        text: "경기도 직무교육(5/15)"
       - section: "경기도청"
         contents:
           - href: gg_20230426.qmd
@@ -45,10 +49,14 @@ website:
             text: "직무교육 - 그리기"
           - href: gg_20230426_excel.qmd
             text: "직무교육 - 엑셀"            
-      - href: gg_hr_20230515.qmd
-        text: "경기도 직무교육"
-      - href: gseek_20230530.qmd
-        text: "지식(GSeek): 디지털 글쓰기"
+      - section: "광명시"
+        contents:
+          - href: km_20230407.qmd
+            text: "직무교육(4/7)"
+          - href: km_20230421.qmd
+            text: "직무교육(4/21)"
+          - href: km_20230407_adv.qmd
+            text: "직무교육 심화"            
 
 bibliography: bibliography.bib
 csl: apa-single-spaced.csl
