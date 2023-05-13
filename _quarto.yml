@@ -47,6 +47,8 @@ website:
             text: "직무교육 - 엑셀"            
       - href: gg_hr_20230515.qmd
         text: "경기도 직무교육"
+      - href: gseek_20230530.qmd
+        text: "지식(GSeek): 디지털 글쓰기"
 
 bibliography: bibliography.bib
 csl: apa-single-spaced.csl
