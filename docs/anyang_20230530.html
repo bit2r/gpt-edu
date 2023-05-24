@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="이광춘">
+<meta name="author" content="신종화">
+<meta name="description" content="챗GPT 프롬프트 엔지니어링, 엑셀 매크로 활용 실습 / 챗GPT 에 코드를 검색하고 엑셀에 적용하는 실습, 미드저니 등 AI 활용 그림그리기 실습으로 진행됩니다.">
 
-<title>챗GPT 교육 - GPT 교육</title>
+<title>챗GPT 교육 - chatGPT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +78,7 @@ ga('send', {
 </script>
 
 
+<link rel="stylesheet" href="css/quarto.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -86,7 +90,7 @@ ga('send', {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">챗GPT 교육</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anyang_20230530.html">안양시 직무교육(5/30)</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
@@ -96,7 +100,60 @@ ga('send', {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">chatGPT</h1>
+            <p class="subtitle lead">안양시 직무교육</p>
+                  <div>
+        <div class="description">
+          <p>챗GPT 프롬프트 엔지니어링, 엑셀 매크로 활용 실습 / 챗GPT 에 코드를 검색하고 엑셀에 적용하는 실습, 미드저니 등 AI 활용 그림그리기 실습으로 진행됩니다.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">저자</div>
+    <div class="quarto-title-meta-heading">소속</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://www.linkedin.com/in/kwangchunlee/">이광춘</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://github.com/bit2r">
+              한국 R 사용자회
+              </a>
+            </p>
+        </div>
+        <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://modernity.tistory.com/">신종화</a> </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://github.com/bit2r">
+              한국 R 사용자회
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">공개</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2023년 4월 7일</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -125,7 +182,7 @@ ga('send', {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./anyang_20230530.html" class="sidebar-item-text sidebar-link">
+  <a href="./anyang_20230530.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">안양시 직무교육(5/30)</span></a>
   </div>
 </li>
@@ -240,30 +297,52 @@ ga('send', {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#프롬프트-공학" id="toc-프롬프트-공학" class="nav-link active" data-scroll-target="#프롬프트-공학"><span class="header-section-number">1</span> 프롬프트 공학</a></li>
+  <li><a href="#엑셀" id="toc-엑셀" class="nav-link" data-scroll-target="#엑셀"><span class="header-section-number">2</span> 엑셀</a></li>
+  <li><a href="#그리기" id="toc-그리기" class="nav-link" data-scroll-target="#그리기"><span class="header-section-number">3</span> 그리기</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">GPT 교육</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mermaid.live/edit#pako:eNqdVO9r00AY_lfCDfzU1knYB6MMSlvmhym1G2y4iFxylzWY5EJ6QcsY7IMV2Zyu2NmKFTYYitAPFTesH_YPtZf_wfeSpj-UqewC4b2753ne9568uR1kMkKRhrYD7FeV1Yru6Z4Cw6xivlJe39KR-NaGQEePlWx2WSkyM3Spx1NcLTQSarohGcevxPumOOgq4uBs1DsfXhyJ7ikoJBQ5iB1Qk9vMi1MqM6PAPA4yNalz2YkaR2JwkiZfL23KiqLWi9FpD97R_kAZfr-Ijj_EiBxA8kQCGodi_wx253LOqsdypc1CaVXmaTdFY28iUaE-C-JzXLZGra9_1yhW8hsALWLHueHahDB-pzRRWnNsQmF3-GMw-twbDvoTLeqR1MHUuESO-g6r_2luvAxKo34_etv7DysfhjjgDBhJoJRDQ5aV1LVBjScFFpcmXr4Gq-RJ33XvGsGy-PgzetMRn87Flz05B3tF9-Rm1GmKdmMu74rN74UGSEBQDQ2ljLdp-qHSBFP0A8od25JHGEdxNb_VM4WXuAnQXC53NWzGwhqvO3RqpGU7jrZgLcknU-MBe0q1BVVVx3H2mU14VVP957PsPBnzFpduW5Z1Ne_WPC_plutx4_64HjXpiJSrWqa6-I-jJmyUQS4NXGwT-Ol35JqOeJW68Ok0CAm1cOhwHeneLkBxyNla3TORxoOQZlDoE8xp0cbQli7SLOzUYNXH3iPGpnNKbM6C-8nFEt8vu78Ar5eMzQ"><img src="https://mermaid.ink/img/pako:eNqdVO9r00AY_lfCDfzU1knYB6MMSlvmhym1G2y4iFxylzWY5EJ6QcsY7IMV2Zyu2NmKFTYYitAPFTesH_YPtZf_wfeSpj-UqewC4b2753ne9568uR1kMkKRhrYD7FeV1Yru6Z4Cw6xivlJe39KR-NaGQEePlWx2WSkyM3Spx1NcLTQSarohGcevxPumOOgq4uBs1DsfXhyJ7ikoJBQ5iB1Qk9vMi1MqM6PAPA4yNalz2YkaR2JwkiZfL23KiqLWi9FpD97R_kAZfr-Ijj_EiBxA8kQCGodi_wx253LOqsdypc1CaVXmaTdFY28iUaE-C-JzXLZGra9_1yhW8hsALWLHueHahDB-pzRRWnNsQmF3-GMw-twbDvoTLeqR1MHUuESO-g6r_2luvAxKo34_etv7DysfhjjgDBhJoJRDQ5aV1LVBjScFFpcmXr4Gq-RJ33XvGsGy-PgzetMRn87Flz05B3tF9-Rm1GmKdmMu74rN74UGSEBQDQ2ljLdp-qHSBFP0A8od25JHGEdxNb_VM4WXuAnQXC53NWzGwhqvO3RqpGU7jrZgLcknU-MBe0q1BVVVx3H2mU14VVP957PsPBnzFpduW5Z1Ne_WPC_plutx4_64HjXpiJSrWqa6-I-jJmyUQS4NXGwT-Ol35JqOeJW68Ok0CAm1cOhwHeneLkBxyNla3TORxoOQZlDoE8xp0cbQli7SLOzUYNXH3iPGpnNKbM6C-8nFEt8vu78Ar5eMzQ?type=png.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
+<section id="프롬프트-공학" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 프롬프트 공학</h1>
+<ol type="1">
+<li><a href="https://r2bit.com/chatGPT/prompt.html">프롬프트 공학</a></li>
+<li><a href="https://r2bit.com/chatGPT/prompt_adv.html">고급 프롬프트 공학</a></li>
+<li><a href="https://r2bit.com/chatGPT/prompt_in_practice.html">프롬프트 실무</a></li>
+<li><a href="https://r2bit.com/chatGPT/prompt_for_develoopers.html">(개발자) 프롬프트 공학</a></li>
+</ol>
+</section>
+<section id="엑셀" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 엑셀</h1>
+<ol type="1">
+<li><a href="https://r2bit.com/quarto/excel_why.html">왜 엑셀(?)</a></li>
+<li><a href="https://r2bit.com/quarto/excel_dc.html">데이터 기본기</a></li>
+<li><a href="https://r2bit.com/quarto/excel_chatGPT.html">챗GPT 엑셀</a></li>
+</ol>
+</section>
+<section id="그리기" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 그리기</h1>
+<ol type="1">
+<li></li>
+</ol>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

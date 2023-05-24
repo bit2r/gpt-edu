@@ -1,0 +1,72 @@
+---
+title: "chatGPT"
+subtitle: "안양시 직무교육"
+description: | 
+  챗GPT 프롬프트 엔지니어링, 엑셀 매크로 활용 실습 / 챗GPT 에 코드를 검색하고 엑셀에 적용하는 실습, 미드저니 등 AI 활용 그림그리기 실습으로 진행됩니다.
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+  - name: 신종화
+    url: https://modernity.tistory.com/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r    
+date: "2023-04-07"
+title-block-banner: true
+#title-block-banner: "#562457"
+format:
+  html:
+    css: css/quarto.css
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+[![](https://mermaid.ink/img/pako:eNqdVO9r00AY_lfCDfzU1knYB6MMSlvmhym1G2y4iFxylzWY5EJ6QcsY7IMV2Zyu2NmKFTYYitAPFTesH_YPtZf_wfeSpj-UqewC4b2753ne9568uR1kMkKRhrYD7FeV1Yru6Z4Cw6xivlJe39KR-NaGQEePlWx2WSkyM3Spx1NcLTQSarohGcevxPumOOgq4uBs1DsfXhyJ7ikoJBQ5iB1Qk9vMi1MqM6PAPA4yNalz2YkaR2JwkiZfL23KiqLWi9FpD97R_kAZfr-Ijj_EiBxA8kQCGodi_wx253LOqsdypc1CaVXmaTdFY28iUaE-C-JzXLZGra9_1yhW8hsALWLHueHahDB-pzRRWnNsQmF3-GMw-twbDvoTLeqR1MHUuESO-g6r_2luvAxKo34_etv7DysfhjjgDBhJoJRDQ5aV1LVBjScFFpcmXr4Gq-RJ33XvGsGy-PgzetMRn87Flz05B3tF9-Rm1GmKdmMu74rN74UGSEBQDQ2ljLdp-qHSBFP0A8od25JHGEdxNb_VM4WXuAnQXC53NWzGwhqvO3RqpGU7jrZgLcknU-MBe0q1BVVVx3H2mU14VVP957PsPBnzFpduW5Z1Ne_WPC_plutx4_64HjXpiJSrWqa6-I-jJmyUQS4NXGwT-Ol35JqOeJW68Ok0CAm1cOhwHeneLkBxyNla3TORxoOQZlDoE8xp0cbQli7SLOzUYNXH3iPGpnNKbM6C-8nFEt8vu78Ar5eMzQ?type=png)](https://mermaid.live/edit#pako:eNqdVO9r00AY_lfCDfzU1knYB6MMSlvmhym1G2y4iFxylzWY5EJ6QcsY7IMV2Zyu2NmKFTYYitAPFTesH_YPtZf_wfeSpj-UqewC4b2753ne9568uR1kMkKRhrYD7FeV1Yru6Z4Cw6xivlJe39KR-NaGQEePlWx2WSkyM3Spx1NcLTQSarohGcevxPumOOgq4uBs1DsfXhyJ7ikoJBQ5iB1Qk9vMi1MqM6PAPA4yNalz2YkaR2JwkiZfL23KiqLWi9FpD97R_kAZfr-Ijj_EiBxA8kQCGodi_wx253LOqsdypc1CaVXmaTdFY28iUaE-C-JzXLZGra9_1yhW8hsALWLHueHahDB-pzRRWnNsQmF3-GMw-twbDvoTLeqR1MHUuESO-g6r_2luvAxKo34_etv7DysfhjjgDBhJoJRDQ5aV1LVBjScFFpcmXr4Gq-RJ33XvGsGy-PgzetMRn87Flz05B3tF9-Rm1GmKdmMu74rN74UGSEBQDQ2ljLdp-qHSBFP0A8od25JHGEdxNb_VM4WXuAnQXC53NWzGwhqvO3RqpGU7jrZgLcknU-MBe0q1BVVVx3H2mU14VVP957PsPBnzFpduW5Z1Ne_WPC_plutx4_64HjXpiJSrWqa6-I-jJmyUQS4NXGwT-Ol35JqOeJW68Ok0CAm1cOhwHeneLkBxyNla3TORxoOQZlDoE8xp0cbQli7SLOzUYNXH3iPGpnNKbM6C-8nFEt8vu78Ar5eMzQ)
+
+
+# 프롬프트 공학
+
+1. [프롬프트 공학](https://r2bit.com/chatGPT/prompt.html)
+1. [고급 프롬프트 공학](https://r2bit.com/chatGPT/prompt_adv.html)
+1. [프롬프트 실무](https://r2bit.com/chatGPT/prompt_in_practice.html)
+1. [(개발자) 프롬프트 공학](https://r2bit.com/chatGPT/prompt_for_develoopers.html)
+
+# 엑셀
+
+1. [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+1. [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+1. [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+
+# 그리기
+
+1. 
+
+
+
+

@@ -27,6 +27,8 @@ website:
         text: "사전 준비"
       - href: timer.qmd
         text: "실습시간"
+      - href: anyang_20230530.qmd
+        text: "안양시 직무교육(5/30)"
       - section: "경기도 지식(GSeek):"        
         contents:
           - href: gseek_20230530.qmd
