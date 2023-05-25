@@ -65,7 +65,14 @@ editor:
 
 # 그리기
 
-1. 
+1. [Text-to-Images](https://r2bit.com/chatGPT/text_to_images.html)
+  - 다음, 네이버 뉴스
+  - 미드저니 프롬프트
+    - [구글 바드](https://bard.google.com/) 
+    - [챗GPT](https://chat.openai.com/)
+  - 형용사 + 명사 + 동사 + 스타일 
+  
+  
 
 
 

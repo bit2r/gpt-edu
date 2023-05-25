@@ -25,8 +25,6 @@ website:
     contents: 
       - href: prerequisite.qmd
         text: "사전 준비"
-      - href: timer.qmd
-        text: "실습시간"
       - href: anyang_20230530.qmd
         text: "안양시 직무교육(5/30)"
       - section: "경기도 지식(GSeek):"        
@@ -40,7 +38,7 @@ website:
           - href: gseek_20230530_deploy.qmd
             text: "챗GPT 배포와 공유"
       - href: gg_hr_20230515.qmd
-        text: "경기도 직무교육(5/15)"
+        text: "경기도 학습동아리(5/15)"
       - section: "경기도청"
         contents:
           - href: gg_20230426.qmd
@@ -59,6 +57,8 @@ website:
             text: "직무교육(4/21)"
           - href: km_20230407_adv.qmd
             text: "직무교육 심화"            
+      - href: timer.qmd
+        text: "실습시간"
 
 bibliography: bibliography.bib
 csl: apa-single-spaced.csl
