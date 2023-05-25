@@ -62,6 +62,10 @@ editor:
 
 [![GSEEK 01](images/GSEEK_001.jpg), ![GSEEK 02](images/GSEEK_002.jpg)]{.aside}
 
+# 강의노트
+
+- [디지털 강의노트](https://bit.ly/42QwEbG)
+    - 정보보안을 위해서 강의 후 접속불가합니다.
 
 
 # (챗GPT) 디지털 글쓰기 [^quarto]

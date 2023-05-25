@@ -1,4 +1,21 @@
 ---
-title: "GPT 교육"
+title: "GPT 실습 교육"
 ---
 
+# 챗GPT 디지털 글쓰기
+
+<br>
+
+1. 글쓰기
+    - 텍스트($\LaTeX$)
+    - 데이터 사이언스 (R/Python/SQL/...)
+    - One-Source Multi-Use
+    - Parameterized Document
+    - Reproducible Research (Compendium)
+    - Software/Data Carpentries
+    - ...
+1. 디지털 글쓰기
+1. 챗GPT 디지털 글쓰기
+1. 데이터 문해력
+
+[![](https://mermaid.ink/img/pako:eNqdVFuL00AU_ishCz61daXsg1EWalPWB5XaFnbRiEwzkzaYZkoyUcuy0Iet6OKqdbu0YpUueEHoQ2VXraB_qEn-g2eSpheX7V4mEM6c-b7vnDlzZjZFlWIiSmLJQtWyULihmIopwFDLiK1lC_cV0fveBkMRHwjx-KogU9WpEJNFONsphtRogTN6Xe9jExghhA-sW0RlOjWDEMLMSFOTAc3mvL8dv_HGG_aiYIXMBs_Ab227B334-ztDYXT4w99_FyASAElhDmjsejufYHUu5qx6IJfZSGdu8TjtpteoTyRypEqtIG_QgFC95-5e13vRP1VPzqXWgSYjw7hU0TGm7Fpmopo3dExgdfRr6H7pj4aDxVppinWzFBSh5ba-TWTAT8beve5iiRzg3N2B9-HI3x4Ibn_o7x-5vc8TKTk_Bxgd_gkLuUiSIJua48R-ttyD3nR_1HjMM4M4cN7-2zrITsSIiaMGifoirBipGrR2vHcCNxcbDPzX_TN0zl0HWYwCIzSErFPkmYWprZPiw6huz17CqYbVu160Vr33v_1XHUjV-1rnc-gmr9u77HeaXrsxF3dNZzedIkiAUXaKQhaVSNSXUYAp-g5hhq7xLYytIJv_8pnCM0wFaCKROBk2U0Kb1QwyLaSmG4a0pK3wL2Yziz4i0lIymRzb8Sc6ZmUpWX06y07hMW955aqmaSfzrszzwstxMS7fzMWYcv7svKims_ygOc8vcUyG3-EL7iBo6Yib1NTk8ilnFbLFmFghVgXpGB7lTe5TRFYmFeg9CUxMNOQYTBEVcwugyGE0XzNVUWKWQ2KiU8WIEVlHcK8qoqQhwwZvFZn3KJ3OCdYZtW6HD3_w_m_9A1iJHxo?type=png)](https://mermaid.live/edit#pako:eNqdVFuL00AU_ishCz61daXsg1EWalPWB5XaFnbRiEwzkzaYZkoyUcuy0Iet6OKqdbu0YpUueEHoQ2VXraB_qEn-g2eSpheX7V4mEM6c-b7vnDlzZjZFlWIiSmLJQtWyULihmIopwFDLiK1lC_cV0fveBkMRHwjx-KogU9WpEJNFONsphtRogTN6Xe9jExghhA-sW0RlOjWDEMLMSFOTAc3mvL8dv_HGG_aiYIXMBs_Ab227B334-ztDYXT4w99_FyASAElhDmjsejufYHUu5qx6IJfZSGdu8TjtpteoTyRypEqtIG_QgFC95-5e13vRP1VPzqXWgSYjw7hU0TGm7Fpmopo3dExgdfRr6H7pj4aDxVppinWzFBSh5ba-TWTAT8beve5iiRzg3N2B9-HI3x4Ibn_o7x-5vc8TKTk_Bxgd_gkLuUiSIJua48R-ttyD3nR_1HjMM4M4cN7-2zrITsSIiaMGifoirBipGrR2vHcCNxcbDPzX_TN0zl0HWYwCIzSErFPkmYWprZPiw6huz17CqYbVu160Vr33v_1XHUjV-1rnc-gmr9u77HeaXrsxF3dNZzedIkiAUXaKQhaVSNSXUYAp-g5hhq7xLYytIJv_8pnCM0wFaCKROBk2U0Kb1QwyLaSmG4a0pK3wL2Yziz4i0lIymRzb8Sc6ZmUpWX06y07hMW955aqmaSfzrszzwstxMS7fzMWYcv7svKims_ygOc8vcUyG3-EL7iBo6Yib1NTk8ilnFbLFmFghVgXpGB7lTe5TRFYmFeg9CUxMNOQYTBEVcwugyGE0XzNVUWKWQ2KiU8WIEVlHcK8qoqQhwwZvFZn3KJ3OCdYZtW6HD3_w_m_9A1iJHxo)
