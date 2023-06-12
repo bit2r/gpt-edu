@@ -297,29 +297,29 @@
     "objectID": "prerequisite.html#open-ai-챗gpt",
     "href": "prerequisite.html#open-ai-챗gpt",
     "title": "chatGPT",
-    "section": "5.1 Open AI 챗GPT",
-    "text": "5.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
+    "section": "6.1 Open AI 챗GPT",
+    "text": "6.1 Open AI 챗GPT\n챗GPT 사용을 위해 서비스에 가입하는 절차는 다음과 같다.\n\nOpenAI 웹사이트(https://openai.com/blog/chatgpt)를 방문\n페이지 좌측 중간에 “Try ChatGPT” 버튼을 클릭\n구글이나 마이크로소프트 계정으로 로그인\n로그인 후 ChatGPT 하단에 챗팅 박스를 확인하면 완료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: 챗GPT 가입절차"
   },
   {
     "objectID": "prerequisite.html#ms-image-creator",
     "href": "prerequisite.html#ms-image-creator",
     "title": "chatGPT",
-    "section": "5.2 MS Image Creator",
-    "text": "5.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
+    "section": "6.2 MS Image Creator",
+    "text": "6.2 MS Image Creator\n텍스트를 이미지로 전환(Text-to-Image) 서비스를 사용하기 위해 마이크로소프트 이미지 작성자(Image Creator) 웹사이트에 접속한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 2: 마이크로소프트 뉴빙(New Bing) 이미지 작성자(Image Creator)"
   },
   {
     "objectID": "prerequisite.html#hackmd",
     "href": "prerequisite.html#hackmd",
     "title": "chatGPT",
-    "section": "5.5 HackMD",
-    "text": "5.5 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n마크다운 디지털 글쓰기"
+    "section": "6.5 HackMD",
+    "text": "6.5 HackMD\n챗GPT는 기본적으로 모든 것을 텍스트를 근본으로 삼고 있기 때문에 채팅창에 남긴 챗 텍스트(프롬프트)를 재사용하고 챗GPT 응답결과를 후가공하기 위해 별도 도구가 필요하다. 또한, 챗GPT 작업결과를 공유하고 품평하는 등 후속 업무도 도무해야 하기 때문에 HackMD 마크다운 편집기를 사용한다.\nHackMD 마크다운 편집기도 구독형 서비스이기 때문에 개인정보를 비롯한 민감한 정보를 작성하거나 남기지 않도록 특별히 유의한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n마크다운 디지털 글쓰기"
   },
   {
     "objectID": "prerequisite.html#마크다운-글쓰기",
     "href": "prerequisite.html#마크다운-글쓰기",
     "title": "chatGPT",
-    "section": "5.6 마크다운 글쓰기",
-    "text": "5.6 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
+    "section": "6.6 마크다운 글쓰기",
+    "text": "6.6 마크다운 글쓰기\n프롬프트 잘 작성하는 방법\n마크다운(Markdown) 문법은 5분이면 누구나 기본적인 글쓰기를 할 수 있게 만든 언어다.\n\n마크다운 기초\n디지털 글쓰기 - chatGPT와 함께 AI (마크다운 기초) 글쓰기\n\n챗GPT 프롬프트를 HackMD에 잘 기록하고 챗GPT 실행결과도 HackMD에 정리하여 동료와 공유와 품평 등 후속 업무를 마치면 다음 단계로 아래한글/워드/쿼토 등에서 최종 문서를 생성한다."
   },
   {
     "objectID": "timer.html",
@@ -360,8 +360,8 @@
     "objectID": "prerequisite.html#네이버-ocr",
     "href": "prerequisite.html#네이버-ocr",
     "title": "chatGPT",
-    "section": "5.4 네이버 OCR",
-    "text": "5.4 네이버 OCR\n네이버 클로버 OCR 은 한글 광학문자인식 업무에 높은 성능을 보이고 있다. 네이버 클로버 OCR은 초기 한글에서 일본어 영어로 언어인식을 범위를 넓혀가고 있으며 영수증, 신용카드, 사업자 등록증, 고지서, 명함, 신분증 등 서류 양식에 맞춰 OCR 판독작업 문서종류도 다양화하고 있다.\n\n\n\n\n\n사용동의\n\n\n\n\n\n접속 화면\n\n\n\n\n\n문서 업로드\n\n\n\n\n\nOCR 텍스트 복사/붙여넣기\n\n\n\n\n\n네이버 클로바 OCR(광학문자판독) 스캔된 문서 텍스트 추출 복사/붙여넣기"
+    "section": "6.4 네이버 OCR",
+    "text": "6.4 네이버 OCR\n네이버 클로버 OCR 은 한글 광학문자인식 업무에 높은 성능을 보이고 있다. 네이버 클로버 OCR은 초기 한글에서 일본어 영어로 언어인식을 범위를 넓혀가고 있으며 영수증, 신용카드, 사업자 등록증, 고지서, 명함, 신분증 등 서류 양식에 맞춰 OCR 판독작업 문서종류도 다양화하고 있다.\n\n\n\n\n\n사용동의\n\n\n\n\n\n접속 화면\n\n\n\n\n\n문서 업로드\n\n\n\n\n\nOCR 텍스트 복사/붙여넣기\n\n\n\n\n\n네이버 클로바 OCR(광학문자판독) 스캔된 문서 텍스트 추출 복사/붙여넣기"
   },
   {
     "objectID": "prerequisite.html#구글",
@@ -395,71 +395,71 @@
     "objectID": "prerequisite.html#행정문서",
     "href": "prerequisite.html#행정문서",
     "title": "chatGPT",
-    "section": "7.1 행정문서",
-    "text": "7.1 행정문서\n\n경기도 긴급복지 위기상담 콜센터 문서: 바로가기\n광명시 생활안정지원금 신청 웹사이트: 바로가기\n\n\n\n\n\n\n경기도 긴급복지 위기상담 콜센터\n\n\n\n\n\n광명시 생활안정지원금 신청\n\n\n\n\n\n행정 문서"
+    "section": "8.1 행정문서",
+    "text": "8.1 행정문서\n\n경기도 긴급복지 위기상담 콜센터 문서: 바로가기\n광명시 생활안정지원금 신청 웹사이트: 바로가기\n\n\n\n\n\n\n경기도 긴급복지 위기상담 콜센터\n\n\n\n\n\n광명시 생활안정지원금 신청\n\n\n\n\n\n행정 문서"
   },
   {
     "objectID": "prerequisite.html#엑셀-데이터",
     "href": "prerequisite.html#엑셀-데이터",
     "title": "chatGPT",
-    "section": "7.2 엑셀 데이터",
-    "text": "7.2 엑셀 데이터\n\n\n다운로드"
+    "section": "8.2 엑셀 데이터",
+    "text": "8.2 엑셀 데이터\n\n\n다운로드"
   },
   {
     "objectID": "prerequisite.html#카카오-bedit",
     "href": "prerequisite.html#카카오-bedit",
     "title": "chatGPT",
-    "section": "5.3 카카오 B^Edit",
-    "text": "5.3 카카오 B^Edit\n카카오브레인이 개발하여 공개한 ‘B^ EDIT(비 에디트)’ 웹 서비스를 통해 Text-to-Image 기능을 통해 다양한 AI 이미지를 얻을 수 있다.\n성현희 (2023-03-07), “카카오브레인, ‘B^ EDIT’ 오픈 베타서비스 글로벌 출시” 전자신문\n’B^ EDIT’에 접속해 바로크, 3D 렌더, 일본 애니메이션 등 총 30가지 화풍 중 원하는 화풍과 제시어(프롬프트)를 입력하면, AI가 화풍 및 프롬프트에 적합한 이미지 8장을 5~10초 이내로 생성한다. 그외에도 아웃페인팅(Outpainting), 인페이팅(Inpainting), CS2I(Color Sketch To Image) 등의 기능도 제공한다."
+    "section": "6.3 카카오 B^Edit",
+    "text": "6.3 카카오 B^Edit\n카카오브레인이 개발하여 공개한 ‘B^ EDIT(비 에디트)’ 웹 서비스를 통해 Text-to-Image 기능을 통해 다양한 AI 이미지를 얻을 수 있다.\n성현희 (2023-03-07), “카카오브레인, ‘B^ EDIT’ 오픈 베타서비스 글로벌 출시” 전자신문\n’B^ EDIT’에 접속해 바로크, 3D 렌더, 일본 애니메이션 등 총 30가지 화풍 중 원하는 화풍과 제시어(프롬프트)를 입력하면, AI가 화풍 및 프롬프트에 적합한 이미지 8장을 5~10초 이내로 생성한다. 그외에도 아웃페인팅(Outpainting), 인페이팅(Inpainting), CS2I(Color Sketch To Image) 등의 기능도 제공한다."
   },
   {
     "objectID": "prerequisite.html#모바일-챗gpt",
     "href": "prerequisite.html#모바일-챗gpt",
     "title": "chatGPT",
-    "section": "4.1 모바일 챗GPT",
-    "text": "4.1 모바일 챗GPT\n안드로이드 계열 핸드폰의 경우 자체 내장된 크롬 웹브라우져를 찾아 주소창에 챗GPT 접속 주소를 넣어 로그인 과정을 거쳐 챗GPT 서비스를 사용한다. 챗GPT 안드로이드 앱이 없기 때문에 웹앱형태로 챗GPT 서비스를 사용한다."
+    "section": "5.1 모바일 챗GPT",
+    "text": "5.1 모바일 챗GPT\n안드로이드 계열 핸드폰의 경우 자체 내장된 크롬 웹브라우져를 찾아 주소창에 챗GPT 접속 주소를 넣어 로그인 과정을 거쳐 챗GPT 서비스를 사용한다. 챗GPT 안드로이드 앱이 없기 때문에 웹앱형태로 챗GPT 서비스를 사용한다."
   },
   {
     "objectID": "prerequisite.html#gpt-4-챗gpt",
     "href": "prerequisite.html#gpt-4-챗gpt",
     "title": "chatGPT",
-    "section": "4.2 GPT-4 챗GPT",
-    "text": "4.2 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
+    "section": "5.2 GPT-4 챗GPT",
+    "text": "5.2 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
   },
   {
     "objectID": "prerequisite.html#gpt-4-챗gpt-1",
     "href": "prerequisite.html#gpt-4-챗gpt-1",
     "title": "chatGPT",
-    "section": "4.3 GPT-4 챗GPT",
-    "text": "4.3 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
+    "section": "5.3 GPT-4 챗GPT",
+    "text": "5.3 GPT-4 챗GPT\n무료버젼 챗GPT는 GPT 3-5 버젼이라 고성능 GPT-4를 사용하고자 하는 경우, 안드로이드 “Play 스토어”(앱스토어)에서 뉴빙 안드로이드 앱을 설치하여 챗GPT 서비스를 사용하게 되면 GPT-4 모델을 사용할 수 있다."
   },
   {
     "objectID": "prerequisite.html#image-creator",
     "href": "prerequisite.html#image-creator",
     "title": "chatGPT",
-    "section": "4.4 Image Creator",
-    "text": "4.4 Image Creator\nText-to-Image를 모바일에서 사용하는 방식은 마이크로소프트 엣지 브라우저에서 이미지 작성자(Image Creator) 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 “Play 스토어”(앱스토어)에서 “엣지브라우저”를 검색하여 엣지 브라우저 앱을 설치한 후 주소 검색창에 https://bing.com/create를 넣어 이미지 작성자 웹사이트에 접속한 후 적절한 프롬프트를 넣어 AI 이미지를 얻는다."
+    "section": "5.4 Image Creator",
+    "text": "5.4 Image Creator\nText-to-Image를 모바일에서 사용하는 방식은 마이크로소프트 엣지 브라우저에서 이미지 작성자(Image Creator) 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 “Play 스토어”(앱스토어)에서 “엣지브라우저”를 검색하여 엣지 브라우저 앱을 설치한 후 주소 검색창에 https://bing.com/create를 넣어 이미지 작성자 웹사이트에 접속한 후 적절한 프롬프트를 넣어 AI 이미지를 얻는다."
   },
   {
     "objectID": "prerequisite.html#클로바-ocr",
     "href": "prerequisite.html#클로바-ocr",
     "title": "chatGPT",
-    "section": "4.5 클로바 OCR",
-    "text": "4.5 클로바 OCR\nImage-to-Text, 광학문자인식(OCR) 기능을 모바일에서 사용하는 방식은 크롬 브라우저에서 CLOVA OCR 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 크롬/엣지 등 웹브라우저 주소 검색창에 https://clova.ai/ocr를 넣어 이미지를 올리거나 사진을 찍으면 해당 이미지에서 텍스트를 탐지하고 텍스트를 추출하는 OCR 작업을 자동 수행한다. 추출된 텍스트를 복사하여 다른 곳에 붙여넣고 후속 작업을 수행하면 된다."
+    "section": "5.5 클로바 OCR",
+    "text": "5.5 클로바 OCR\nImage-to-Text, 광학문자인식(OCR) 기능을 모바일에서 사용하는 방식은 크롬 브라우저에서 CLOVA OCR 웹사이트에 접속하여 서비스를 사용한다. 이를 위해서 크롬/엣지 등 웹브라우저 주소 검색창에 https://clova.ai/ocr를 넣어 이미지를 올리거나 사진을 찍으면 해당 이미지에서 텍스트를 탐지하고 텍스트를 추출하는 OCR 작업을 자동 수행한다. 추출된 텍스트를 복사하여 다른 곳에 붙여넣고 후속 작업을 수행하면 된다."
   },
   {
     "objectID": "prerequisite.html#파이썬",
     "href": "prerequisite.html#파이썬",
     "title": "chatGPT",
-    "section": "6.1 파이썬",
-    "text": "6.1 파이썬\n코딩 실습을 위해서 파이썬을 설치한다. 파이썬 홈페이지에서 운영체제에 맞는 파이썬 버전을 선택하여 설치한다. 파이썬 코드 작성에 필요한 편집기는 파이썬 설치할 때 내장되어 있으니 설치가 정상처리되면 아이들(IDLE) 편집기를 실행하여 헬로월드 파이썬 확장자를 갖는 파일을 생성하여 키보드 F5 키를 누르면 실행된다. 즉 바탕화면에 hello.py 파일명으로 코드를 저장하고 키보드 F5 키로 실행한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 파이썬과 편집기(IDLE)"
+    "section": "7.1 파이썬",
+    "text": "7.1 파이썬\n코딩 실습을 위해서 파이썬을 설치한다. 파이썬 홈페이지에서 운영체제에 맞는 파이썬 버전을 선택하여 설치한다. 파이썬 코드 작성에 필요한 편집기는 파이썬 설치할 때 내장되어 있으니 설치가 정상처리되면 아이들(IDLE) 편집기를 실행하여 헬로월드 파이썬 확장자를 갖는 파일을 생성하여 키보드 F5 키를 누르면 실행된다. 즉 바탕화면에 hello.py 파일명으로 코드를 저장하고 키보드 F5 키로 실행한다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 3: 파이썬과 편집기(IDLE)"
   },
   {
     "objectID": "prerequisite.html#엑셀-vba",
     "href": "prerequisite.html#엑셀-vba",
     "title": "chatGPT",
-    "section": "6.2 엑셀 VBA",
-    "text": "6.2 엑셀 VBA\n먼저 엑셀 상단 메뉴에서 파일 &rarr; 옵션 &rarr; 리본 사용자 지정 &rarr; 개발도구를 클릭하여 활성화시키면된다. 그리고 챗GPT에서 작성된 VBA 코드는 해당 엑셀쉬트(Sheet)를 활성화시킨 후에 코드를 붙여넣고 상단 실행버튼을 클릭하면 된다.\n\n\n\n\n\n\nVBA 개발도구 설정\n\n\n\n\n\nVBA 실행\n\n\n\n그림 4: 엑셀 내부 VBA 프로그래밍 언어 실행\n\n\nVBA는 Visual Basic for Applications의 약자로 Excel, Word, PowerPoint와 같은 Microsoft Office 응용 프로그램에 통합된 프로그래밍 언어입니다. VBA를 사용하면 이러한 애플리케이션 내에서 작업을 자동화하고 사용자 지정 함수를 만들 수 있다. VBA 코드는 애플리케이션 내에서 작성 및 편집할 수 있으므로 다양한 사용자 지정 및 자동화 가능성을 제공한다."
+    "section": "7.2 엑셀 VBA",
+    "text": "7.2 엑셀 VBA\n먼저 엑셀 상단 메뉴에서 파일 &rarr; 옵션 &rarr; 리본 사용자 지정 &rarr; 개발도구를 클릭하여 활성화시키면된다. 그리고 챗GPT에서 작성된 VBA 코드는 해당 엑셀쉬트(Sheet)를 활성화시킨 후에 코드를 붙여넣고 상단 실행버튼을 클릭하면 된다.\n\n\n\n\n\n\nVBA 개발도구 설정\n\n\n\n\n\nVBA 실행\n\n\n\n그림 4: 엑셀 내부 VBA 프로그래밍 언어 실행\n\n\nVBA는 Visual Basic for Applications의 약자로 Excel, Word, PowerPoint와 같은 Microsoft Office 응용 프로그램에 통합된 프로그래밍 언어입니다. VBA를 사용하면 이러한 애플리케이션 내에서 작업을 자동화하고 사용자 지정 함수를 만들 수 있다. VBA 코드는 애플리케이션 내에서 작성 및 편집할 수 있으므로 다양한 사용자 지정 및 자동화 가능성을 제공한다."
   },
   {
     "objectID": "gseek_20230530.html",
@@ -705,5 +705,40 @@
     "title": "GPT 실습 교육",
     "section": "",
     "text": "챗GPT 디지털 글쓰기\n\n\n글쓰기\n\n텍스트(\\(\\LaTeX\\))\n데이터 사이언스 (R/Python/SQL/…)\nOne-Source Multi-Use\nParameterized Document\nReproducible Research (Compendium)\nSoftware/Data Carpentries\n…\n\n디지털 글쓰기\n챗GPT 디지털 글쓰기\n데이터 문해력"
+  },
+  {
+    "objectID": "gghr_20230619.html",
+    "href": "gghr_20230619.html",
+    "title": "chatGPT",
+    "section": "",
+    "text": "디지털 강의노트\n\n정보보안을 위해서 강의 후 접속불가합니다."
+  },
+  {
+    "objectID": "gghr_20230619.html#footnotes",
+    "href": "gghr_20230619.html#footnotes",
+    "title": "chatGPT",
+    "section": "각주",
+    "text": "각주\n\n\n한국 R 사용자회 데이터 과학 글쓰기↩︎"
+  },
+  {
+    "objectID": "prerequisite.html#구글-계정",
+    "href": "prerequisite.html#구글-계정",
+    "title": "chatGPT",
+    "section": "4.1 구글 계정",
+    "text": "4.1 구글 계정\n구글 전자우편주소 계정을 생성하는 절차는 다음과 같다.\n\nGoogle 홈페이지에 접속하세요. https://www.google.com/\n화면 오른쪽 상단의 “로그인” 버튼을 클릭하세요.\n로그인 페이지에서 “계정 만들기”를 선택하세요.\n“개인용”, “자녀 계정”, “직장 또는 비즈니스용” 중 하나를 선택하세요. (개인 사용자라면 “개인용”을 선택하세요.)\n요구되는 정보를 입력하세요. 이에는 이름, 성, 원하는 이메일 주소, 비밀번호 등이 포함됩니다. “다음” 버튼을 클릭하세요.\n생년월일과 성별을 입력하세요. “다음” 버튼을 클릭하세요.\n개인정보보호와 약관 페이지를 읽고, “동의”를 클릭하세요.\n이제 당신의 구글 계정이 생성되었습니다.\n\n이 과정은 모바일 기기에서도 거의 동일하게 진행됩니다. 구글 계정을 생성하면 Gmail 외에도 YouTube, Google Play, Google Drive 등 구글의 다른 서비스를 사용할 수 있게 됩니다. 이메일 주소는 여러분이 선택한 이름과 “(gmail.com?)”이 합쳐진 형태가 될 것입니다. 비밀번호는 안전을 위해 복잡하고 독특하게 설정하는 것이 좋습니다.\n\n1단계2단계3단계4단계5단계6단계7단계8단계9단계10단계"
+  },
+  {
+    "objectID": "prerequisite.html#ms-계정",
+    "href": "prerequisite.html#ms-계정",
+    "title": "chatGPT",
+    "section": "4.2 MS 계정",
+    "text": "4.2 MS 계정\n마이크로소프트 전자우편주소 계정을 생성하는 절차는 다음과 같다.\n\n아웃룩 홈페이지 https://outlook.live.com에 접속하세요.\n화면 오른쪽 상단에 있는 “무료 계정 생성”을 클릭하세요.\n원하는 이메일 주소를 입력하고 “다음”을 클릭하세요.\n원하는 비밀번호를 입력하고 “다음”을 클릭하세요.\n이름과 성을 입력하고 “다음”을 클릭하세요.\n국가와 생년월일을 입력하고 “다음”을 클릭하세요.\n보안 코드를 입력하고 “다음”을 클릭하세요.\n이제 아웃룩 계정이 생성되었습니다.\n\n이 과정은 모바일 기기에서도 거의 동일하게 진행됩니다. 구글 계정을 생성하면 Gmail 외에도 YouTube, Google Play, Google Drive 등 구글의 다른 서비스를 사용할 수 있게 됩니다. 이메일 주소는 여러분이 선택한 이름과 “(gmail.com?)”이 합쳐진 형태가 될 것입니다. 비밀번호는 안전을 위해 복잡하고 독특하게 설정하는 것이 좋습니다.\n\n1단계2단계3단계4단계5단계6단계7단계8단계9단계"
+  },
+  {
+    "objectID": "gghr_20230619.html#학습자료-바로가기",
+    "href": "gghr_20230619.html#학습자료-바로가기",
+    "title": "chatGPT",
+    "section": "4.1 학습자료 바로가기",
+    "text": "4.1 학습자료 바로가기"
   }
 ]

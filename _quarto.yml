@@ -25,9 +25,12 @@ website:
     contents: 
       - href: prerequisite.qmd
         text: "사전 준비"
+      - text: "---------------"
+      - href: gghr_20230619.qmd
+        text: "인재개발원(6/19)"
       - href: anyang_20230530.qmd
         text: "안양시 직무교육(5/30)"
-      - section: "경기도 지식(GSeek):"        
+      - section: "경기도 지식(GSeek):"
         contents:
           - href: gseek_20230530.qmd
             text: "챗GPT 디지털 글쓰기(5/30)"
