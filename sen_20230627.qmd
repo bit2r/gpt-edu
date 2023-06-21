@@ -1,8 +1,8 @@
 ---
 title: "chatGPT"
-subtitle: "경기도 인재개발원"
+subtitle: "서울교육청 직무연수"
 description: | 
-  챗GPT와 4차 산업혁명(디지털 전환) 실습자료입니다.
+  "내 맘대로 선택하는 위풍당당" 2023 초등 교육정책 직무연수 3기 "챗GPT와 디지털 글쓰기" 실습자료입니다.
 author:
   - name: 이광춘
     url: https://www.linkedin.com/in/kwangchunlee/
@@ -12,7 +12,7 @@ author:
     url: https://modernity.tistory.com/
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r    
-date: "2023-06-19"
+date: "2023-06-27"
 title-block-banner: true
 #title-block-banner: "#562457"
 format:
@@ -48,7 +48,7 @@ editor:
 
 # 강의노트
 
--   [디지털 강의노트](https://bit.ly/42AxXdC)
+-   [디지털 강의노트](https://bit.ly/42R12Sk)
     -   정보보안을 위해서 강의 후 접속불가합니다.
 
 # 사전준비
@@ -79,9 +79,16 @@ editor:
 
 ![<https://event-us.kr/data-science/event/64397>](images/chatGPT_publishing.png){fig-align="center"
 width="354"}
+
+### 챗GPT 유닉스 쉘
+
+![](images/chatGPT_shell_cover.png)
+
+<https://github.com/bit2r/gpt-shell>
+
 :::
 
-# 챗GPT 4차 산업혁명
+# 챗GPT와 디지털 글쓰기
 
 ::: column-page
 ```{mermaid}
