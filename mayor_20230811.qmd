@@ -92,7 +92,6 @@ editor:
 ::: column
 ![](images/km_image.png){fig-align="center" width="566"}
 :::
-
 :::
 :::
 
@@ -130,17 +129,23 @@ class development nodeStyle
 classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
 ```
 
-
 # 광명 챗GPT
 
-1. [OpenAI API KEY 발급](https://r2bit.com/chatGPT/openAI_api.html#openai-api-%ED%97%AC%EB%A1%9C%EC%9B%94%EB%93%9C)
-2. 광명시 챗GPT: [바로가기](https://r2bit.shinyapps.io/kmchatgpt/)
+1.  [OpenAI API KEY
+    발급](https://r2bit.com/chatGPT/openAI_api.html#openai-api-%ED%97%AC%EB%A1%9C%EC%9B%94%EB%93%9C)
+2.  광명시 챗GPT: [바로가기](https://r2bit.shinyapps.io/kmchatgpt/)
 
 ![](images/km_chatgpt_shinyapps.jpeg)
 
+3.  광명 달리(Dalle): [바로가기](https://r2bit.shinyapps.io/kmdalle/) ⇆
+    shinyapps.io 에서 서버 실행이 먼저 되어야 함
+
+![](images/km_dalle.jpeg)
+
 # 뉴스 속보기사
 
-행정안전부 [대통령기록관](https://www.pa.go.kr/research/contents/speech/index.jsp)에
+행정안전부
+[대통령기록관](https://www.pa.go.kr/research/contents/speech/index.jsp)에
 연설기록 중 연설음성에서 제84주년 3.1절 기념식 노무현 대통령 음성원고를
 대상으로 OpenAI Whisper API를 사용해서 텍스트를 추출해보자.
 
@@ -437,7 +442,6 @@ glue::glue("{gpt4_txt}")
 ```
 :::
 
-
 # 뉴스기사 제작
 
 오디오나 사진, 동영상 등 다양한 형태의 데이터를 텍스트 문자로 변환시키면
@@ -538,7 +542,6 @@ Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to expre
 ```
 :::
 
-
 # AI 이미지
 
 AI 이미지 생성 프롬프트를 작성하고, [DALL·E 2 -
@@ -602,5 +605,3 @@ image.save('images/dalle_image.jpeg', 'JPEG')
 ```
 
 ![](images/dalle_image.jpeg)
-
-
