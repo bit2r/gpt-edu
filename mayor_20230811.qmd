@@ -109,8 +109,7 @@ flowchart TB
     direction LR
         speech["대통령 기념사"]     --> stt["받아쓰기"]
         stt               --> text2text["기념사 재작성"]
-        text2text --> image["이미지 생성"]
-        image --> news_article["뉴스기사 제작"]
+        text2text --> news_article["뉴스속보 제작"]
     end
 
     subgraph development["챗GPT 실습(앱개발)"]
@@ -438,7 +437,53 @@ glue::glue("{gpt4_txt}")
 ```
 :::
 
-# 번역
+
+# 뉴스기사 제작
+
+오디오나 사진, 동영상 등 다양한 형태의 데이터를 텍스트 문자로 변환시키면
+다음 단계로 다양한 후속 작업을 수행할 수 있다. 앞서 노무현 대통령의
+3.1절 연설문을 거의 실시간으로 녹취를 떠서 이를 텍스트로 추출한 후 속보
+형태 기사로 송고할 수 있다.
+
+![](images/openai_api_workflow.jpg)
+
+```{python}
+#| eval: false
+import openai
+from dotenv import load_dotenv
+import os
+
+# API KEY ----------------------
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
+# 연설문 불러오기 --------------------------
+with open("data/stt_audio_gpt4.txt", "r") as file:
+    speech_content = file.read()
+
+prompt = f'다음 텍스트를 뉴스 속보 형태 기사로 엄중한 문체로 100자 내외로 짧게 작성해주세요.. \n\n{speech_content}'
+
+# API KEY ----------------------
+breaking_news_response = openai.ChatCompletion.create(
+  model       = "gpt-3.5-turbo",
+  messages    = [
+    {"role": "system", "content": "You are a Korean reporter."},
+    {"role": "user", "content": prompt}
+  ],
+  max_tokens   = 800,
+  temperature  = 0
+)
+
+print(breaking_news_response["choices"][0]['message']['content'])
+```
+
+```         
+[속보] 3.1절 맞아 국민에게 경의 표한
+오늘 84번째 3.1절을 맞아 애국선열들에게 감사와 경의를 표합니다. 독립유공자와 유가족에게도 존경과 감사의 말씀을 전합니다. 102년 전 오늘, 우리는 일제의 총칼에 맞서 독립을 위해 일어섰습니다. 3.1운동을 계기로 국내외의 독립투쟁은 더욱 힘차게 전개되었습니다. 오늘의 참여정부는 역사의 연장선 위에 서 있으며, 한반도의 평화를 정착시키는 일이 중요합니다. 국민 모두가 참된 주인으로서 국정에 참여하고 개혁을 추진해야 합니다.
+```
+
+# 한국어 음성 영어통역
 
 Whisper API를 사용하면 다국어를 번역하는 것도 가능하다. 먼저, 연설문
 앞쪽부분을 영어로 실시간 번역해보자. Whisper는 영어가 아닌 다양한
@@ -493,50 +538,6 @@ Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to expre
 ```
 :::
 
-# 뉴스기사 제작
-
-오디오나 사진, 동영상 등 다양한 형태의 데이터를 텍스트 문자로 변환시키면
-다음 단계로 다양한 후속 작업을 수행할 수 있다. 앞서 노무현 대통령의
-3.1절 연설문을 거의 실시간으로 녹취를 떠서 이를 텍스트로 추출한 후 속보
-형태 기사로 송고할 수 있다.
-
-![](images/openai_api_workflow.jpg)
-
-```{python}
-#| eval: false
-import openai
-from dotenv import load_dotenv
-import os
-
-# API KEY ----------------------
-load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
-
-
-# 연설문 불러오기 --------------------------
-with open("data/stt_audio_gpt4.txt", "r") as file:
-    speech_content = file.read()
-
-prompt = f'다음 텍스트를 뉴스 속보 형태 기사로 엄중한 문체로 100자 내외로 짧게 작성해주세요.. \n\n{speech_content}'
-
-# API KEY ----------------------
-breaking_news_response = openai.ChatCompletion.create(
-  model       = "gpt-3.5-turbo",
-  messages    = [
-    {"role": "system", "content": "You are a Korean reporter."},
-    {"role": "user", "content": prompt}
-  ],
-  max_tokens   = 800,
-  temperature  = 0
-)
-
-print(breaking_news_response["choices"][0]['message']['content'])
-```
-
-```         
-[속보] 3.1절 맞아 국민에게 경의 표한
-오늘 84번째 3.1절을 맞아 애국선열들에게 감사와 경의를 표합니다. 독립유공자와 유가족에게도 존경과 감사의 말씀을 전합니다. 102년 전 오늘, 우리는 일제의 총칼에 맞서 독립을 위해 일어섰습니다. 3.1운동을 계기로 국내외의 독립투쟁은 더욱 힘차게 전개되었습니다. 오늘의 참여정부는 역사의 연장선 위에 서 있으며, 한반도의 평화를 정착시키는 일이 중요합니다. 국민 모두가 참된 주인으로서 국정에 참여하고 개혁을 추진해야 합니다.
-```
 
 # AI 이미지
 

@@ -383,8 +383,8 @@ ga('send', {
   <li><a href="#mp3-텍스트" id="toc-mp3-텍스트" class="nav-link" data-scroll-target="#mp3-텍스트"><span class="header-section-number">5.2</span> <code>.mp3</code> → 텍스트</a></li>
   <li><a href="#후처리" id="toc-후처리" class="nav-link" data-scroll-target="#후처리"><span class="header-section-number">5.3</span> 후처리</a></li>
   </ul></li>
-  <li><a href="#번역" id="toc-번역" class="nav-link" data-scroll-target="#번역"><span class="header-section-number">6</span> 번역</a></li>
-  <li><a href="#뉴스기사-제작" id="toc-뉴스기사-제작" class="nav-link" data-scroll-target="#뉴스기사-제작"><span class="header-section-number">7</span> 뉴스기사 제작</a></li>
+  <li><a href="#뉴스기사-제작" id="toc-뉴스기사-제작" class="nav-link" data-scroll-target="#뉴스기사-제작"><span class="header-section-number">6</span> 뉴스기사 제작</a></li>
+  <li><a href="#한국어-음성-영어통역" id="toc-한국어-음성-영어통역" class="nav-link" data-scroll-target="#한국어-음성-영어통역"><span class="header-section-number">7</span> 한국어 음성 영어통역</a></li>
   <li><a href="#ai-이미지" id="toc-ai-이미지" class="nav-link" data-scroll-target="#ai-이미지"><span class="header-section-number">8</span> AI 이미지</a>
   <ul class="collapse">
   <li><a href="#ai-이미지-후처리" id="toc-ai-이미지-후처리" class="nav-link" data-scroll-target="#ai-이미지-후처리"><span class="header-section-number">8.1</span> AI 이미지 후처리</a></li>
@@ -442,7 +442,7 @@ ga('send', {
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="챗GPT 디지털 글쓰기 진화과정"><img src="images/writing_history.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/writing_history.jpg" class="lightbox" title="챗GPT 디지털 글쓰기 진화과정" data-gallery="quarto-lightbox-gallery-5"><img src="images/writing_history.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">챗GPT 디지털 글쓰기 진화과정</figcaption>
 </figure>
 </div>
@@ -490,8 +490,7 @@ ga('send', {
     direction LR
         speech["대통령 기념사"]     --&gt; stt["받아쓰기"]
         stt               --&gt; text2text["기념사 재작성"]
-        text2text --&gt; image["이미지 생성"]
-        image --&gt; news_article["뉴스기사 제작"]
+        text2text --&gt; news_article["뉴스속보 제작"]
     end
 
     subgraph development["챗GPT 실습(앱개발)"]
@@ -731,8 +730,51 @@ classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bo
 </div>
 </section>
 </section>
-<section id="번역" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 번역</h1>
+<section id="뉴스기사-제작" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 뉴스기사 제작</h1>
+<p>오디오나 사진, 동영상 등 다양한 형태의 데이터를 텍스트 문자로 변환시키면 다음 단계로 다양한 후속 작업을 수행할 수 있다. 앞서 노무현 대통령의 3.1절 연설문을 거의 실시간으로 녹취를 떠서 이를 텍스트로 추출한 후 속보 형태 기사로 송고할 수 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/openai_api_workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/openai_api_workflow.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<details>
+<summary>코드</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openai</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY ----------------------</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>openai.api_key <span class="op">=</span> os.getenv(<span class="st">'OPENAI_API_KEY'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 연설문 불러오기 --------------------------</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/stt_audio_gpt4.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    speech_content <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="ss">f'다음 텍스트를 뉴스 속보 형태 기사로 엄중한 문체로 100자 내외로 짧게 작성해주세요.. </span><span class="ch">\n\n</span><span class="sc">{</span>speech_content<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY ----------------------</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>breaking_news_response <span class="op">=</span> openai.ChatCompletion.create(</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  model       <span class="op">=</span> <span class="st">"gpt-3.5-turbo"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  messages    <span class="op">=</span> [</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: <span class="st">"You are a Korean reporter."</span>},</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  ],</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  max_tokens   <span class="op">=</span> <span class="dv">800</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  temperature  <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(breaking_news_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">'message'</span>][<span class="st">'content'</span>])</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<pre><code>[속보] 3.1절 맞아 국민에게 경의 표한
+오늘 84번째 3.1절을 맞아 애국선열들에게 감사와 경의를 표합니다. 독립유공자와 유가족에게도 존경과 감사의 말씀을 전합니다. 102년 전 오늘, 우리는 일제의 총칼에 맞서 독립을 위해 일어섰습니다. 3.1운동을 계기로 국내외의 독립투쟁은 더욱 힘차게 전개되었습니다. 오늘의 참여정부는 역사의 연장선 위에 서 있으며, 한반도의 평화를 정착시키는 일이 중요합니다. 국민 모두가 참된 주인으로서 국정에 참여하고 개혁을 추진해야 합니다.</code></pre>
+</section>
+<section id="한국어-음성-영어통역" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 한국어 음성 영어통역</h1>
 <p>Whisper API를 사용하면 다국어를 번역하는 것도 가능하다. 먼저, 연설문 앞쪽부분을 영어로 실시간 번역해보자. Whisper는 영어가 아닌 다양한 언어음성을 영어로 번역하는 기능도 갖추고 있다.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">연설문 초반부</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">연설 원음</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">한국어 음성 → 영문</a></li></ul>
@@ -745,10 +787,10 @@ classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bo
 <div class="cell">
 <details>
 <summary>코드</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(av)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(embedr)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>embedr<span class="sc">::</span><span class="fu">embed_audio</span>(<span class="st">"data/한국어_영어번역.mp3"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(av)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(embedr)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>embedr<span class="sc">::</span><span class="fu">embed_audio</span>(<span class="st">"data/한국어_영어번역.mp3"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <audio controls=""> <source src="data/한국어_영어번역.mp3" type="audio/mpeg"> Your browser does not support the audio tag;  for browser support, please see:  https://www.w3schools.com/tags/tag_audio.asp </audio>
@@ -760,39 +802,6 @@ classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bo
 <div class="cell">
 <details>
 <summary>코드</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openai</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY ----------------------</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>openai.api_key <span class="op">=</span> os.getenv(<span class="st">'OPENAI_API_KEY'</span>)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 번역 ----------------------</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>start_audio_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"data/한국어_영어번역.mp3"</span>, <span class="st">"rb"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>start_prompt <span class="op">=</span> <span class="st">"한국 대통령이 3.1절 기념식 연설문 중 앞부분입니다."</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>start_resp <span class="op">=</span> openai.Audio.translate(<span class="st">"whisper-1"</span>,</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                                    start_audio_file,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                                    prompt <span class="op">=</span> start_prompt)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start_resp[<span class="st">"text"</span>])</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<pre><code>Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to express my deepest gratitude and respect to the patriotic soldiers who sacrificed for the country. I would also like to express my respect and gratitude to the independence activists and their families.</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="뉴스기사-제작" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 뉴스기사 제작</h1>
-<p>오디오나 사진, 동영상 등 다양한 형태의 데이터를 텍스트 문자로 변환시키면 다음 단계로 다양한 후속 작업을 수행할 수 있다. 앞서 노무현 대통령의 3.1절 연설문을 거의 실시간으로 녹취를 떠서 이를 텍스트로 추출한 후 속보 형태 기사로 송고할 수 있다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/openai_api_workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/openai_api_workflow.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="cell">
-<details>
-<summary>코드</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> openai</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -801,29 +810,19 @@ classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bo
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>openai.api_key <span class="op">=</span> os.getenv(<span class="st">'OPENAI_API_KEY'</span>)</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 연설문 불러오기 --------------------------</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/stt_audio_gpt4.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    speech_content <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="ss">f'다음 텍스트를 뉴스 속보 형태 기사로 엄중한 문체로 100자 내외로 짧게 작성해주세요.. </span><span class="ch">\n\n</span><span class="sc">{</span>speech_content<span class="sc">}</span><span class="ss">'</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># API KEY ----------------------</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>breaking_news_response <span class="op">=</span> openai.ChatCompletion.create(</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  model       <span class="op">=</span> <span class="st">"gpt-3.5-turbo"</span>,</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  messages    <span class="op">=</span> [</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: <span class="st">"You are a Korean reporter."</span>},</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  ],</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  max_tokens   <span class="op">=</span> <span class="dv">800</span>,</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  temperature  <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(breaking_news_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">'message'</span>][<span class="st">'content'</span>])</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 번역 ----------------------</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>start_audio_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">"data/한국어_영어번역.mp3"</span>, <span class="st">"rb"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>start_prompt <span class="op">=</span> <span class="st">"한국 대통령이 3.1절 기념식 연설문 중 앞부분입니다."</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>start_resp <span class="op">=</span> openai.Audio.translate(<span class="st">"whisper-1"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                                    start_audio_file,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                                    prompt <span class="op">=</span> start_prompt)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start_resp[<span class="st">"text"</span>])</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<pre><code>[속보] 3.1절 맞아 국민에게 경의 표한
-오늘 84번째 3.1절을 맞아 애국선열들에게 감사와 경의를 표합니다. 독립유공자와 유가족에게도 존경과 감사의 말씀을 전합니다. 102년 전 오늘, 우리는 일제의 총칼에 맞서 독립을 위해 일어섰습니다. 3.1운동을 계기로 국내외의 독립투쟁은 더욱 힘차게 전개되었습니다. 오늘의 참여정부는 역사의 연장선 위에 서 있으며, 한반도의 평화를 정착시키는 일이 중요합니다. 국민 모두가 참된 주인으로서 국정에 참여하고 개혁을 추진해야 합니다.</code></pre>
+<pre><code>Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to express my deepest gratitude and respect to the patriotic soldiers who sacrificed for the country. I would also like to express my respect and gratitude to the independence activists and their families.</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="ai-이미지" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> AI 이미지</h1>
@@ -1228,7 +1227,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
