@@ -26,6 +26,8 @@ website:
       - href: prerequisite.qmd
         text: "사전 준비"
       - text: "---------------"
+      - href: mayor_20230811.qmd
+        text: "광명시 (8/11)"
       - href: sch_20230706.qmd
         text: "순천향대 (7/6)"
       - href: sen_20230627.qmd

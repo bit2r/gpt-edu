@@ -1,0 +1,14 @@
+{
+  "hash": "a2234b203e302826a7b865b185312127",
+  "result": {
+    "markdown": "---\ntitle: \"chatGPT\"\nsubtitle: \"광명시 (8/11)\"\ndescription: | \n  광명시 챗GPT 실습자료로 기존 챗GPT 실습 교육에서 한걸음 더 들어갑니다.\nauthor:\n  - name: 이광춘\n    url: https://www.linkedin.com/in/kwangchunlee/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r\n  - name: 신종화\n    url: https://modernity.tistory.com/\n    affiliation: 한국 R 사용자회\n    affiliation-url: https://github.com/bit2r    \ndate: \"2023-06-19\"\ntitle-block-banner: true\n#title-block-banner: \"#562457\"\nformat:\n  html:\n    css: css/quarto.css\n    theme: flatly\n    code-fold: true\n    code-overflow: wrap\n    toc: true\n    toc-depth: 3\n    toc-title: 목차\n    number-sections: true\n    highlight-style: github    \n    self-contained: false\nfilters:\n   - lightbox\nlightbox: auto\nlink-citations: true\nknitr:\n  opts_chunk: \n    message: false\n    warning: false\n    collapse: true\n    comment: \"#>\" \n    R.options:\n      knitr.graphics.auto_pdf: true\neditor_options: \n  chunk_output_type: console\neditor: \n  markdown: \n    wrap: 72\n---\n\n\n# 사전준비\n\n1.  안드로이드 핸드폰 구글 \"Play스토어\"에서 **\"ChatGPT\"** by\n    **\"OpenAI\"** 꼭 정확한 명칭과 앱개발사 이름 확인한 후 설치 실행\n\n::: columns\n::: column\n![](images/ChatGPT_playstore.png){fig-align=\"center\" width=\"188\"}\n:::\n\n::: column\n![](images/ChatGPT_mobile.png){fig-align=\"center\" width=\"187\"}\n:::\n:::\n\n2.  챗GPT 유료계정 사용\n\n![](images/ChatGPT_paid.png){fig-align=\"center\" width=\"362\"}\n\n# (챗GPT) 디지털 글쓰기 [^1]\n\n[^1]: 한국 R 사용자회 [데이터 과학 글쓰기](https://r2bit.com/quarto/)\n\n::: panel-tabset\n### 도구의 인간\n\n![](images/homo-faber.jpg)\n\n### 디지털 글쓰기\n\n![챗GPT 디지털 글쓰기 진화과정](images/writing_history.jpg)\n\n### (행정) 문서 출판\n\n![](images/book_cover.jpg){fig-align=\"center\" width=\"283\"}\n\n### (행정) 앱개발\n\n::: columns\n::: column\n![](images/km_chatgpt.jpeg){fig-align=\"center\" width=\"714\"}\n:::\n\n::: column\n![](images/km_image.png){fig-align=\"center\" width=\"566\"}\n:::\n\n:::\n:::\n\n# 챗GPT 4차 산업혁명\n\n::: column-page\n\n```{mermaid}\nflowchart TB\n    \n    setup[\"환경설정<br>MS(OpenAI), 구글(Bard)\"]     --> practice\n\n    subgraph practice[\"챗GPT 실습\"]\n    direction LR\n        survey[\"자료조사<br>대한민국 영화통계\"]     --> writing[\"챗GPT 프롬프트 <br> 대박 영화 시놉시스 제작\"]\n        writing               --> image[\"Text-to-Image<br> 대박영화 포스터 제작\"]\n        image --> excle[\"정형 데이터 <br> 엑셀\"]\n        image --> autoGPT[\"작업 자동화 <br> AutoGPT\"]\n        image --> reasoning[\"추론 <br> 수능문제풀이\"]\n        \n\n    end\n\n    practice     --> workshop[\"챗GPT 출판<br>bitPublish, PDF\"]\n\n\nclass practice nodeStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\n```\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

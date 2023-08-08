@@ -1,0 +1,125 @@
+---
+title: "chatGPT"
+subtitle: "광명시 (8/11)"
+description: | 
+  광명시 챗GPT 실습자료로 기존 챗GPT 실습 교육에서 한걸음 더 들어갑니다.
+author:
+  - name: 이광춘
+    url: https://www.linkedin.com/in/kwangchunlee/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+  - name: 신종화
+    url: https://modernity.tistory.com/
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r    
+date: "2023-06-19"
+title-block-banner: true
+#title-block-banner: "#562457"
+format:
+  html:
+    css: css/quarto.css
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: 목차
+    number-sections: true
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# 사전준비
+
+1.  안드로이드 핸드폰 구글 "Play스토어"에서 **"ChatGPT"** by
+    **"OpenAI"** 꼭 정확한 명칭과 앱개발사 이름 확인한 후 설치 실행
+
+::: columns
+::: column
+![](images/ChatGPT_playstore.png){fig-align="center" width="188"}
+:::
+
+::: column
+![](images/ChatGPT_mobile.png){fig-align="center" width="187"}
+:::
+:::
+
+2.  챗GPT 유료계정 사용
+
+![](images/ChatGPT_paid.png){fig-align="center" width="362"}
+
+# (챗GPT) 디지털 글쓰기 [^1]
+
+[^1]: 한국 R 사용자회 [데이터 과학 글쓰기](https://r2bit.com/quarto/)
+
+::: panel-tabset
+### 도구의 인간
+
+![](images/homo-faber.jpg)
+
+### 디지털 글쓰기
+
+![챗GPT 디지털 글쓰기 진화과정](images/writing_history.jpg)
+
+### (행정) 문서 출판
+
+![](images/book_cover.jpg){fig-align="center" width="283"}
+
+### (행정) 앱개발
+
+::: columns
+::: column
+![](images/km_chatgpt.jpeg){fig-align="center" width="714"}
+:::
+
+::: column
+![](images/km_image.png){fig-align="center" width="566"}
+:::
+
+:::
+:::
+
+# 챗GPT 4차 산업혁명
+
+::: column-page
+```{mermaid}
+flowchart TB
+    
+    setup["환경설정<br>MS(OpenAI), 구글(Bard)"]     --> practice
+
+    subgraph practice["챗GPT 실습"]
+    direction LR
+        survey["자료조사<br>대한민국 영화통계"]     --> writing["챗GPT 프롬프트 <br> 대박 영화 시놉시스 제작"]
+        writing               --> image["Text-to-Image<br> 대박영화 포스터 제작"]
+        image --> excle["정형 데이터 <br> 엑셀"]
+        image --> autoGPT["작업 자동화 <br> AutoGPT"]
+        image --> reasoning["추론 <br> 수능문제풀이"]
+        
+
+    end
+
+    practice     --> workshop["챗GPT 출판<br>bitPublish, PDF"]
+
+
+class practice nodeStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+```
+:::
