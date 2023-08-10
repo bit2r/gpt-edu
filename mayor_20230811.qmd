@@ -542,6 +542,14 @@ Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to expre
 ```
 :::
 
+
+# 엑셀 작업
+
+광명시 인구 데이터를 바탕으로 엑셀 데이터 분석을 수행합니다.
+
+![](images/km_code_interpreter.png)
+[실습: [Code Interpreter](https://r2bit.com/map_challenge/km_BitGPT.html)]{.aside}
+
 # AI 이미지
 
 AI 이미지 생성 프롬프트를 작성하고, [DALL·E 2 -
