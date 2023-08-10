@@ -550,6 +550,12 @@ Honorable citizens, Today, on the 84th anniversary of 3.1, I would like to expre
 ![](images/km_code_interpreter.png)
 [실습: [Code Interpreter](https://r2bit.com/map_challenge/km_BitGPT.html)]{.aside}
 
+# 수능문제 풀이
+
+- [영어](https://r2bit.com/quarto/sat_english.html)
+- [수학](https://r2bit.com/quarto/sat_math.html)
+- [국어](https://r2bit.com/quarto/sat_korean.html)
+
 # AI 이미지
 
 AI 이미지 생성 프롬프트를 작성하고, [DALL·E 2 -
